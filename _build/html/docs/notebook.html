@@ -440,12 +440,13 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># df_food_prices = pd.read_csv(&#39;dataset_sources/Food_Prices.csv&#39;)</span>
-<span class="c1"># df_food_prices_sweden = df_food_prices[df_food_prices[&#39;Country &#39;] == &#39;Sweden&#39;].drop(&#39;Country &#39;, axis=1)</span>
-<span class="c1"># df_food_prices_sweden.to_csv(&#39;filtered/Food_Prices_Sweden.csv&#39;, index=False)</span>
-<span class="c1"># df_food_prices_sweden = pd.read_csv(&#39;filtered/Food_Prices_Sweden.csv&#39;)</span>
-<span class="c1"># df_food_prices_sweden_years = df_food_prices_sweden[df_food_prices_sweden[&#39;Year &#39;] &lt;= 2021]</span>
-<span class="n">df_food_prices_sweden_years</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Food_Prices_Sweden_2018-2021&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_food_prices</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;dataset_sources/Food_Prices.csv&#39;</span><span class="p">)</span>
+<span class="n">df_food_prices_sweden</span> <span class="o">=</span> <span class="n">df_food_prices</span><span class="p">[</span><span class="n">df_food_prices</span><span class="p">[</span><span class="s1">&#39;Country &#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sweden&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Country &#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_food_prices_sweden</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Food_Prices_Sweden.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">df_food_prices_sweden</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Food_Prices_Sweden.csv&#39;</span><span class="p">)</span>
+<span class="n">df_food_prices_sweden_years</span> <span class="o">=</span> <span class="n">df_food_prices_sweden</span><span class="p">[</span><span class="n">df_food_prices_sweden</span><span class="p">[</span><span class="s1">&#39;Year &#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2021</span><span class="p">]</span>
+<span class="n">df_food_prices_sweden_years</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Food_Prices_Sweden_2018-2021.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">df_food_prices_sweden_years</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Food_Prices_Sweden_2018-2021.csv&#39;</span><span class="p">)</span>
 <span class="n">df_food_prices_sweden</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 <span class="c1"># df_food_prices_sweden.describe()</span>
 <span class="n">df_food_prices_sweden</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
@@ -453,31 +454,126 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># df_food_prices = pd.read_csv(&#39;dataset_sources/Food_Prices.csv&#39;)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># df_food_prices_sweden = df_food_prices[df_food_prices[&#39;Country &#39;] == &#39;Sweden&#39;].drop(&#39;Country &#39;, axis=1)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># df_food_prices_sweden.to_csv(&#39;filtered/Food_Prices_Sweden.csv&#39;, index=False)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># df_food_prices_sweden = pd.read_csv(&#39;filtered/Food_Prices_Sweden.csv&#39;)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># df_food_prices_sweden_years = df_food_prices_sweden[df_food_prices_sweden[&#39;Year &#39;] &lt;= 2021]</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">df_food_prices_sweden_years</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Food_Prices_Sweden_2018-2021&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">df_food_prices_sweden</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># df_food_prices_sweden.describe()</span>
-
-<span class="ne">NameError</span>: name &#39;df_food_prices_sweden_years&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 240 entries, 0 to 239
+Data columns (total 9 columns):
+ #   Column               Non-Null Count  Dtype  
+---  ------               --------------  -----  
+ 0   Year                 240 non-null    int64  
+ 1   Month                240 non-null    int64  
+ 2   Food Item            240 non-null    object 
+ 3   Unit of Measurement  240 non-null    object 
+ 4   Average Price        240 non-null    float64
+ 5   Currency             240 non-null    object 
+ 6   Price in USD         240 non-null    float64
+ 7   Availability         240 non-null    int64  
+ 8   Quality              240 non-null    object 
+dtypes: float64(2), int64(3), object(4)
+memory usage: 17.0+ KB
 </pre></div>
 </div>
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Month</th>
+      <th>Food Item</th>
+      <th>Unit of Measurement</th>
+      <th>Average Price</th>
+      <th>Currency</th>
+      <th>Price in USD</th>
+      <th>Availability</th>
+      <th>Quality</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2018</td>
+      <td>1</td>
+      <td>Bread</td>
+      <td>Loaf</td>
+      <td>18.61</td>
+      <td>Kr</td>
+      <td>1.82</td>
+      <td>1</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2018</td>
+      <td>2</td>
+      <td>Bread</td>
+      <td>Loaf</td>
+      <td>18.66</td>
+      <td>Kr</td>
+      <td>1.83</td>
+      <td>1</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2018</td>
+      <td>3</td>
+      <td>Bread</td>
+      <td>Loaf</td>
+      <td>18.71</td>
+      <td>Kr</td>
+      <td>1.83</td>
+      <td>1</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2018</td>
+      <td>4</td>
+      <td>Bread</td>
+      <td>Loaf</td>
+      <td>18.76</td>
+      <td>Kr</td>
+      <td>1.84</td>
+      <td>1</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2018</td>
+      <td>5</td>
+      <td>Bread</td>
+      <td>Loaf</td>
+      <td>18.81</td>
+      <td>Kr</td>
+      <td>1.84</td>
+      <td>1</td>
+      <td>High</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># df_wdi_indicators = pd.read_csv(&#39;dataset_sources/WDI_Indicators_MainData.csv&#39;)</span>
-<span class="c1"># df_wdi_indicators_sweden = df_wdi_indicators[df_wdi_indicators[&#39;Country Name&#39;] == &#39;Sweden&#39;].drop(&#39;Country Name&#39;, axis=1).drop(&#39;Country Code&#39;, axis=1)</span>
-<span class="c1"># df_wdi_indicators_sweden.to_csv(&quot;filtered/WDI_Indicators_Sweden.csv&quot;, index=False)</span>
-<span class="c1"># df_wdi_indicators_sweden = pd.read_csv(&#39;filtered/WDI_Indicators_Sweden.csv&#39;)</span>
-<span class="c1"># df_wdi_indicators_sweden_years = df_wdi_indicators_sweden[df_wdi_indicators_sweden[&#39;Time&#39;] &gt;= 2018]</span>
-<span class="c1"># df_wdi_indicators_sweden_years.to_csv(&#39;filtered/WDI_Indicators_Sweden_2018-2021.csv&#39;, index=False)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_wdi_indicators</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;dataset_sources/WDI_Indicators_MainData.csv&#39;</span><span class="p">)</span>
+<span class="n">df_wdi_indicators_sweden</span> <span class="o">=</span> <span class="n">df_wdi_indicators</span><span class="p">[</span><span class="n">df_wdi_indicators</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sweden&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Country Code&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_wdi_indicators_sweden</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;filtered/WDI_Indicators_Sweden.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">df_wdi_indicators_sweden</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/WDI_Indicators_Sweden.csv&#39;</span><span class="p">)</span>
+<span class="n">df_wdi_indicators_sweden_years</span> <span class="o">=</span> <span class="n">df_wdi_indicators_sweden</span><span class="p">[</span><span class="n">df_wdi_indicators_sweden</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2018</span><span class="p">]</span>
+<span class="n">df_wdi_indicators_sweden_years</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;filtered/WDI_Indicators_Sweden_2018-2021.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">df_wdi_indicators_sweden_years</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/WDI_Indicators_Sweden_2018-2021.csv&#39;</span><span class="p">)</span>
 <span class="n">df_wdi_indicators_sweden_years</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 <span class="c1"># df_wdi_indicators_sweden.describe()</span>
@@ -733,12 +829,12 @@ memory usage: 3.0+ KB
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># df_annual_net_earnings = pd.read_csv(&#39;dataset_sources/estat_earn_nt_net_en.csv&#39;)</span>
-<span class="c1"># df_annual_net_earnings_sweden = df_annual_net_earnings[df_annual_net_earnings[&#39;geo&#39;] == &#39;Sweden&#39;].drop(&#39;geo&#39;, axis=1)</span>
-<span class="c1"># df_annual_net_earnings_sweden.to_csv(&#39;filtered/Annual_Net_Earnings_Sweden.csv&#39;, index=False)</span>
-<span class="c1"># df_annual_net_earnings_sweden = pd.read_csv(&#39;filtered/Annual_Net_Earnings_Sweden.csv&#39;)</span>
-<span class="c1"># df_annual_net_earnings_sweden_years = df_annual_net_earnings_sweden[(df_annual_net_earnings_sweden[&#39;TIME_PERIOD&#39;] &gt;= 2018) &amp; (df_annual_net_earnings_sweden[&#39;TIME_PERIOD&#39;] &lt;= 2021)]</span>
-<span class="c1"># df_annual_net_earnings_sweden_years.to_csv(&#39;filtered/Annual_Net_Earnings_Sweden_2018-2021.csv&#39;, index=False)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_annual_net_earnings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;dataset_sources/estat_earn_nt_net_en.csv&#39;</span><span class="p">)</span>
+<span class="n">df_annual_net_earnings_sweden</span> <span class="o">=</span> <span class="n">df_annual_net_earnings</span><span class="p">[</span><span class="n">df_annual_net_earnings</span><span class="p">[</span><span class="s1">&#39;geo&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sweden&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;geo&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_annual_net_earnings_sweden</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Annual_Net_Earnings_Sweden.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">df_annual_net_earnings_sweden</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Annual_Net_Earnings_Sweden.csv&#39;</span><span class="p">)</span>
+<span class="n">df_annual_net_earnings_sweden_years</span> <span class="o">=</span> <span class="n">df_annual_net_earnings_sweden</span><span class="p">[(</span><span class="n">df_annual_net_earnings_sweden</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2018</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_annual_net_earnings_sweden</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2021</span><span class="p">)]</span>
+<span class="n">df_annual_net_earnings_sweden_years</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Annual_Net_Earnings_Sweden_2018-2021.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">df_annual_net_earnings_sweden_years</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Annual_Net_Earnings_Sweden_2018-2021.csv&#39;</span><span class="p">)</span>
 <span class="n">df_annual_net_earnings_sweden_years</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 <span class="c1"># df_annual_net_earnings_sweden_years.describe()</span>
@@ -763,7 +859,7 @@ Data columns (total 10 columns):
  8   OBS_FLAG     0 non-null      float64
  9   CONF_STATUS  0 non-null      float64
 dtypes: float64(3), int64(1), object(6)
-memory usage: 73.3+ KB
+memory usage: 73.2+ KB
 </pre></div>
 </div>
 <div class="output text_html"><div>
