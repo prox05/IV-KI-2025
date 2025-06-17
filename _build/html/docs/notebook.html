@@ -447,29 +447,29 @@ document.write(`
 <span class="n">df_food_prices_sweden_years</span> <span class="o">=</span> <span class="n">df_food_prices_sweden</span><span class="p">[</span><span class="n">df_food_prices_sweden</span><span class="p">[</span><span class="s1">&#39;Year &#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2021</span><span class="p">]</span>
 <span class="n">df_food_prices_sweden_years</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Food_Prices_Sweden_2018-2021.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">df_food_prices_sweden_years</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Food_Prices_Sweden_2018-2021.csv&#39;</span><span class="p">)</span>
-<span class="n">df_food_prices_sweden</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="n">df_food_prices_sweden_years</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 <span class="c1"># df_food_prices_sweden.describe()</span>
-<span class="n">df_food_prices_sweden</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">df_food_prices_sweden_years</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 240 entries, 0 to 239
+RangeIndex: 192 entries, 0 to 191
 Data columns (total 9 columns):
  #   Column               Non-Null Count  Dtype  
 ---  ------               --------------  -----  
- 0   Year                 240 non-null    int64  
- 1   Month                240 non-null    int64  
- 2   Food Item            240 non-null    object 
- 3   Unit of Measurement  240 non-null    object 
- 4   Average Price        240 non-null    float64
- 5   Currency             240 non-null    object 
- 6   Price in USD         240 non-null    float64
- 7   Availability         240 non-null    int64  
- 8   Quality              240 non-null    object 
+ 0   Year                 192 non-null    int64  
+ 1   Month                192 non-null    int64  
+ 2   Food Item            192 non-null    object 
+ 3   Unit of Measurement  192 non-null    object 
+ 4   Average Price        192 non-null    float64
+ 5   Currency             192 non-null    object 
+ 6   Price in USD         192 non-null    float64
+ 7   Availability         192 non-null    int64  
+ 8   Quality              192 non-null    object 
 dtypes: float64(2), int64(3), object(4)
-memory usage: 17.0+ KB
+memory usage: 13.6+ KB
 </pre></div>
 </div>
 <div class="output text_html"><div>
