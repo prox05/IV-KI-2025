@@ -1,0 +1,193 @@
+Year ,Month ,Food Item ,Unit of Measurement,Average Price ,Currency ,Price in USD,Availability ,Quality 
+2018,1,Bread,Loaf,18.61,Kr,1.82,1,High
+2018,2,Bread,Loaf,18.66,Kr,1.83,1,High
+2018,3,Bread,Loaf,18.71,Kr,1.83,1,High
+2018,4,Bread,Loaf,18.76,Kr,1.84,1,High
+2018,5,Bread,Loaf,18.81,Kr,1.84,1,High
+2018,6,Bread,Loaf,18.86,Kr,1.85,1,High
+2018,7,Bread,Loaf,18.91,Kr,1.85,1,High
+2018,8,Bread,Loaf,18.96,Kr,1.86,1,High
+2018,9,Bread,Loaf,19.01,Kr,1.86,1,High
+2018,10,Bread,Loaf,19.06,Kr,1.87,1,High
+2018,11,Bread,Loaf,19.11,Kr,1.87,1,High
+2018,12,Bread,Loaf,19.16,Kr,1.88,1,High
+2019,1,Bread,Loaf,19.21,Kr,1.88,1,High
+2019,2,Bread,Loaf,19.36,Kr,1.9,1,High
+2019,3,Bread,Loaf,19.51,Kr,1.91,1,High
+2019,4,Bread,Loaf,19.66,Kr,1.93,1,High
+2019,5,Bread,Loaf,19.81,Kr,1.94,1,High
+2019,6,Bread,Loaf,19.96,Kr,1.96,1,High
+2019,7,Bread,Loaf,20.11,Kr,1.97,1,High
+2019,8,Bread,Loaf,20.26,Kr,1.99,1,High
+2019,9,Bread,Loaf,20.41,Kr,2.0,1,High
+2019,10,Bread,Loaf,20.56,Kr,2.01,1,High
+2019,11,Bread,Loaf,20.71,Kr,2.03,1,High
+2019,12,Bread,Loaf,20.86,Kr,2.04,1,High
+2020,1,Bread,Loaf,21.01,Kr,2.06,1,High
+2020,2,Bread,Loaf,21.02,Kr,2.06,1,High
+2020,3,Bread,Loaf,21.03,Kr,2.06,1,High
+2020,4,Bread,Loaf,21.04,Kr,2.06,1,High
+2020,5,Bread,Loaf,21.05,Kr,2.06,1,High
+2020,6,Bread,Loaf,21.06,Kr,2.06,1,High
+2020,7,Bread,Loaf,21.07,Kr,2.06,1,High
+2020,8,Bread,Loaf,21.08,Kr,2.07,1,High
+2020,9,Bread,Loaf,21.09,Kr,2.07,1,High
+2020,10,Bread,Loaf,21.1,Kr,2.07,1,High
+2020,11,Bread,Loaf,21.11,Kr,2.07,1,High
+2020,12,Bread,Loaf,21.12,Kr,2.07,1,High
+2021,1,Bread,Loaf,21.13,Kr,2.07,1,High
+2021,2,Bread,Loaf,21.3,Kr,2.09,1,High
+2021,3,Bread,Loaf,21.47,Kr,2.1,1,High
+2021,4,Bread,Loaf,21.64,Kr,2.12,1,High
+2021,5,Bread,Loaf,21.81,Kr,2.14,1,High
+2021,6,Bread,Loaf,21.98,Kr,2.15,1,High
+2021,7,Bread,Loaf,22.15,Kr,2.17,1,High
+2021,8,Bread,Loaf,22.32,Kr,2.19,1,High
+2021,9,Bread,Loaf,22.49,Kr,2.2,1,High
+2021,10,Bread,Loaf,22.66,Kr,2.22,1,High
+2021,11,Bread,Loaf,22.83,Kr,2.24,1,High
+2021,12,Bread,Loaf,23.0,Kr,2.25,1,High
+2018,1,Milk,1 L,10.18,Kr,1.0,1,High
+2018,2,Milk,1 L,10.23,Kr,1.0,1,High
+2018,3,Milk,1 L,10.28,Kr,1.01,1,High
+2018,4,Milk,1 L,10.33,Kr,1.01,1,High
+2018,5,Milk,1 L,10.38,Kr,1.02,1,High
+2018,6,Milk,1 L,10.43,Kr,1.02,1,High
+2018,7,Milk,1 L,10.48,Kr,1.03,1,High
+2018,8,Milk,1 L,10.53,Kr,1.03,1,High
+2018,9,Milk,1 L,10.58,Kr,1.04,1,High
+2018,10,Milk,1 L,10.63,Kr,1.04,1,High
+2018,11,Milk,1 L,10.68,Kr,1.05,1,High
+2018,12,Milk,1 L,10.73,Kr,1.05,1,High
+2019,1,Milk,1 L,10.78,Kr,1.06,1,High
+2019,2,Milk,1 L,10.86,Kr,1.06,1,High
+2019,3,Milk,1 L,10.94,Kr,1.07,1,High
+2019,4,Milk,1 L,11.02,Kr,1.08,1,High
+2019,5,Milk,1 L,11.1,Kr,1.09,1,High
+2019,6,Milk,1 L,11.18,Kr,1.1,1,High
+2019,7,Milk,1 L,11.26,Kr,1.1,1,High
+2019,8,Milk,1 L,11.34,Kr,1.11,1,High
+2019,9,Milk,1 L,11.42,Kr,1.12,1,High
+2019,10,Milk,1 L,11.5,Kr,1.13,1,High
+2019,11,Milk,1 L,11.58,Kr,1.14,1,High
+2019,12,Milk,1 L,11.66,Kr,1.14,1,High
+2020,1,Milk,1 L,11.74,Kr,1.15,1,High
+2020,2,Milk,1 L,11.76,Kr,1.15,1,High
+2020,3,Milk,1 L,11.78,Kr,1.15,1,High
+2020,4,Milk,1 L,11.8,Kr,1.16,1,High
+2020,5,Milk,1 L,11.82,Kr,1.16,1,High
+2020,6,Milk,1 L,11.84,Kr,1.16,1,High
+2020,7,Milk,1 L,11.86,Kr,1.16,1,High
+2020,8,Milk,1 L,11.88,Kr,1.16,1,High
+2020,9,Milk,1 L,11.9,Kr,1.17,1,High
+2020,10,Milk,1 L,11.92,Kr,1.17,1,High
+2020,11,Milk,1 L,11.94,Kr,1.17,1,High
+2020,12,Milk,1 L,11.96,Kr,1.17,1,High
+2021,1,Milk,1 L,11.98,Kr,1.17,1,High
+2021,2,Milk,1 L,12.07,Kr,1.18,1,High
+2021,3,Milk,1 L,12.16,Kr,1.19,1,High
+2021,4,Milk,1 L,12.24,Kr,1.2,1,High
+2021,5,Milk,1 L,12.33,Kr,1.21,1,High
+2021,6,Milk,1 L,12.41,Kr,1.22,1,High
+2021,7,Milk,1 L,12.5,Kr,1.22,1,High
+2021,8,Milk,1 L,12.59,Kr,1.23,1,High
+2021,9,Milk,1 L,12.67,Kr,1.24,1,High
+2021,10,Milk,1 L,12.76,Kr,1.25,1,High
+2021,11,Milk,1 L,12.84,Kr,1.26,1,High
+2021,12,Milk,1 L,12.93,Kr,1.27,1,High
+2018,1,Eggs,Carton of 12,26.08,Kr,2.56,1,High
+2018,2,Eggs,Carton of 12,26.1,Kr,2.56,1,High
+2018,3,Eggs,Carton of 12,26.12,Kr,2.56,1,High
+2018,4,Eggs,Carton of 12,26.14,Kr,2.56,1,High
+2018,5,Eggs,Carton of 12,26.16,Kr,2.56,1,High
+2018,6,Eggs,Carton of 12,26.18,Kr,2.57,1,High
+2018,7,Eggs,Carton of 12,26.2,Kr,2.57,1,High
+2018,8,Eggs,Carton of 12,26.22,Kr,2.57,1,High
+2018,9,Eggs,Carton of 12,26.24,Kr,2.57,1,High
+2018,10,Eggs,Carton of 12,26.26,Kr,2.57,1,High
+2018,11,Eggs,Carton of 12,26.28,Kr,2.58,1,High
+2018,12,Eggs,Carton of 12,26.3,Kr,2.58,1,High
+2019,1,Eggs,Carton of 12,26.32,Kr,2.58,1,High
+2019,2,Eggs,Carton of 12,26.57,Kr,2.6,1,High
+2019,3,Eggs,Carton of 12,26.82,Kr,2.63,1,High
+2019,4,Eggs,Carton of 12,27.07,Kr,2.65,1,High
+2019,5,Eggs,Carton of 12,27.32,Kr,2.68,1,High
+2019,6,Eggs,Carton of 12,27.57,Kr,2.7,1,High
+2019,7,Eggs,Carton of 12,27.82,Kr,2.73,1,High
+2019,8,Eggs,Carton of 12,28.07,Kr,2.75,1,High
+2019,9,Eggs,Carton of 12,28.32,Kr,2.78,1,High
+2019,10,Eggs,Carton of 12,28.57,Kr,2.8,1,High
+2019,11,Eggs,Carton of 12,28.82,Kr,2.82,1,High
+2019,12,Eggs,Carton of 12,29.07,Kr,2.85,1,High
+2020,1,Eggs,Carton of 12,29.32,Kr,2.87,1,High
+2020,2,Eggs,Carton of 12,29.39,Kr,2.88,1,High
+2020,3,Eggs,Carton of 12,29.47,Kr,2.89,1,High
+2020,4,Eggs,Carton of 12,29.55,Kr,2.9,1,High
+2020,5,Eggs,Carton of 12,29.62,Kr,2.9,1,High
+2020,6,Eggs,Carton of 12,29.7,Kr,2.91,1,High
+2020,7,Eggs,Carton of 12,29.77,Kr,2.92,1,High
+2020,8,Eggs,Carton of 12,29.85,Kr,2.93,1,High
+2020,9,Eggs,Carton of 12,29.93,Kr,2.93,1,High
+2020,10,Eggs,Carton of 12,30.0,Kr,2.94,1,High
+2020,11,Eggs,Carton of 12,30.08,Kr,2.95,1,High
+2020,12,Eggs,Carton of 12,30.15,Kr,2.96,1,High
+2021,1,Eggs,Carton of 12,30.23,Kr,2.96,1,High
+2021,2,Eggs,Carton of 12,30.43,Kr,2.98,1,High
+2021,3,Eggs,Carton of 12,30.63,Kr,3.0,1,High
+2021,4,Eggs,Carton of 12,30.83,Kr,3.02,1,High
+2021,5,Eggs,Carton of 12,31.03,Kr,3.04,1,High
+2021,6,Eggs,Carton of 12,31.23,Kr,3.06,1,High
+2021,7,Eggs,Carton of 12,31.43,Kr,3.08,1,High
+2021,8,Eggs,Carton of 12,31.63,Kr,3.1,1,High
+2021,9,Eggs,Carton of 12,31.83,Kr,3.12,1,High
+2021,10,Eggs,Carton of 12,32.03,Kr,3.14,1,High
+2021,11,Eggs,Carton of 12,32.23,Kr,3.16,1,High
+2021,12,Eggs,Carton of 12,32.43,Kr,3.18,1,High
+2018,1,Potatoes,1 Kg,11.1,Kr,1.09,1,High
+2018,2,Potatoes,1 Kg,11.12,Kr,1.09,1,High
+2018,3,Potatoes,1 Kg,11.14,Kr,1.09,1,High
+2018,4,Potatoes,1 Kg,11.16,Kr,1.09,1,High
+2018,5,Potatoes,1 Kg,11.18,Kr,1.1,1,High
+2018,6,Potatoes,1 Kg,11.2,Kr,1.1,1,High
+2018,7,Potatoes,1 Kg,11.22,Kr,1.1,1,High
+2018,8,Potatoes,1 Kg,11.25,Kr,1.1,1,High
+2018,9,Potatoes,1 Kg,11.27,Kr,1.1,1,High
+2018,10,Potatoes,1 Kg,11.29,Kr,1.11,1,High
+2018,11,Potatoes,1 Kg,11.31,Kr,1.11,1,High
+2018,12,Potatoes,1 Kg,11.33,Kr,1.11,1,High
+2019,1,Potatoes,1 Kg,11.35,Kr,1.11,1,High
+2019,2,Potatoes,1 Kg,11.37,Kr,1.11,1,High
+2019,3,Potatoes,1 Kg,11.39,Kr,1.12,1,High
+2019,4,Potatoes,1 Kg,11.41,Kr,1.12,1,High
+2019,5,Potatoes,1 Kg,11.43,Kr,1.12,1,High
+2019,6,Potatoes,1 Kg,11.45,Kr,1.12,1,High
+2019,7,Potatoes,1 Kg,11.47,Kr,1.12,1,High
+2019,8,Potatoes,1 Kg,11.49,Kr,1.13,1,High
+2019,9,Potatoes,1 Kg,11.51,Kr,1.13,1,High
+2019,10,Potatoes,1 Kg,11.53,Kr,1.13,1,High
+2019,11,Potatoes,1 Kg,11.55,Kr,1.13,1,High
+2019,12,Potatoes,1 Kg,11.57,Kr,1.13,1,High
+2020,1,Potatoes,1 Kg,11.59,Kr,1.14,1,High
+2020,2,Potatoes,1 Kg,11.62,Kr,1.14,1,High
+2020,3,Potatoes,1 Kg,11.65,Kr,1.14,1,High
+2020,4,Potatoes,1 Kg,11.68,Kr,1.14,1,High
+2020,5,Potatoes,1 Kg,11.71,Kr,1.15,1,High
+2020,6,Potatoes,1 Kg,11.74,Kr,1.15,1,High
+2020,7,Potatoes,1 Kg,11.77,Kr,1.15,1,High
+2020,8,Potatoes,1 Kg,11.8,Kr,1.16,1,High
+2020,9,Potatoes,1 Kg,11.83,Kr,1.16,1,High
+2020,10,Potatoes,1 Kg,11.86,Kr,1.16,1,High
+2020,11,Potatoes,1 Kg,11.89,Kr,1.17,1,High
+2020,12,Potatoes,1 Kg,11.92,Kr,1.17,1,High
+2021,1,Potatoes,1 Kg,11.95,Kr,1.17,1,High
+2021,2,Potatoes,1 Kg,12.03,Kr,1.18,1,High
+2021,3,Potatoes,1 Kg,12.11,Kr,1.19,1,High
+2021,4,Potatoes,1 Kg,12.19,Kr,1.19,1,High
+2021,5,Potatoes,1 Kg,12.27,Kr,1.2,1,High
+2021,6,Potatoes,1 Kg,12.35,Kr,1.21,1,High
+2021,7,Potatoes,1 Kg,12.43,Kr,1.22,1,High
+2021,8,Potatoes,1 Kg,12.51,Kr,1.23,1,High
+2021,9,Potatoes,1 Kg,12.59,Kr,1.23,1,High
+2021,10,Potatoes,1 Kg,12.67,Kr,1.24,1,High
+2021,11,Potatoes,1 Kg,12.75,Kr,1.25,1,High
+2021,12,Potatoes,1 Kg,12.83,Kr,1.26,1,High
