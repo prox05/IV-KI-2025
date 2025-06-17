@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Example Notebook &#8212; Jupyter Book Template</title>
+    <title>Options visualisation &#8212; Jupyter Book Template</title>
   
   
   
@@ -61,7 +61,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Jupyter Book Tutorial" href="home.html" />
+    <link rel="prev" title="Informatie Visualisatie G1 (24)" href="home.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -169,12 +169,12 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="home.html">
-                    Jupyter Book Tutorial
+                    Informatie Visualisatie G1 (24)
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Example Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Options visualisation</a></li>
 </ul>
 
     </div>
@@ -378,9 +378,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -391,20 +389,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Example Notebook</h1>
+    <h1>Options visualisation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-data">Plot data</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -414,35 +403,56 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="example-notebook">
-<h1>Example Notebook<a class="headerlink" href="#example-notebook" title="Link to this heading">#</a></h1>
-<p>(Last updated: May 22, 2023)</p>
-<p>You can also create content with Jupyter Notebooks.
-This means that you can include code blocks and their outputs in your book.
-In this notebook, we show some examples of loading and plotting data.
-Check <a class="reference external" href="https://jupyterbook.org/en/stable/content/executable/index.html">this documentation</a> about how to write executable content.</p>
-<div class="cell docutils container">
+  <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import packages</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">plotly.graph_objs</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">go</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section id="load-data">
-<h2>Load data<a class="headerlink" href="#load-data" title="Link to this heading">#</a></h2>
-<p>You can put your data at the same directory as the notebook file and then use <code class="docutils literal notranslate"><span class="pre">pandas</span></code> to load the data.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the Iris flower dataset using pandas</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;iris_data.csv&quot;</span><span class="p">)</span>
-<span class="n">df</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">plotly.offline</span><span class="w"> </span><span class="kn">import</span> <span class="n">init_notebook_mode</span>
+<span class="n">init_notebook_mode</span><span class="p">(</span><span class="n">connected</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output text_html">        <script type="text/javascript">
+        window.PlotlyConfig = {MathJaxConfig: 'local'};
+        if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+        </script>
+        <script type="module">import "https://cdn.plot.ly/plotly-3.0.1.min"</script>
+        </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># df_food_prices = pd.read_csv(&#39;/dataset_sources/Food_Prices.csv&#39;)</span>
+<span class="c1"># df_food_prices_sweden = df_food_prices[df_food_prices[&#39;Country &#39;] == &#39;Sweden&#39;].drop(&#39;Country &#39;, axis=1)</span>
+<span class="c1"># df_food_prices_sweden.to_csv(&#39;/filtered/Food_Prices_Sweden.csv&#39;, index=False)</span>
+<span class="n">df_food_prices_sweden</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Food_Prices_Sweden.csv&#39;</span><span class="p">)</span>
+<span class="n">df_food_prices_sweden</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="c1"># df_food_prices_sweden.describe()</span>
+<span class="n">df_food_prices_sweden</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 240 entries, 0 to 239
+Data columns (total 9 columns):
+ #   Column               Non-Null Count  Dtype  
+---  ------               --------------  -----  
+ 0   Year                 240 non-null    int64  
+ 1   Month                240 non-null    int64  
+ 2   Food Item            240 non-null    object 
+ 3   Unit of Measurement  240 non-null    object 
+ 4   Average Price        240 non-null    float64
+ 5   Currency             240 non-null    object 
+ 6   Price in USD         240 non-null    float64
+ 7   Availability         240 non-null    int64  
+ 8   Quality              240 non-null    object 
+dtypes: float64(2), int64(3), object(4)
+memory usage: 17.0+ KB
+</pre></div>
+</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -461,161 +471,506 @@ Check <a class="reference external" href="https://jupyterbook.org/en/stable/cont
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>sepal_length</th>
-      <th>sepal_width</th>
-      <th>petal_length</th>
-      <th>petal_width</th>
-      <th>species</th>
-      <th>species_id</th>
+      <th>Year</th>
+      <th>Month</th>
+      <th>Food Item</th>
+      <th>Unit of Measurement</th>
+      <th>Average Price</th>
+      <th>Currency</th>
+      <th>Price in USD</th>
+      <th>Availability</th>
+      <th>Quality</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>5.1</td>
-      <td>3.5</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>setosa</td>
+      <td>2018</td>
       <td>1</td>
+      <td>Bread</td>
+      <td>Loaf</td>
+      <td>18.61</td>
+      <td>Kr</td>
+      <td>1.82</td>
+      <td>1</td>
+      <td>High</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>4.9</td>
-      <td>3.0</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>setosa</td>
+      <td>2018</td>
+      <td>2</td>
+      <td>Bread</td>
+      <td>Loaf</td>
+      <td>18.66</td>
+      <td>Kr</td>
+      <td>1.83</td>
       <td>1</td>
+      <td>High</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>4.7</td>
-      <td>3.2</td>
-      <td>1.3</td>
-      <td>0.2</td>
-      <td>setosa</td>
+      <td>2018</td>
+      <td>3</td>
+      <td>Bread</td>
+      <td>Loaf</td>
+      <td>18.71</td>
+      <td>Kr</td>
+      <td>1.83</td>
       <td>1</td>
+      <td>High</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4.6</td>
-      <td>3.1</td>
-      <td>1.5</td>
-      <td>0.2</td>
-      <td>setosa</td>
+      <td>2018</td>
+      <td>4</td>
+      <td>Bread</td>
+      <td>Loaf</td>
+      <td>18.76</td>
+      <td>Kr</td>
+      <td>1.84</td>
       <td>1</td>
+      <td>High</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5.0</td>
-      <td>3.6</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>setosa</td>
+      <td>2018</td>
+      <td>5</td>
+      <td>Bread</td>
+      <td>Loaf</td>
+      <td>18.81</td>
+      <td>Kr</td>
+      <td>1.84</td>
       <td>1</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>145</th>
-      <td>6.7</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.3</td>
-      <td>virginica</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>6.3</td>
-      <td>2.5</td>
-      <td>5.0</td>
-      <td>1.9</td>
-      <td>virginica</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>6.5</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.0</td>
-      <td>virginica</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>6.2</td>
-      <td>3.4</td>
-      <td>5.4</td>
-      <td>2.3</td>
-      <td>virginica</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>5.9</td>
-      <td>3.0</td>
-      <td>5.1</td>
-      <td>1.8</td>
-      <td>virginica</td>
-      <td>3</td>
+      <td>High</td>
     </tr>
   </tbody>
 </table>
-<p>150 rows × 6 columns</p>
 </div></div></div>
 </div>
-</section>
-<section id="plot-data">
-<h2>Plot data<a class="headerlink" href="#plot-data" title="Link to this heading">#</a></h2>
-<p>We set the repository in a way that you can use <a class="reference external" href="https://plotly.com/python/">Plotly</a> for interactive visualizations.
-For more information, check <a class="reference external" href="https://jupyterbook.org/en/stable/interactive/interactive.html">this documentation</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the Iris dataset using Plotly</span>
-<span class="n">g1</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter_3d</span><span class="p">(</span><span class="n">df</span><span class="p">,</span>
-                   <span class="n">x</span><span class="o">=</span><span class="s2">&quot;sepal_width&quot;</span><span class="p">,</span>
-                   <span class="n">y</span><span class="o">=</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">,</span>
-                   <span class="n">z</span><span class="o">=</span><span class="s2">&quot;petal_width&quot;</span><span class="p">,</span>
-                   <span class="n">color</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span>
-                   <span class="n">size</span><span class="o">=</span><span class="s2">&quot;petal_length&quot;</span><span class="p">,</span>
-                   <span class="n">opacity</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>
-                   <span class="n">size_max</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
-                   <span class="n">height</span><span class="o">=</span><span class="mi">700</span><span class="p">)</span>
-<span class="n">g1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># df_wdi_indicators = pd.read_csv(&#39;/dataset_sources/WDI_Indicators_MainData.csv&#39;)</span>
+<span class="c1"># df_wdi_indicators_sweden = df_wdi_indicators[df_wdi_indicators[&#39;Country Name&#39;] == &#39;Sweden&#39;].drop(&#39;Country Name&#39;, axis=1).drop(&#39;Country Code&#39;, axis=1)</span>
+<span class="c1"># df_wdi_indicators_sweden.to_csv(&quot;/filtered/WDI_Indicators_Sweden.csv&quot;, index=False)</span>
+<span class="n">df_wdi_indicators_sweden</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/WDI_Indicators_Sweden.csv&#39;</span><span class="p">)</span>
+<span class="n">df_wdi_indicators_sweden</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="c1"># df_wdi_indicators_sweden.describe()</span>
+<span class="n">df_wdi_indicators_sweden</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 11 entries, 0 to 10
+Data columns (total 93 columns):
+ #   Column                                                                                                                                        Non-Null Count  Dtype  
+---  ------                                                                                                                                        --------------  -----  
+ 0   Time                                                                                                                                          11 non-null     int64  
+ 1   Time Code                                                                                                                                     11 non-null     object 
+ 2   Current education expenditure, primary (% of total expenditure in primary public institutions) [SE.XPD.CPRM.ZS]                               11 non-null     float64
+ 3   Current education expenditure, secondary (% of total expenditure in secondary public institutions) [SE.XPD.CSEC.ZS]                           11 non-null     float64
+ 4   Current education expenditure, tertiary (% of total expenditure in tertiary public institutions) [SE.XPD.CTER.ZS]                             11 non-null     float64
+ 5   Current education expenditure, total (% of total expenditure in public institutions) [SE.XPD.CTOT.ZS]                                         11 non-null     float64
+ 6   Current health expenditure (% of GDP) [SH.XPD.CHEX.GD.ZS]                                                                                     11 non-null     float64
+ 7   Domestic general government health expenditure (% of GDP) [SH.XPD.GHED.GD.ZS]                                                                 11 non-null     float64
+ 8   Educational attainment, at least Bachelor&#39;s or equivalent, population 25+, female (%) (cumulative) [SE.TER.CUAT.BA.FE.ZS]                     11 non-null     float64
+ 9   Educational attainment, at least Bachelor&#39;s or equivalent, population 25+, male (%) (cumulative) [SE.TER.CUAT.BA.MA.ZS]                       11 non-null     float64
+ 10  Educational attainment, at least Bachelor&#39;s or equivalent, population 25+, total (%) (cumulative) [SE.TER.CUAT.BA.ZS]                         11 non-null     float64
+ 11  Educational attainment, at least completed lower secondary, population 25+, female (%) (cumulative) [SE.SEC.CUAT.LO.FE.ZS]                    11 non-null     float64
+ 12  Educational attainment, at least completed lower secondary, population 25+, male (%) (cumulative) [SE.SEC.CUAT.LO.MA.ZS]                      11 non-null     float64
+ 13  Educational attainment, at least completed lower secondary, population 25+, total (%) (cumulative) [SE.SEC.CUAT.LO.ZS]                        11 non-null     float64
+ 14  Educational attainment, at least completed post-secondary, population 25+, female (%) (cumulative) [SE.SEC.CUAT.PO.FE.ZS]                     11 non-null     float64
+ 15  Educational attainment, at least completed post-secondary, population 25+, male (%) (cumulative) [SE.SEC.CUAT.PO.MA.ZS]                       11 non-null     float64
+ 16  Educational attainment, at least completed post-secondary, population 25+, total (%) (cumulative) [SE.SEC.CUAT.PO.ZS]                         11 non-null     float64
+ 17  Educational attainment, at least completed primary, population 25+ years, female (%) (cumulative) [SE.PRM.CUAT.FE.ZS]                         11 non-null     float64
+ 18  Educational attainment, at least completed primary, population 25+ years, male (%) (cumulative) [SE.PRM.CUAT.MA.ZS]                           11 non-null     float64
+ 19  Educational attainment, at least completed primary, population 25+ years, total (%) (cumulative) [SE.PRM.CUAT.ZS]                             11 non-null     float64
+ 20  Educational attainment, at least completed short-cycle tertiary, population 25+, female (%) (cumulative) [SE.TER.CUAT.ST.FE.ZS]               11 non-null     float64
+ 21  Educational attainment, at least completed short-cycle tertiary, population 25+, male (%) (cumulative) [SE.TER.CUAT.ST.MA.ZS]                 11 non-null     float64
+ 22  Educational attainment, at least completed short-cycle tertiary, population 25+, total (%) (cumulative) [SE.TER.CUAT.ST.ZS]                   11 non-null     float64
+ 23  Educational attainment, at least completed upper secondary, population 25+, female (%) (cumulative) [SE.SEC.CUAT.UP.FE.ZS]                    11 non-null     float64
+ 24  Educational attainment, at least completed upper secondary, population 25+, male (%) (cumulative) [SE.SEC.CUAT.UP.MA.ZS]                      11 non-null     float64
+ 25  Educational attainment, at least completed upper secondary, population 25+, total (%) (cumulative) [SE.SEC.CUAT.UP.ZS]                        11 non-null     float64
+ 26  Educational attainment, at least Master&#39;s or equivalent, population 25+, female (%) (cumulative) [SE.TER.CUAT.MS.FE.ZS]                       11 non-null     float64
+ 27  Educational attainment, at least Master&#39;s or equivalent, population 25+, male (%) (cumulative) [SE.TER.CUAT.MS.MA.ZS]                         11 non-null     float64
+ 28  Educational attainment, at least Master&#39;s or equivalent, population 25+, total (%) (cumulative) [SE.TER.CUAT.MS.ZS]                           11 non-null     float64
+ 29  Educational attainment, Doctoral or equivalent, population 25+, female (%) (cumulative) [SE.TER.CUAT.DO.FE.ZS]                                11 non-null     float64
+ 30  Educational attainment, Doctoral or equivalent, population 25+, male (%) (cumulative) [SE.TER.CUAT.DO.MA.ZS]                                  11 non-null     float64
+ 31  Educational attainment, Doctoral or equivalent, population 25+, total (%) (cumulative) [SE.TER.CUAT.DO.ZS]                                    11 non-null     float64
+ 32  Employers, female (% of female employment) (modeled ILO estimate) [SL.EMP.MPYR.FE.ZS]                                                         11 non-null     float64
+ 33  Employers, male (% of male employment) (modeled ILO estimate) [SL.EMP.MPYR.MA.ZS]                                                             11 non-null     float64
+ 34  Employers, total (% of total employment) (modeled ILO estimate) [SL.EMP.MPYR.ZS]                                                              11 non-null     float64
+ 35  Employment in agriculture (% of total employment) (modeled ILO estimate) [SL.AGR.EMPL.ZS]                                                     11 non-null     float64
+ 36  Employment in agriculture, female (% of female employment) (modeled ILO estimate) [SL.AGR.EMPL.FE.ZS]                                         11 non-null     float64
+ 37  Employment in agriculture, male (% of male employment) (modeled ILO estimate) [SL.AGR.EMPL.MA.ZS]                                             11 non-null     float64
+ 38  Employment in industry (% of total employment) (modeled ILO estimate) [SL.IND.EMPL.ZS]                                                        11 non-null     float64
+ 39  Employment in industry, female (% of female employment) (modeled ILO estimate) [SL.IND.EMPL.FE.ZS]                                            11 non-null     float64
+ 40  Employment in industry, male (% of male employment) (modeled ILO estimate) [SL.IND.EMPL.MA.ZS]                                                11 non-null     float64
+ 41  Employment in services (% of total employment) (modeled ILO estimate) [SL.SRV.EMPL.ZS]                                                        11 non-null     float64
+ 42  Employment in services, female (% of female employment) (modeled ILO estimate) [SL.SRV.EMPL.FE.ZS]                                            11 non-null     float64
+ 43  Employment in services, male (% of male employment) (modeled ILO estimate) [SL.SRV.EMPL.MA.ZS]                                                11 non-null     float64
+ 44  Employment to population ratio, 15+, female (%) (modeled ILO estimate) [SL.EMP.TOTL.SP.FE.ZS]                                                 11 non-null     float64
+ 45  Employment to population ratio, 15+, male (%) (modeled ILO estimate) [SL.EMP.TOTL.SP.MA.ZS]                                                   11 non-null     float64
+ 46  Employment to population ratio, 15+, total (%) (modeled ILO estimate) [SL.EMP.TOTL.SP.ZS]                                                     11 non-null     float64
+ 47  Employment to population ratio, ages 15-24, female (%) (modeled ILO estimate) [SL.EMP.1524.SP.FE.ZS]                                          11 non-null     float64
+ 48  Employment to population ratio, ages 15-24, male (%) (modeled ILO estimate) [SL.EMP.1524.SP.MA.ZS]                                            11 non-null     float64
+ 49  Employment to population ratio, ages 15-24, total (%) (modeled ILO estimate) [SL.EMP.1524.SP.ZS]                                              11 non-null     float64
+ 50  Hospital beds (per 1,000 people) [SH.MED.BEDS.ZS]                                                                                             10 non-null     float64
+ 51  International migrant stock (% of population) [SM.POP.TOTL.ZS]                                                                                1 non-null      float64
+ 52  Net migration [SM.POP.NETM]                                                                                                                   11 non-null     int64  
+ 53  Nurses and midwives (per 1,000 people) [SH.MED.NUMW.P3]                                                                                       10 non-null     float64
+ 54  Part time employment, female (% of total female employment) [SL.TLF.PART.FE.ZS]                                                               11 non-null     float64
+ 55  Part time employment, male (% of total male employment) [SL.TLF.PART.MA.ZS]                                                                   11 non-null     float64
+ 56  Part time employment, total (% of total employment) [SL.TLF.PART.ZS]                                                                          11 non-null     float64
+ 57  Physicians (per 1,000 people) [SH.MED.PHYS.ZS]                                                                                                10 non-null     float64
+ 58  Population growth (annual %) [SP.POP.GROW]                                                                                                    11 non-null     float64
+ 59  Population, female [SP.POP.TOTL.FE.IN]                                                                                                        11 non-null     int64  
+ 60  Population, male [SP.POP.TOTL.MA.IN]                                                                                                          11 non-null     int64  
+ 61  Population, total [SP.POP.TOTL]                                                                                                               11 non-null     int64  
+ 62  Research and development expenditure (% of GDP) [GB.XPD.RSDV.GD.ZS]                                                                           11 non-null     float64
+ 63  Researchers in R&amp;D (per million people) [SP.POP.SCIE.RD.P6]                                                                                   11 non-null     float64
+ 64  Scientific and technical journal articles [IP.JRN.ARTC.SC]                                                                                    11 non-null     float64
+ 65  Self-employed, female (% of female employment) (modeled ILO estimate) [SL.EMP.SELF.FE.ZS]                                                     11 non-null     float64
+ 66  Self-employed, male (% of male employment) (modeled ILO estimate) [SL.EMP.SELF.MA.ZS]                                                         11 non-null     float64
+ 67  Self-employed, total (% of total employment) (modeled ILO estimate) [SL.EMP.SELF.ZS]                                                          11 non-null     float64
+ 68  Share of youth not in education, employment or training, female (% of female youth population) (modeled ILO estimate) [SL.UEM.NEET.FE.ME.ZS]  11 non-null     float64
+ 69  Share of youth not in education, employment or training, male (% of male youth population)  (modeled ILO estimate) [SL.UEM.NEET.MA.ME.ZS]     11 non-null     float64
+ 70  Share of youth not in education, employment or training, total (% of youth population)  (modeled ILO estimate) [SL.UEM.NEET.ME.ZS]            11 non-null     float64
+ 71  Survival to age 65, female (% of cohort) [SP.DYN.TO65.FE.ZS]                                                                                  11 non-null     float64
+ 72  Survival to age 65, male (% of cohort) [SP.DYN.TO65.MA.ZS]                                                                                    11 non-null     float64
+ 73  Unemployment with advanced education, female (% of female labor force with advanced education) [SL.UEM.ADVN.FE.ZS]                            11 non-null     float64
+ 74  Unemployment with advanced education, male (% of male labor force with advanced education) [SL.UEM.ADVN.MA.ZS]                                11 non-null     float64
+ 75  Unemployment with basic education (% of total labor force with basic education) [SL.UEM.BASC.ZS]                                              11 non-null     float64
+ 76  Unemployment with basic education, female (% of female labor force with basic education) [SL.UEM.BASC.FE.ZS]                                  11 non-null     float64
+ 77  Unemployment with basic education, male (% of male labor force with basic education) [SL.UEM.BASC.MA.ZS]                                      11 non-null     float64
+ 78  Unemployment with intermediate education (% of total labor force with intermediate education) [SL.UEM.INTM.ZS]                                11 non-null     float64
+ 79  Unemployment with intermediate education, female (% of female labor force with intermediate education) [SL.UEM.INTM.FE.ZS]                    11 non-null     float64
+ 80  Unemployment with intermediate education, male (% of male labor force with intermediate education) [SL.UEM.INTM.MA.ZS]                        11 non-null     float64
+ 81  Unemployment, female (% of female labor force) (modeled ILO estimate) [SL.UEM.TOTL.FE.ZS]                                                     11 non-null     float64
+ 82  Unemployment, male (% of male labor force) (modeled ILO estimate) [SL.UEM.TOTL.MA.ZS]                                                         11 non-null     float64
+ 83  Unemployment, total (% of total labor force) (modeled ILO estimate) [SL.UEM.TOTL.ZS]                                                          11 non-null     float64
+ 84  Unemployment, youth female (% of female labor force ages 15-24) (modeled ILO estimate) [SL.UEM.1524.FE.ZS]                                    11 non-null     float64
+ 85  Unemployment, youth male (% of male labor force ages 15-24) (modeled ILO estimate) [SL.UEM.1524.MA.ZS]                                        11 non-null     float64
+ 86  Unemployment, youth total (% of total labor force ages 15-24) (modeled ILO estimate) [SL.UEM.1524.ZS]                                         11 non-null     float64
+ 87  Vulnerable employment, female (% of female employment) (modeled ILO estimate) [SL.EMP.VULN.FE.ZS]                                             11 non-null     float64
+ 88  Vulnerable employment, male (% of male employment) (modeled ILO estimate) [SL.EMP.VULN.MA.ZS]                                                 11 non-null     float64
+ 89  Vulnerable employment, total (% of total employment) (modeled ILO estimate) [SL.EMP.VULN.ZS]                                                  11 non-null     float64
+ 90  Wage and salaried workers, female (% of female employment) (modeled ILO estimate) [SL.EMP.WORK.FE.ZS]                                         11 non-null     float64
+ 91  Wage and salaried workers, male (% of male employment) (modeled ILO estimate) [SL.EMP.WORK.MA.ZS]                                             11 non-null     float64
+ 92  Wage and salaried workers, total (% of total employment) (modeled ILO estimate) [SL.EMP.WORK.ZS]                                              11 non-null     float64
+dtypes: float64(87), int64(5), object(1)
+memory usage: 8.1+ KB
+</pre></div>
 </div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Time</th>
+      <th>Time Code</th>
+      <th>Current education expenditure, primary (% of total expenditure in primary public institutions) [SE.XPD.CPRM.ZS]</th>
+      <th>Current education expenditure, secondary (% of total expenditure in secondary public institutions) [SE.XPD.CSEC.ZS]</th>
+      <th>Current education expenditure, tertiary (% of total expenditure in tertiary public institutions) [SE.XPD.CTER.ZS]</th>
+      <th>Current education expenditure, total (% of total expenditure in public institutions) [SE.XPD.CTOT.ZS]</th>
+      <th>Current health expenditure (% of GDP) [SH.XPD.CHEX.GD.ZS]</th>
+      <th>Domestic general government health expenditure (% of GDP) [SH.XPD.GHED.GD.ZS]</th>
+      <th>Educational attainment, at least Bachelor's or equivalent, population 25+, female (%) (cumulative) [SE.TER.CUAT.BA.FE.ZS]</th>
+      <th>Educational attainment, at least Bachelor's or equivalent, population 25+, male (%) (cumulative) [SE.TER.CUAT.BA.MA.ZS]</th>
+      <th>...</th>
+      <th>Unemployment, total (% of total labor force) (modeled ILO estimate) [SL.UEM.TOTL.ZS]</th>
+      <th>Unemployment, youth female (% of female labor force ages 15-24) (modeled ILO estimate) [SL.UEM.1524.FE.ZS]</th>
+      <th>Unemployment, youth male (% of male labor force ages 15-24) (modeled ILO estimate) [SL.UEM.1524.MA.ZS]</th>
+      <th>Unemployment, youth total (% of total labor force ages 15-24) (modeled ILO estimate) [SL.UEM.1524.ZS]</th>
+      <th>Vulnerable employment, female (% of female employment) (modeled ILO estimate) [SL.EMP.VULN.FE.ZS]</th>
+      <th>Vulnerable employment, male (% of male employment) (modeled ILO estimate) [SL.EMP.VULN.MA.ZS]</th>
+      <th>Vulnerable employment, total (% of total employment) (modeled ILO estimate) [SL.EMP.VULN.ZS]</th>
+      <th>Wage and salaried workers, female (% of female employment) (modeled ILO estimate) [SL.EMP.WORK.FE.ZS]</th>
+      <th>Wage and salaried workers, male (% of male employment) (modeled ILO estimate) [SL.EMP.WORK.MA.ZS]</th>
+      <th>Wage and salaried workers, total (% of total employment) (modeled ILO estimate) [SL.EMP.WORK.ZS]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2011</td>
+      <td>YR2011</td>
+      <td>93.548080</td>
+      <td>92.387177</td>
+      <td>96.735512</td>
+      <td>94.218224</td>
+      <td>10.42</td>
+      <td>8.80</td>
+      <td>1.043066</td>
+      <td>1.601204</td>
+      <td>...</td>
+      <td>7.804</td>
+      <td>22.264</td>
+      <td>23.274</td>
+      <td>22.784</td>
+      <td>4.334885</td>
+      <td>9.508193</td>
+      <td>7.060419</td>
+      <td>94.115397</td>
+      <td>85.506837</td>
+      <td>89.580016</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2012</td>
+      <td>YR2012</td>
+      <td>93.414368</td>
+      <td>92.748329</td>
+      <td>96.636200</td>
+      <td>94.350578</td>
+      <td>10.74</td>
+      <td>9.04</td>
+      <td>1.082311</td>
+      <td>1.553720</td>
+      <td>...</td>
+      <td>7.976</td>
+      <td>22.199</td>
+      <td>24.990</td>
+      <td>23.609</td>
+      <td>4.409921</td>
+      <td>9.526058</td>
+      <td>7.092931</td>
+      <td>94.029428</td>
+      <td>85.482927</td>
+      <td>89.547485</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2013</td>
+      <td>YR2013</td>
+      <td>94.069023</td>
+      <td>93.433868</td>
+      <td>96.626732</td>
+      <td>94.933533</td>
+      <td>10.90</td>
+      <td>9.16</td>
+      <td>24.990000</td>
+      <td>19.000000</td>
+      <td>...</td>
+      <td>8.052</td>
+      <td>22.273</td>
+      <td>24.726</td>
+      <td>23.519</td>
+      <td>4.455857</td>
+      <td>9.659157</td>
+      <td>7.184854</td>
+      <td>93.946155</td>
+      <td>85.294918</td>
+      <td>89.408790</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2014</td>
+      <td>YR2014</td>
+      <td>94.294456</td>
+      <td>93.243660</td>
+      <td>96.539963</td>
+      <td>94.891449</td>
+      <td>10.95</td>
+      <td>9.20</td>
+      <td>25.660000</td>
+      <td>19.320000</td>
+      <td>...</td>
+      <td>7.954</td>
+      <td>21.432</td>
+      <td>24.161</td>
+      <td>22.822</td>
+      <td>4.406226</td>
+      <td>9.380237</td>
+      <td>7.011152</td>
+      <td>94.022379</td>
+      <td>85.700021</td>
+      <td>89.663843</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2015</td>
+      <td>YR2015</td>
+      <td>94.451561</td>
+      <td>93.581108</td>
+      <td>96.397507</td>
+      <td>94.913559</td>
+      <td>10.80</td>
+      <td>9.07</td>
+      <td>26.299999</td>
+      <td>19.610001</td>
+      <td>...</td>
+      <td>7.432</td>
+      <td>19.536</td>
+      <td>21.180</td>
+      <td>20.365</td>
+      <td>4.404664</td>
+      <td>9.280488</td>
+      <td>6.954681</td>
+      <td>94.010933</td>
+      <td>85.845618</td>
+      <td>89.740538</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 93 columns</p>
+</div></div></div>
 </div>
-<p>You can also plot the data using static visualizations, such as the <a class="reference external" href="https://seaborn.pydata.org/#">seaborn</a> library.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the Iris dataset using seaborn</span>
-<span class="n">g2</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;species_id&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
-                  <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;species&#39;</span><span class="p">)</span>
-<span class="n">g2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># df_annual_net_earnings = pd.read_csv(&#39;/dataset_sources/estat_earn_nt_net_en.csv&#39;)</span>
+<span class="c1"># df_annual_net_earnings_sweden = df_annual_net_earnings[df_annual_net_earnings[&#39;geo&#39;] == &#39;Sweden&#39;].drop(&#39;geo&#39;, axis=1)</span>
+<span class="c1"># df_annual_net_earnings_sweden.to_csv(&#39;/filtered/Annual_Net_Earnings_Sweden.csv&#39;, index=False)</span>
+<span class="n">df_annual_net_earnings_sweden</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Annual_Net_Earnings_Sweden.csv&#39;</span><span class="p">)</span>
+<span class="n">df_annual_net_earnings_sweden</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="c1"># df_annual_net_earnings_sweden.describe()</span>
+<span class="n">df_annual_net_earnings_sweden</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x7f2845f3b280&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 5742 entries, 0 to 5741
+Data columns (total 10 columns):
+ #   Column       Non-Null Count  Dtype  
+---  ------       --------------  -----  
+ 0   DATAFLOW     5742 non-null   object 
+ 1   LAST UPDATE  5742 non-null   object 
+ 2   freq         5742 non-null   object 
+ 3   currency     5742 non-null   object 
+ 4   estruct      5742 non-null   object 
+ 5   ecase        5742 non-null   object 
+ 6   TIME_PERIOD  5742 non-null   int64  
+ 7   OBS_VALUE    5742 non-null   float64
+ 8   OBS_FLAG     0 non-null      float64
+ 9   CONF_STATUS  0 non-null      float64
+dtypes: float64(3), int64(1), object(6)
+memory usage: 448.7+ KB
 </pre></div>
 </div>
-<img alt="../_images/0137b957bc1921a4d05afb3081fe6532f0465a3609f0b59e8ae612a679be78c4.png" src="../_images/0137b957bc1921a4d05afb3081fe6532f0465a3609f0b59e8ae612a679be78c4.png" />
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>DATAFLOW</th>
+      <th>LAST UPDATE</th>
+      <th>freq</th>
+      <th>currency</th>
+      <th>estruct</th>
+      <th>ecase</th>
+      <th>TIME_PERIOD</th>
+      <th>OBS_VALUE</th>
+      <th>OBS_FLAG</th>
+      <th>CONF_STATUS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ESTAT:EARN_NT_NET(1.0)</td>
+      <td>29/04/25 23:00:00</td>
+      <td>Annual</td>
+      <td>Euro</td>
+      <td>Family allowances</td>
+      <td>One-earner couple with two children earning 10...</td>
+      <td>2000</td>
+      <td>2415.57</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ESTAT:EARN_NT_NET(1.0)</td>
+      <td>29/04/25 23:00:00</td>
+      <td>Annual</td>
+      <td>Euro</td>
+      <td>Family allowances</td>
+      <td>One-earner couple with two children earning 10...</td>
+      <td>2001</td>
+      <td>2463.51</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ESTAT:EARN_NT_NET(1.0)</td>
+      <td>29/04/25 23:00:00</td>
+      <td>Annual</td>
+      <td>Euro</td>
+      <td>Family allowances</td>
+      <td>One-earner couple with two children earning 10...</td>
+      <td>2002</td>
+      <td>2488.78</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ESTAT:EARN_NT_NET(1.0)</td>
+      <td>29/04/25 23:00:00</td>
+      <td>Annual</td>
+      <td>Euro</td>
+      <td>Family allowances</td>
+      <td>One-earner couple with two children earning 10...</td>
+      <td>2003</td>
+      <td>2498.85</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ESTAT:EARN_NT_NET(1.0)</td>
+      <td>29/04/25 23:00:00</td>
+      <td>Annual</td>
+      <td>Euro</td>
+      <td>Family allowances</td>
+      <td>One-earner couple with two children earning 10...</td>
+      <td>2004</td>
+      <td>2498.82</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
-</div>
-</section>
+<section class="tex2jax_ignore mathjax_ignore" id="options-visualisation">
+<h1>Options visualisation<a class="headerlink" href="#options-visualisation" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Multibar chart showing net income through the years for a view categories</p></li>
+<li><p>Distribution income sources donut chart maybe</p></li>
+<li><p>Food Prices per product or per category aka essential (bread) and luxury food</p></li>
+<li><p>Line chart comparing income and food prices
+need more</p></li>
+</ul>
+<p><strong>Gebruik Lecture 4-4 pagina 11</strong> om te kijken wat voor plot het beste past.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -654,7 +1009,7 @@ For more information, check <a class="reference external" href="https://jupyterb
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Jupyter Book Tutorial</p>
+        <p class="prev-next-title">Informatie Visualisatie G1 (24)</p>
       </div>
     </a>
 </div>
@@ -663,22 +1018,6 @@ For more information, check <a class="reference external" href="https://jupyterb
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-data">Plot data</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
