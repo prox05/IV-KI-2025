@@ -100,4 +100,4 @@ De originele dataset bevat netto inkomsten die reflecterend zijn voor verschille
 
 <a name="vis"></a>
 ## Visualisatie
-
+Zie Notebook
