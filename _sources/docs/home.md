@@ -34,7 +34,7 @@ De werkgelegenheid in Zweden is de afgelopen jaren stabiel gebleven en het netto
 **Original**
 <table><tr>
 <td>Name</td><td>Vital Food Costs: A Five-Nation Analysis 2018-2022 </td></tr><tr>
-<td>Source</td><td>[https://www.kaggle.com/datasets/sumangoda/food-prices](https://www.kaggle.com/datasets/sumangoda/food-prices) </td></tr><tr>
+<td>Source</td><td> [https://www.kaggle.com/datasets/sumangoda/food-prices](https://www.kaggle.com/datasets/sumangoda/food-prices) </td></tr><tr>
 <td>Records</td><td>1200 </td></tr><tr>
 <td>Variables</td><td>10 </td></tr></table>
 
@@ -51,7 +51,7 @@ Deze dataset bevat de maandelijkse prijzen van vier essentiële voedingsmiddelen
 **Original**
 <table><tr>
 <td>Name</td><td>WDI: Education, Health & Employment (2011 - 2021) </td></tr><tr>
-<td>Source</td><td>[https://www.kaggle.com/datasets/parsabahramsari/wdi-education-health-and-employment-2011-2021](https://www.kaggle.com/datasets/parsabahramsari/wdi-education-health-and-employment-2011-2021) </td></tr><tr>
+<td>Source</td><td> [https://www.kaggle.com/datasets/parsabahramsari/wdi-education-health-and-employment-2011-2021](https://www.kaggle.com/datasets/parsabahramsari/wdi-education-health-and-employment-2011-2021) </td></tr><tr>
 <td>Records</td><td>209 </td></tr><tr>
 <td>Variables</td><td>95 </td></tr></table>
 
@@ -68,7 +68,7 @@ Deze dataset bevat wereldwijde sociaaleconomische indicatoren zoals onderwijs, g
 **Original**
 <table><tr>
 <td>Name</td><td>Annual net earnings </td></tr><tr>
-<td>Source</td><td>[https://ec.europa.eu/eurostat/databrowser/bookmark/6adafcb6-297e-4d27-b687-9b7c189c264c?lang=en](https://ec.europa.eu/eurostat/databrowser/bookmark/6adafcb6-297e-4d27-b687-9b7c189c264c?lang=en) </td></tr><tr>
+<td>Source</td><td> [https://ec.europa.eu/eurostat/databrowser/bookmark/6adafcb6-297e-4d27-b687-9b7c189c264c?lang=en](https://ec.europa.eu/eurostat/databrowser/bookmark/6adafcb6-297e-4d27-b687-9b7c189c264c?lang=en) </td></tr><tr>
 <td>Records</td><td>193548 </td></tr><tr>
 <td>Variables</td><td>11 </td></tr><tr></table>
 
