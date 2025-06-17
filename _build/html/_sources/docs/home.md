@@ -45,10 +45,10 @@ df_food_prices_sweden_years = df_food_prices_sweden[df_food_prices_sweden['Year 
 ```
 
 <table>
-<th><td></td><td>Sweden</td><td>Sweden 2018 - 2021</td></th>
+<thead><tr><td></td><td>Sweden</td><td>Sweden 2018 - 2021</td></tr></thead><tbody>
 <tr>
 <td>Records</td><td>240</td><td>190 </td></tr><tr>
-<td>Variables</td><td>9 </td><td>9</td></tr></table>
+<td>Variables</td><td>9 </td><td>9</td></tr></tbody></table>
 
 **Description**<br>
 Deze dataset bevat de maandelijkse prijzen van vier essentiële voedingsmiddelen (melk, eieren, brood en aardappelen) in vijf landen (Australië, Japan, Canada, Zuid-Afrika en Zweden) van 2018 tot 2022. Elk record bevat het land, de datum, het artikel, de prijs in lokale valuta, de prijs in dollars, de beschikbaarheid en de kwaliteit van het product. Deze dataset kan helpen bij het beoordelen van de betaalbaarheid van voedsel, de kosten van levensonderhoud en de gevolgen van inflatie. Wij focussen hierbij specifiek op de data van Zweden.
@@ -67,10 +67,10 @@ df_wdi_indicators[df_wdi_indicators['Country Name'] == 'Sweden'].drop('Country N
 df_wdi_indicators_sweden_years = df_wdi_indicators_sweden[df_wdi_indicators_sweden['Time'] >= 2018]
 ```
 <table>
-<th><td></td><td>Sweden</td><td>Sweden 2018 - 2021</td></th>
+<thead><tr><td></td><td>Sweden</td><td>Sweden 2018 - 2021</td></tr></thead><tbody>
 <tr>
 <td>Records </td><td>11</td><td>4</td></tr><tr>
-<td>Variables </td><td>93</td><td>93</td></tr></table>
+<td>Variables </td><td>93</td><td>93</td></tr></tbody></table>
 
 **Description**
 Deze dataset bevat wereldwijde sociaaleconomische indicatoren zoals onderwijs, gezondheid en werkgelegenheid, tussen 2011 en 2021 van 19 geavanceerde economieën. Het biedt statistieken per land per jaar, zoals het werkloosheidspercentage, het gemiddelde inkomen, het opleidingsniveau en gezondheidsindicatoren. Hiermee is het mogelijk om de 19 landen te vergelijken op basis van onderwijs, werkgelegenheid, gezondheidszorg en het geeft demografie om trends en verschillen te identificeren. Wij zullen hierbij focussen op Zweden.
@@ -89,10 +89,10 @@ df_annual_net_earnings_sweden = df_annual_net_earnings[df_annual_net_earnings['g
 df_annual_net_earnings_sweden_years = df_annual_net_earnings_sweden[(df_annual_net_earnings_sweden['TIME_PERIOD'] >= 2018) & (df_annual_net_earnings_sweden['TIME_PERIOD'] <= 2021)]
 ```
 <table>
-<th><td></td><td>Sweden</td><td>Sweden 2018 - 2021</td></th>
+<thead><tr><td></td><td>Sweden</td><td>Sweden 2018 - 2021</td></tr></thead><tbody>
 <tr>
 <td>Records </td><td>5742 </td><td>936</td></tr><tr>
-<td>Variables </td><td>10 </td><td>10</td></tr></table>
+<td>Variables </td><td>10 </td><td>10</td></tr></tbody></table>
 
 **Description**
 Deze dataset is een subset van de Annual net earnings, een subset met alleen Zweden. 
