@@ -1,3 +1,3 @@
-# jupyter-book-template
+# Infovis 2025 G1
 
-This repository hosts the tutorial and template code for building a basic Jupyter Book website.
+This repository now hosts the infovis project group G1 (#24) 2025
