@@ -447,31 +447,13 @@ document.write(`
 <span class="n">df_food_prices_sweden_years</span> <span class="o">=</span> <span class="n">df_food_prices_sweden</span><span class="p">[</span><span class="n">df_food_prices_sweden</span><span class="p">[</span><span class="s1">&#39;Year &#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2021</span><span class="p">]</span>
 <span class="n">df_food_prices_sweden_years</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Food_Prices_Sweden_2018-2021.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">df_food_prices_sweden_years</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Food_Prices_Sweden_2018-2021.csv&#39;</span><span class="p">)</span>
-<span class="n">df_food_prices_sweden_years</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="c1"># df_food_prices_sweden_years.info()</span>
 <span class="c1"># df_food_prices_sweden.describe()</span>
 <span class="n">df_food_prices_sweden_years</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 192 entries, 0 to 191
-Data columns (total 9 columns):
- #   Column               Non-Null Count  Dtype  
----  ------               --------------  -----  
- 0   Year                 192 non-null    int64  
- 1   Month                192 non-null    int64  
- 2   Food Item            192 non-null    object 
- 3   Unit of Measurement  192 non-null    object 
- 4   Average Price        192 non-null    float64
- 5   Currency             192 non-null    object 
- 6   Price in USD         192 non-null    float64
- 7   Availability         192 non-null    int64  
- 8   Quality              192 non-null    object 
-dtypes: float64(2), int64(3), object(4)
-memory usage: 13.6+ KB
-</pre></div>
-</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -575,115 +557,13 @@ memory usage: 13.6+ KB
 <span class="n">df_wdi_indicators_sweden_years</span> <span class="o">=</span> <span class="n">df_wdi_indicators_sweden</span><span class="p">[</span><span class="n">df_wdi_indicators_sweden</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2018</span><span class="p">]</span>
 <span class="n">df_wdi_indicators_sweden_years</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;filtered/WDI_Indicators_Sweden_2018-2021.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">df_wdi_indicators_sweden_years</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/WDI_Indicators_Sweden_2018-2021.csv&#39;</span><span class="p">)</span>
-<span class="n">df_wdi_indicators_sweden_years</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="c1"># df_wdi_indicators_sweden_years.info()</span>
 <span class="c1"># df_wdi_indicators_sweden.describe()</span>
 <span class="n">df_wdi_indicators_sweden_years</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 4 entries, 0 to 3
-Data columns (total 93 columns):
- #   Column                                                                                                                                        Non-Null Count  Dtype  
----  ------                                                                                                                                        --------------  -----  
- 0   Time                                                                                                                                          4 non-null      int64  
- 1   Time Code                                                                                                                                     4 non-null      object 
- 2   Current education expenditure, primary (% of total expenditure in primary public institutions) [SE.XPD.CPRM.ZS]                               4 non-null      float64
- 3   Current education expenditure, secondary (% of total expenditure in secondary public institutions) [SE.XPD.CSEC.ZS]                           4 non-null      float64
- 4   Current education expenditure, tertiary (% of total expenditure in tertiary public institutions) [SE.XPD.CTER.ZS]                             4 non-null      float64
- 5   Current education expenditure, total (% of total expenditure in public institutions) [SE.XPD.CTOT.ZS]                                         4 non-null      float64
- 6   Current health expenditure (% of GDP) [SH.XPD.CHEX.GD.ZS]                                                                                     4 non-null      float64
- 7   Domestic general government health expenditure (% of GDP) [SH.XPD.GHED.GD.ZS]                                                                 4 non-null      float64
- 8   Educational attainment, at least Bachelor&#39;s or equivalent, population 25+, female (%) (cumulative) [SE.TER.CUAT.BA.FE.ZS]                     4 non-null      float64
- 9   Educational attainment, at least Bachelor&#39;s or equivalent, population 25+, male (%) (cumulative) [SE.TER.CUAT.BA.MA.ZS]                       4 non-null      float64
- 10  Educational attainment, at least Bachelor&#39;s or equivalent, population 25+, total (%) (cumulative) [SE.TER.CUAT.BA.ZS]                         4 non-null      float64
- 11  Educational attainment, at least completed lower secondary, population 25+, female (%) (cumulative) [SE.SEC.CUAT.LO.FE.ZS]                    4 non-null      float64
- 12  Educational attainment, at least completed lower secondary, population 25+, male (%) (cumulative) [SE.SEC.CUAT.LO.MA.ZS]                      4 non-null      float64
- 13  Educational attainment, at least completed lower secondary, population 25+, total (%) (cumulative) [SE.SEC.CUAT.LO.ZS]                        4 non-null      float64
- 14  Educational attainment, at least completed post-secondary, population 25+, female (%) (cumulative) [SE.SEC.CUAT.PO.FE.ZS]                     4 non-null      float64
- 15  Educational attainment, at least completed post-secondary, population 25+, male (%) (cumulative) [SE.SEC.CUAT.PO.MA.ZS]                       4 non-null      float64
- 16  Educational attainment, at least completed post-secondary, population 25+, total (%) (cumulative) [SE.SEC.CUAT.PO.ZS]                         4 non-null      float64
- 17  Educational attainment, at least completed primary, population 25+ years, female (%) (cumulative) [SE.PRM.CUAT.FE.ZS]                         4 non-null      float64
- 18  Educational attainment, at least completed primary, population 25+ years, male (%) (cumulative) [SE.PRM.CUAT.MA.ZS]                           4 non-null      float64
- 19  Educational attainment, at least completed primary, population 25+ years, total (%) (cumulative) [SE.PRM.CUAT.ZS]                             4 non-null      float64
- 20  Educational attainment, at least completed short-cycle tertiary, population 25+, female (%) (cumulative) [SE.TER.CUAT.ST.FE.ZS]               4 non-null      float64
- 21  Educational attainment, at least completed short-cycle tertiary, population 25+, male (%) (cumulative) [SE.TER.CUAT.ST.MA.ZS]                 4 non-null      float64
- 22  Educational attainment, at least completed short-cycle tertiary, population 25+, total (%) (cumulative) [SE.TER.CUAT.ST.ZS]                   4 non-null      float64
- 23  Educational attainment, at least completed upper secondary, population 25+, female (%) (cumulative) [SE.SEC.CUAT.UP.FE.ZS]                    4 non-null      float64
- 24  Educational attainment, at least completed upper secondary, population 25+, male (%) (cumulative) [SE.SEC.CUAT.UP.MA.ZS]                      4 non-null      float64
- 25  Educational attainment, at least completed upper secondary, population 25+, total (%) (cumulative) [SE.SEC.CUAT.UP.ZS]                        4 non-null      float64
- 26  Educational attainment, at least Master&#39;s or equivalent, population 25+, female (%) (cumulative) [SE.TER.CUAT.MS.FE.ZS]                       4 non-null      float64
- 27  Educational attainment, at least Master&#39;s or equivalent, population 25+, male (%) (cumulative) [SE.TER.CUAT.MS.MA.ZS]                         4 non-null      float64
- 28  Educational attainment, at least Master&#39;s or equivalent, population 25+, total (%) (cumulative) [SE.TER.CUAT.MS.ZS]                           4 non-null      float64
- 29  Educational attainment, Doctoral or equivalent, population 25+, female (%) (cumulative) [SE.TER.CUAT.DO.FE.ZS]                                4 non-null      float64
- 30  Educational attainment, Doctoral or equivalent, population 25+, male (%) (cumulative) [SE.TER.CUAT.DO.MA.ZS]                                  4 non-null      float64
- 31  Educational attainment, Doctoral or equivalent, population 25+, total (%) (cumulative) [SE.TER.CUAT.DO.ZS]                                    4 non-null      float64
- 32  Employers, female (% of female employment) (modeled ILO estimate) [SL.EMP.MPYR.FE.ZS]                                                         4 non-null      float64
- 33  Employers, male (% of male employment) (modeled ILO estimate) [SL.EMP.MPYR.MA.ZS]                                                             4 non-null      float64
- 34  Employers, total (% of total employment) (modeled ILO estimate) [SL.EMP.MPYR.ZS]                                                              4 non-null      float64
- 35  Employment in agriculture (% of total employment) (modeled ILO estimate) [SL.AGR.EMPL.ZS]                                                     4 non-null      float64
- 36  Employment in agriculture, female (% of female employment) (modeled ILO estimate) [SL.AGR.EMPL.FE.ZS]                                         4 non-null      float64
- 37  Employment in agriculture, male (% of male employment) (modeled ILO estimate) [SL.AGR.EMPL.MA.ZS]                                             4 non-null      float64
- 38  Employment in industry (% of total employment) (modeled ILO estimate) [SL.IND.EMPL.ZS]                                                        4 non-null      float64
- 39  Employment in industry, female (% of female employment) (modeled ILO estimate) [SL.IND.EMPL.FE.ZS]                                            4 non-null      float64
- 40  Employment in industry, male (% of male employment) (modeled ILO estimate) [SL.IND.EMPL.MA.ZS]                                                4 non-null      float64
- 41  Employment in services (% of total employment) (modeled ILO estimate) [SL.SRV.EMPL.ZS]                                                        4 non-null      float64
- 42  Employment in services, female (% of female employment) (modeled ILO estimate) [SL.SRV.EMPL.FE.ZS]                                            4 non-null      float64
- 43  Employment in services, male (% of male employment) (modeled ILO estimate) [SL.SRV.EMPL.MA.ZS]                                                4 non-null      float64
- 44  Employment to population ratio, 15+, female (%) (modeled ILO estimate) [SL.EMP.TOTL.SP.FE.ZS]                                                 4 non-null      float64
- 45  Employment to population ratio, 15+, male (%) (modeled ILO estimate) [SL.EMP.TOTL.SP.MA.ZS]                                                   4 non-null      float64
- 46  Employment to population ratio, 15+, total (%) (modeled ILO estimate) [SL.EMP.TOTL.SP.ZS]                                                     4 non-null      float64
- 47  Employment to population ratio, ages 15-24, female (%) (modeled ILO estimate) [SL.EMP.1524.SP.FE.ZS]                                          4 non-null      float64
- 48  Employment to population ratio, ages 15-24, male (%) (modeled ILO estimate) [SL.EMP.1524.SP.MA.ZS]                                            4 non-null      float64
- 49  Employment to population ratio, ages 15-24, total (%) (modeled ILO estimate) [SL.EMP.1524.SP.ZS]                                              4 non-null      float64
- 50  Hospital beds (per 1,000 people) [SH.MED.BEDS.ZS]                                                                                             3 non-null      float64
- 51  International migrant stock (% of population) [SM.POP.TOTL.ZS]                                                                                0 non-null      float64
- 52  Net migration [SM.POP.NETM]                                                                                                                   4 non-null      int64  
- 53  Nurses and midwives (per 1,000 people) [SH.MED.NUMW.P3]                                                                                       3 non-null      float64
- 54  Part time employment, female (% of total female employment) [SL.TLF.PART.FE.ZS]                                                               4 non-null      float64
- 55  Part time employment, male (% of total male employment) [SL.TLF.PART.MA.ZS]                                                                   4 non-null      float64
- 56  Part time employment, total (% of total employment) [SL.TLF.PART.ZS]                                                                          4 non-null      float64
- 57  Physicians (per 1,000 people) [SH.MED.PHYS.ZS]                                                                                                3 non-null      float64
- 58  Population growth (annual %) [SP.POP.GROW]                                                                                                    4 non-null      float64
- 59  Population, female [SP.POP.TOTL.FE.IN]                                                                                                        4 non-null      int64  
- 60  Population, male [SP.POP.TOTL.MA.IN]                                                                                                          4 non-null      int64  
- 61  Population, total [SP.POP.TOTL]                                                                                                               4 non-null      int64  
- 62  Research and development expenditure (% of GDP) [GB.XPD.RSDV.GD.ZS]                                                                           4 non-null      float64
- 63  Researchers in R&amp;D (per million people) [SP.POP.SCIE.RD.P6]                                                                                   4 non-null      float64
- 64  Scientific and technical journal articles [IP.JRN.ARTC.SC]                                                                                    4 non-null      float64
- 65  Self-employed, female (% of female employment) (modeled ILO estimate) [SL.EMP.SELF.FE.ZS]                                                     4 non-null      float64
- 66  Self-employed, male (% of male employment) (modeled ILO estimate) [SL.EMP.SELF.MA.ZS]                                                         4 non-null      float64
- 67  Self-employed, total (% of total employment) (modeled ILO estimate) [SL.EMP.SELF.ZS]                                                          4 non-null      float64
- 68  Share of youth not in education, employment or training, female (% of female youth population) (modeled ILO estimate) [SL.UEM.NEET.FE.ME.ZS]  4 non-null      float64
- 69  Share of youth not in education, employment or training, male (% of male youth population)  (modeled ILO estimate) [SL.UEM.NEET.MA.ME.ZS]     4 non-null      float64
- 70  Share of youth not in education, employment or training, total (% of youth population)  (modeled ILO estimate) [SL.UEM.NEET.ME.ZS]            4 non-null      float64
- 71  Survival to age 65, female (% of cohort) [SP.DYN.TO65.FE.ZS]                                                                                  4 non-null      float64
- 72  Survival to age 65, male (% of cohort) [SP.DYN.TO65.MA.ZS]                                                                                    4 non-null      float64
- 73  Unemployment with advanced education, female (% of female labor force with advanced education) [SL.UEM.ADVN.FE.ZS]                            4 non-null      float64
- 74  Unemployment with advanced education, male (% of male labor force with advanced education) [SL.UEM.ADVN.MA.ZS]                                4 non-null      float64
- 75  Unemployment with basic education (% of total labor force with basic education) [SL.UEM.BASC.ZS]                                              4 non-null      float64
- 76  Unemployment with basic education, female (% of female labor force with basic education) [SL.UEM.BASC.FE.ZS]                                  4 non-null      float64
- 77  Unemployment with basic education, male (% of male labor force with basic education) [SL.UEM.BASC.MA.ZS]                                      4 non-null      float64
- 78  Unemployment with intermediate education (% of total labor force with intermediate education) [SL.UEM.INTM.ZS]                                4 non-null      float64
- 79  Unemployment with intermediate education, female (% of female labor force with intermediate education) [SL.UEM.INTM.FE.ZS]                    4 non-null      float64
- 80  Unemployment with intermediate education, male (% of male labor force with intermediate education) [SL.UEM.INTM.MA.ZS]                        4 non-null      float64
- 81  Unemployment, female (% of female labor force) (modeled ILO estimate) [SL.UEM.TOTL.FE.ZS]                                                     4 non-null      float64
- 82  Unemployment, male (% of male labor force) (modeled ILO estimate) [SL.UEM.TOTL.MA.ZS]                                                         4 non-null      float64
- 83  Unemployment, total (% of total labor force) (modeled ILO estimate) [SL.UEM.TOTL.ZS]                                                          4 non-null      float64
- 84  Unemployment, youth female (% of female labor force ages 15-24) (modeled ILO estimate) [SL.UEM.1524.FE.ZS]                                    4 non-null      float64
- 85  Unemployment, youth male (% of male labor force ages 15-24) (modeled ILO estimate) [SL.UEM.1524.MA.ZS]                                        4 non-null      float64
- 86  Unemployment, youth total (% of total labor force ages 15-24) (modeled ILO estimate) [SL.UEM.1524.ZS]                                         4 non-null      float64
- 87  Vulnerable employment, female (% of female employment) (modeled ILO estimate) [SL.EMP.VULN.FE.ZS]                                             4 non-null      float64
- 88  Vulnerable employment, male (% of male employment) (modeled ILO estimate) [SL.EMP.VULN.MA.ZS]                                                 4 non-null      float64
- 89  Vulnerable employment, total (% of total employment) (modeled ILO estimate) [SL.EMP.VULN.ZS]                                                  4 non-null      float64
- 90  Wage and salaried workers, female (% of female employment) (modeled ILO estimate) [SL.EMP.WORK.FE.ZS]                                         4 non-null      float64
- 91  Wage and salaried workers, male (% of male employment) (modeled ILO estimate) [SL.EMP.WORK.MA.ZS]                                             4 non-null      float64
- 92  Wage and salaried workers, total (% of total employment) (modeled ILO estimate) [SL.EMP.WORK.ZS]                                              4 non-null      float64
-dtypes: float64(87), int64(5), object(1)
-memory usage: 3.0+ KB
-</pre></div>
-</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -836,32 +716,13 @@ memory usage: 3.0+ KB
 <span class="n">df_annual_net_earnings_sweden_years</span> <span class="o">=</span> <span class="n">df_annual_net_earnings_sweden</span><span class="p">[(</span><span class="n">df_annual_net_earnings_sweden</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2018</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_annual_net_earnings_sweden</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2021</span><span class="p">)]</span>
 <span class="n">df_annual_net_earnings_sweden_years</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Annual_Net_Earnings_Sweden_2018-2021.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">df_annual_net_earnings_sweden_years</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Annual_Net_Earnings_Sweden_2018-2021.csv&#39;</span><span class="p">)</span>
-<span class="n">df_annual_net_earnings_sweden_years</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="c1"># df_annual_net_earnings_sweden_years.info()</span>
 <span class="c1"># df_annual_net_earnings_sweden_years.describe()</span>
 <span class="n">df_annual_net_earnings_sweden_years</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 936 entries, 0 to 935
-Data columns (total 10 columns):
- #   Column       Non-Null Count  Dtype  
----  ------       --------------  -----  
- 0   DATAFLOW     936 non-null    object 
- 1   LAST UPDATE  936 non-null    object 
- 2   freq         936 non-null    object 
- 3   currency     936 non-null    object 
- 4   estruct      936 non-null    object 
- 5   ecase        936 non-null    object 
- 6   TIME_PERIOD  936 non-null    int64  
- 7   OBS_VALUE    936 non-null    float64
- 8   OBS_FLAG     0 non-null      float64
- 9   CONF_STATUS  0 non-null      float64
-dtypes: float64(3), int64(1), object(6)
-memory usage: 73.2+ KB
-</pre></div>
-</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -973,6 +834,222 @@ memory usage: 73.2+ KB
 need more</p></li>
 </ul>
 <p><strong>Gebruik Lecture 4-4 pagina 11</strong> om te kijken wat voor plot het beste past.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">calendar</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+
+<span class="n">income</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Annual_Net_Earnings_Sweden_2018-2021.csv&#39;</span><span class="p">)</span>
+
+<span class="n">income_sweden</span> <span class="o">=</span> <span class="n">income</span><span class="p">[(</span><span class="n">income</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2018</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">income</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2021</span><span class="p">)]</span>
+
+<span class="n">avg_income</span> <span class="o">=</span> <span class="n">income_sweden</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">)[</span><span class="s1">&#39;OBS_VALUE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">avg_income</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;OBS_VALUE&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Gemiddeld Jaarlijks Inkomen Zweden (2018-2021)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Jaar&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Gemiddeld Inkomen (EUR)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b0d0ba6f6897ca877f754784425013ca0bbb7f32ae4344c648da5e51667048a7.png" src="../_images/b0d0ba6f6897ca877f754784425013ca0bbb7f32ae4344c648da5e51667048a7.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+
+<span class="n">income</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Annual_Net_Earnings_Sweden.csv&#39;</span><span class="p">)</span>
+
+
+<span class="n">avg_income</span> <span class="o">=</span> <span class="n">income</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">)[</span><span class="s1">&#39;OBS_VALUE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">avg_income</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;OBS_VALUE&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Gemiddeld Jaarlijks Inkomen Zweden (2000-2025)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Jaar&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Gemiddeld Inkomen (EUR)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/edd9948899410ee7a833e384cafb70da0655f1eb35622fe1a046b5355a34e1f9.png" src="../_images/edd9948899410ee7a833e384cafb70da0655f1eb35622fe1a046b5355a34e1f9.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">food</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Food_Prices_Sweden_2018-2021.csv&#39;</span><span class="p">)</span>
+
+
+<span class="n">food</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">food</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+
+<span class="n">food_sweden</span> <span class="o">=</span> <span class="n">food</span><span class="p">[(</span><span class="n">food</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2018</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">food</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2021</span><span class="p">)]</span>
+
+
+<span class="n">avg_food_price</span> <span class="o">=</span> <span class="n">food_sweden</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)[</span><span class="s1">&#39;Average Price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">avg_income</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">avg_income</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">avg_food_price</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">avg_food_price</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="n">combined</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">avg_income</span><span class="p">,</span> <span class="n">avg_food_price</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Combined shape:&#39;</span><span class="p">,</span> <span class="n">combined</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">combined</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">combined</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">combined</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;OBS_VALUE&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Average Price&#39;</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">combined</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;OBS_VALUE&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Average Price&#39;</span><span class="p">,</span> <span class="n">scatter</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Relatie Gemiddeld Inkomen &amp; Voedselprijs Zweden (2018-2021)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Gemiddeld Inkomen (EUR)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Gemiddelde Voedselprijs&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error: Geen data na merge, controleer je filters en kolomnamen.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Combined shape: (4, 4)
+   TIME_PERIOD      OBS_VALUE  Year  Average Price
+0         2018  121509.519701  2018      16.686042
+1         2019  123120.298761  2019      17.602500
+2         2020  125612.739872  2020      18.601458
+3         2021  129461.803248  2021      19.560417
+</pre></div>
+</div>
+<img alt="../_images/c599f82f2b7a81a9f2357908574a1d08b4cf94c705b99d67cc124608ce5bdd6e.png" src="../_images/c599f82f2b7a81a9f2357908574a1d08b4cf94c705b99d67cc124608ce5bdd6e.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wdi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/WDI_Indicators_Sweden.csv&#39;</span><span class="p">)</span>
+
+
+<span class="n">wdi</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">wdi</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+
+<span class="n">combined</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">avg_income</span><span class="p">,</span> <span class="n">avg_food_price</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+
+
+<span class="n">combined</span><span class="p">[</span><span class="s1">&#39;Koopkracht&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">combined</span><span class="p">[</span><span class="s1">&#39;OBS_VALUE&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">combined</span><span class="p">[</span><span class="s1">&#39;Average Price&#39;</span><span class="p">]</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">combined</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Koopkracht&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Koopkracht Zweden (2018-2021)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Jaar&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Koopkracht index (Gemiddeld Inkomen / Voedselprijs)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/63ccb5ae7aee5dc03713d4713b6c96259bde2b70b9cb7a069a6c4c01cb669477.png" src="../_images/63ccb5ae7aee5dc03713d4713b6c96259bde2b70b9cb7a069a6c4c01cb669477.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Food_Prices_Sweden_2018-2021.csv&#39;</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Price in USD&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Price in USD&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Food Item&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Food Item&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+<span class="n">gekozen_producten</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Bread&#39;</span><span class="p">,</span> <span class="s1">&#39;Potatoes&#39;</span><span class="p">,</span> <span class="s1">&#39;Milk&#39;</span><span class="p">,</span> <span class="s1">&#39;Eggs&#39;</span><span class="p">]</span>
+<span class="n">df_selectie</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Food Item&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">gekozen_producten</span><span class="p">)]</span>
+
+<span class="n">per_product</span> <span class="o">=</span> <span class="n">df_selectie</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Food Item&#39;</span><span class="p">])[</span><span class="s1">&#39;Price in USD&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">gemiddeld</span> <span class="o">=</span> <span class="n">df_selectie</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)[</span><span class="s1">&#39;Price in USD&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">gemiddeld</span><span class="p">[</span><span class="s1">&#39;Food Item&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Gemiddelde prijs&#39;</span>
+
+<span class="n">alles</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">per_product</span><span class="p">,</span> <span class="n">gemiddeld</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">alles</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">alles</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="n">vertaling</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Bread&#39;</span><span class="p">:</span> <span class="s1">&#39;Brood&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Potatoes&#39;</span><span class="p">:</span> <span class="s1">&#39;Aardappelen&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Milk&#39;</span><span class="p">:</span> <span class="s1">&#39;Melk&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Eggs&#39;</span><span class="p">:</span> <span class="s1">&#39;Eieren&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Gemiddelde prijs&#39;</span><span class="p">:</span> <span class="s1">&#39;Gemiddelde prijs&#39;</span>
+<span class="p">}</span>
+<span class="n">alles</span><span class="p">[</span><span class="s1">&#39;Voedselproduct&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">alles</span><span class="p">[</span><span class="s1">&#39;Food Item&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">vertaling</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">alles</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Price in USD&#39;</span><span class="p">,</span> 
+                  <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Voedselproduct&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;Set2&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">2019</span><span class="p">,</span> <span class="mi">2020</span><span class="p">,</span> <span class="mi">2021</span><span class="p">])</span>
+<span class="n">y_min</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">alles</span><span class="p">[</span><span class="s1">&#39;Price in USD&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span>
+<span class="n">y_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">alles</span><span class="p">[</span><span class="s1">&#39;Price in USD&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span>
+<span class="n">yticks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">+</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">yticks</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Gemiddelde voedselprijzen per jaar in Zweden (2018–2021, USD)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Jaar&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Gemiddelde prijs (USD)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Voedselproduct&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/dce6ca2169bdb9374cf010dee5b849ffd8b91cc6fc0baf58db831f80b3e2850e.png" src="../_images/dce6ca2169bdb9374cf010dee5b849ffd8b91cc6fc0baf58db831f80b3e2850e.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filtered/Food_Prices_Sweden_2018-2021.csv&#39;</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">2021</span><span class="p">)]</span>
+
+<span class="n">producten</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Bread&#39;</span><span class="p">,</span> <span class="s1">&#39;Potatoes&#39;</span><span class="p">,</span> <span class="s1">&#39;Milk&#39;</span><span class="p">,</span> <span class="s1">&#39;Eggs&#39;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Food Item&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">producten</span><span class="p">)]</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Price in USD&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Price in USD&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;MonthName&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">calendar</span><span class="o">.</span><span class="n">month_abbr</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)])</span>
+
+<span class="n">gemiddelde_prijs</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;MonthName&#39;</span><span class="p">])[</span><span class="s1">&#39;Price in USD&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">heatmap_data</span> <span class="o">=</span> <span class="n">gemiddelde_prijs</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;MonthName&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Price in USD&#39;</span><span class="p">)</span>
+
+<span class="n">maanden_volgorde</span> <span class="o">=</span> <span class="p">[</span><span class="n">calendar</span><span class="o">.</span><span class="n">month_abbr</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">)]</span>
+<span class="n">heatmap_data</span> <span class="o">=</span> <span class="n">heatmap_data</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">maanden_volgorde</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">heatmap_data</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.2f&quot;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;YlOrRd&#39;</span><span class="p">,</span> <span class="n">cbar_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Gem. prijs (USD)&#39;</span><span class="p">})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Gemiddelde maandelijkse prijs van basisvoedsel in Zweden (2018–2021, USD)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Maand&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Jaar&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/39f41f848dc5be3296e06559e74cbae91a6a1a209509a19a7aab0b30dfe4b334.png" src="../_images/39f41f848dc5be3296e06559e74cbae91a6a1a209509a19a7aab0b30dfe4b334.png" />
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
