@@ -380,24 +380,34 @@ document.write(`
 The sources are:</p>
 <p><strong>Dataset 1:</strong>  <br>
 <em>Original</em>  <br>
-Food Prices.csv (Renamed to Food_Prices.csv from here on out, to avoid problems with the source string.)  <br>
-<a class="reference external" href="https://www.kaggle.com/datasets/sumangoda/food-prices">https://www.kaggle.com/datasets/sumangoda/food-prices</a>  <br>
-df_food_prices  <br>
+Name	Vital Food Costs: A Five-Nation Analysis 2018-2022 <br>
+Source	<a class="reference external" href="https://www.kaggle.com/datasets/sumangoda/food-prices">https://www.kaggle.com/datasets/sumangoda/food-prices</a> <br>
+Records	1200 <br>
+Variables	10 <br>
 <em>Filtered</em>  <br>
-240 entries, 9 columns  <br>
-/filtered/Food_Prices_Sweden.csv  <br>
-<code class="docutils literal notranslate"><span class="pre">df_food_pricees_sweden</span> <span class="pre">=</span> <span class="pre">df_food_prices[df_food_prices['Country</span> <span class="pre">']</span> <span class="pre">==</span> <span class="pre">'Sweden'].drop('Country</span> <span class="pre">',</span> <span class="pre">axis=1)</span></code>  <br>
-df_food_prices_sweden  <br></p>
+/filtered/Food_Prices_Sweden.csv - 240 records; 9 variables <br>
+/filtered/Food_Prices_Sweden_2018-2021.csv - 190 records; 9 variables <br></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_food_pricees_sweden</span> <span class="o">=</span> <span class="n">df_food_prices</span><span class="p">[</span><span class="n">df_food_prices</span><span class="p">[</span><span class="s1">&#39;Country &#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sweden&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Country &#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_food_prices_sweden_years</span> <span class="o">=</span> <span class="n">df_food_prices_sweden</span><span class="p">[</span><span class="n">df_food_prices_sweden</span><span class="p">[</span><span class="s1">&#39;Year &#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2021</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Description</strong><br>
+Deze dataset bevat de maandelijkse prijzen van vier essentiële voedingsmiddelen (melk, eieren, brood en aardappelen) in vijf landen (Australië, Japan, Canada, Zuid-Afrika en Zweden) van 2018 tot 2022. Elk record bevat het land, de datum, het artikel, de prijs in lokale valuta, de prijs in dollars, de beschikbaarheid en de kwaliteit van het product. Deze dataset kan helpen bij het beoordelen van de betaalbaarheid van voedsel, de kosten van levensonderhoud en de gevolgen van inflatie. Wij focussen hierbij specifiek op de data van Zweden.<br></p>
 <p><strong>Dataset 2:</strong>  <br>
 <em>Original</em>  <br>
-WDI_Indicators_MainData.csv  <br>
-<a class="reference external" href="https://www.kaggle.com/datasets/parsabahramsari/wdi-education-health-and-employment-2011-2021">https://www.kaggle.com/datasets/parsabahramsari/wdi-education-health-and-employment-2011-2021</a>  <br>
-df_wdi_indicators  <br>
-<em>Filtered</em>  <br>
-11 entries, 93 columns  <br>
-/filtered/WDI_Indicators_Sweden.csv  <br>
-<code class="docutils literal notranslate"><span class="pre">df_wdi_indicators[df_wdi_indicators['Country</span> <span class="pre">Name']</span> <span class="pre">==</span> <span class="pre">'Sweden'].drop('Country</span> <span class="pre">Name',</span> <span class="pre">axis=1).drop('Country</span> <span class="pre">Code',</span> <span class="pre">axis=1)</span></code>  <br>
-df_wdi_indicators_sweden  <br></p>
+Name 	WDI: Education, Health &amp; Employment (2011 - 2021) <br>
+Source 	<a class="reference external" href="https://www.kaggle.com/datasets/parsabahramsari/wdi-education-health-and-employment-2011-2021">https://www.kaggle.com/datasets/parsabahramsari/wdi-education-health-and-employment-2011-2021</a> <br>
+Records 	209 <br>
+Variables 	95 <br>
+<strong>Filtered</strong> <br>
+/filtered/WDI_Indicators_Sweden.csv - 11 records; 93 variables; <br>
+/filtered/WDI_Indicators_Sweden_2018-2021.csv - 4 records; 93 variables;<br></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_wdi_indicators_sweden</span> <span class="o">=</span> <span class="n">df_wdi_indicators</span><span class="p">[</span><span class="n">df_wdi_indicators</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sweden&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Country Code&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_wdi_indicators_sweden_years</span> <span class="o">=</span> <span class="n">df_wdi_indicators_sweden</span><span class="p">[</span><span class="n">df_wdi_indicators_sweden</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2018</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Description</strong> <br>
+Deze dataset bevat wereldwijde sociaaleconomische indicatoren zoals onderwijs, gezondheid en werkgelegenheid, tussen 2011 en 2021 van 19 geavanceerde economieën. Het biedt statistieken per land per jaar, zoals het werkloosheidspercentage, het gemiddelde inkomen, het opleidingsniveau en gezondheidsindicatoren. Hiermee is het mogelijk om de 19 landen te vergelijken op basis van onderwijs, werkgelegenheid, gezondheidszorg en het geeft demografie om trends en verschillen te identificeren. Wij zullen hierbij focussen op Zweden.<br></p>
 <p><strong>Dataset 3:</strong>  <br>
 <em>Original</em>  <br>
 estat_earn_nt_net_en.csv (Not uploaded to github due to file size) <br>
@@ -405,9 +415,15 @@ estat_earn_nt_net_en.csv (Not uploaded to github due to file size) <br>
 df_annual_net_earnings  <br>
 <em>Filtered</em>  <br>
 5742 entries, 10 columns  <br>
-/filtered/Annual_Net_Earnings_Sweden.csv (Is uploaded to github) <br>
-<code class="docutils literal notranslate"><span class="pre">df_annual_net_earnings_sweden</span> <span class="pre">=</span> <span class="pre">df_annual_net_earnings[df_annual_net_earnings['geo']</span> <span class="pre">==</span> <span class="pre">'Sweden'].drop('geo',</span> <span class="pre">axis=1)</span></code>  <br>
-df_annual_net_earnings_sweden  <br></p>
+/filtered/Annual_Net_Earnings_Sweden.csv - 5742 records; 10 variables; <br>
+/filtered/Annual_Net_Earnings_Sweden_2018-2021.csv - 936 records; 10 variables; <br></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_annual_net_earnings_sweden</span> <span class="o">=</span> <span class="n">df_annual_net_earnings</span><span class="p">[</span><span class="n">df_annual_net_earnings</span><span class="p">[</span><span class="s1">&#39;geo&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sweden&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;geo&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_annual_net_earnings_sweden_years</span> <span class="o">=</span> <span class="n">df_annual_net_earnings_sweden</span><span class="p">[(</span><span class="n">df_annual_net_earnings_sweden</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2018</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_annual_net_earnings_sweden</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2021</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p><strong>Description</strong> <br>
+Deze dataset is een subset van de Annual net earnings, een subset met alleen Zweden.
+De originele dataset bevat netto inkomsten die reflecterend zijn voor verschillende soorten gezinnen in de EU en landen die economisch sterk verbonden zijn met de EU, door de jaren heen (2000 - 2024), per land. Waar het netto inkomen uit is opgebouwd (bruto inkomen / belastingen / financiële ondersteuning van de overheid, etc.) worden benoemd. De data komen van een Model, dat op zichzelf is gebaseerd op data die verschillende landen zelf hebben gedeeld.<br></p>
 </section>
 
     <script type="text/x-thebe-config">
