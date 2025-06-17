@@ -45,7 +45,7 @@ df_food_prices_sweden_years = df_food_prices_sweden[df_food_prices_sweden['Year 
 ```
 
 <table>
-<thead><tr><td></td><td>Sweden</td><td>Sweden 2018 - 2021</td></tr></thead><tbody>
+<thead><tr><td></td><td>Sweden </td><td>Sweden 2018 - 2021 </td></tr></thead><tbody>
 <tr>
 <td>Records</td><td>240</td><td>190 </td></tr><tr>
 <td>Variables</td><td>9 </td><td>9</td></tr></tbody></table>
@@ -67,7 +67,7 @@ df_wdi_indicators[df_wdi_indicators['Country Name'] == 'Sweden'].drop('Country N
 df_wdi_indicators_sweden_years = df_wdi_indicators_sweden[df_wdi_indicators_sweden['Time'] >= 2018]
 ```
 <table>
-<thead><tr><td></td><td>Sweden</td><td>Sweden 2018 - 2021</td></tr></thead><tbody>
+<thead><tr><td></td><td>Sweden </td><td>Sweden 2018 - 2021 </td></tr></thead><tbody>
 <tr>
 <td>Records </td><td>11</td><td>4</td></tr><tr>
 <td>Variables </td><td>93</td><td>93</td></tr></tbody></table>
@@ -89,7 +89,7 @@ df_annual_net_earnings_sweden = df_annual_net_earnings[df_annual_net_earnings['g
 df_annual_net_earnings_sweden_years = df_annual_net_earnings_sweden[(df_annual_net_earnings_sweden['TIME_PERIOD'] >= 2018) & (df_annual_net_earnings_sweden['TIME_PERIOD'] <= 2021)]
 ```
 <table>
-<thead><tr><td></td><td>Sweden</td><td>Sweden 2018 - 2021</td></tr></thead><tbody>
+<thead><tr><td></td><td>Sweden </td><td>Sweden 2018 - 2021 </td></tr></thead><tbody>
 <tr>
 <td>Records </td><td>5742 </td><td>936</td></tr><tr>
 <td>Variables </td><td>10 </td><td>10</td></tr></tbody></table>
