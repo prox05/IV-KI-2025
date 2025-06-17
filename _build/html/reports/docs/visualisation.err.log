@@ -1,0 +1,70 @@
+Traceback (most recent call last):
+  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 154, in wrapped
+    asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 158, in wrapped
+    return loop.run_until_complete(inner)
+  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+df.columns = df.columns.str.strip()
+df_annual_net_earnings.columns = df_annual_net_earnings.columns.str.strip()
+
+
+avg_price_per_year = df.groupby('Year')['Average Price'].mean()
+avg_income_per_year = df_annual_net_earnings.groupby('TIME_PERIOD')['OBS_VALUE'].mean()
+
+
+avg_price_per_year.index = avg_price_per_year.index.astype(int)
+avg_income_per_year.index = avg_income_per_year.index.astype(int)
+
+
+merged_df = pd.DataFrame({
+    'Jaar': avg_price_per_year.index,
+    'Gem_Voedselprijs': avg_price_per_year.values,
+    'Gem_Inkomen': avg_income_per_year.reindex(avg_price_per_year.index).values
+})
+
+
+corr_matrix = merged_df[['Gem_Voedselprijs', 'Gem_Inkomen']].corr()
+
+
+plt.figure(figsize=(4,3))
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', fmt=".2f")
+plt.title('Correlatie tussen Voedselprijzen en Netto Inkomen')
+plt.show()
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[12], line 7[0m
+[1;32m      3[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mplt[39;00m
+[1;32m      6[0m df[38;5;241m.[39mcolumns [38;5;241m=[39m df[38;5;241m.[39mcolumns[38;5;241m.[39mstr[38;5;241m.[39mstrip()
+[0;32m----> 7[0m df_annual_net_earnings[38;5;241m.[39mcolumns [38;5;241m=[39m [43mdf_annual_net_earnings[49m[38;5;241m.[39mcolumns[38;5;241m.[39mstr[38;5;241m.[39mstrip()
+[1;32m     10[0m avg_price_per_year [38;5;241m=[39m df[38;5;241m.[39mgroupby([38;5;124m'[39m[38;5;124mYear[39m[38;5;124m'[39m)[[38;5;124m'[39m[38;5;124mAverage Price[39m[38;5;124m'[39m][38;5;241m.[39mmean()
+[1;32m     11[0m avg_income_per_year [38;5;241m=[39m df_annual_net_earnings[38;5;241m.[39mgroupby([38;5;124m'[39m[38;5;124mTIME_PERIOD[39m[38;5;124m'[39m)[[38;5;124m'[39m[38;5;124mOBS_VALUE[39m[38;5;124m'[39m][38;5;241m.[39mmean()
+
+[0;31mNameError[0m: name 'df_annual_net_earnings' is not defined
+
