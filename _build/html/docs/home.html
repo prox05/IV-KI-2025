@@ -417,73 +417,73 @@ document.write(`
 <li><p><a class="reference internal" href="#dap"><span class="xref myst">Dataset en Preprocessing</span></a></p></li>
 <li><p><a class="reference internal" href="#vis"><span class="xref myst">Visualisatie</span></a></p></li>
 </ul>
+<p><a name="int"></a></p>
 </section>
 <section id="introductie">
 <h2>Introductie<a class="headerlink" href="#introductie" title="Link to this heading">#</a></h2>
-<p><a name="int"></a></p>
 <p><em>Topic description in your own words</em> <br>
 De kosten van leefbaarheid zijn een belangrijk onderwerp in Zweden. Zo is te zien dat de prijs van voedsel in de afgelopen jaren is gestegen. Veel burgers vinden het te duur geworden voor hun inkomen. Tegelijkertijd zien we dat het jaarlijkse netto-inkomen ook is gestegen en dat de werkgelegenheid redelijk stabiel is gebleven. Is deze inkomensstijging genoeg om de kosten van leefbaarheid te betalen? Met de gevonden datasets onderzoeken wij de verschillende perspectieven. <br><br></p>
 <p><em>First Perspective</em> <br>
 De prijzen van het voedsel in Zweden zijn de afgelopen jaren gestegen. Hierdoor zijn er veel huishoudens die het niet meer kunnen betalen om comfortabel te leven. <br><br></p>
 <p><em>Second Perspective</em> <br>
 De werkgelegenheid in Zweden is de afgelopen jaren stabiel gebleven en het nettoloon is zelfs gestegen. Hierdoor zouden de inwoners van Zweden in principe de gestegen kosten van het voedsel moeten kunnen betalen. <br><br></p>
+<p><a name="dap"></a></p>
 </section>
 <section id="dataset-en-preprocessing">
 <h2>Dataset en Preprocessing<a class="headerlink" href="#dataset-en-preprocessing" title="Link to this heading">#</a></h2>
-<p><a name="dap"></a></p>
 <section id="dataset-1">
 <h3>Dataset 1<a class="headerlink" href="#dataset-1" title="Link to this heading">#</a></h3>
-<p><strong>Original</strong>
-| — | — |
-| Name | Vital Food Costs: A Five-Nation Analysis 2018-2022 |
-| Source | <a class="reference external" href="https://www.kaggle.com/datasets/sumangoda/food-prices">https://www.kaggle.com/datasets/sumangoda/food-prices</a> |
-| Records | 1200 |
-| Variables | 10 |</p>
+<p><strong>Original</strong></p>
+<table><tr>
+<td>Name</td><td>Vital Food Costs: A Five-Nation Analysis 2018-2022 </td></tr><tr>
+<td>Source</td><td>[https://www.kaggle.com/datasets/sumangoda/food-prices](https://www.kaggle.com/datasets/sumangoda/food-prices) </td></tr><tr>
+<td>Records</td><td>1200 </td></tr><tr>
+<td>Variables</td><td>10 </td></tr></table>
 <p><strong>Filtered</strong><br>
-Filter (Sweden): <code class="docutils literal notranslate"><span class="pre">df_food_pricees_sweden</span> <span class="pre">=</span> <span class="pre">df_food_prices[df_food_prices['Country</span> <span class="pre">']</span> <span class="pre">==</span> <span class="pre">'Sweden'].drop('Country</span> <span class="pre">',</span> <span class="pre">axis=1)</span></code>
-| — | — |
-| Records | 240 |
-| Variables | 9 |</p>
+Filter (Sweden): <code class="docutils literal notranslate"><span class="pre">df_food_pricees_sweden</span> <span class="pre">=</span> <span class="pre">df_food_prices[df_food_prices['Country</span> <span class="pre">']</span> <span class="pre">==</span> <span class="pre">'Sweden'].drop('Country</span> <span class="pre">',</span> <span class="pre">axis=1)</span></code></p>
+<table><tr>
+<td>Records</td><td>240 </td></tr><tr>
+<td>Variables</td><td>9 </td></tr></table>
 <p><strong>Description</strong><br>
 Deze dataset bevat de maandelijkse prijzen van vier essentiële voedingsmiddelen (melk, eieren, brood en aardappelen) in vijf landen (Australië, Japan, Canada, Zuid-Afrika en Zweden) van 2018 tot 2022. Elk record bevat het land, de datum, het artikel, de prijs in lokale valuta, de prijs in dollars, de beschikbaarheid en de kwaliteit van het product. Deze dataset kan helpen bij het beoordelen van de betaalbaarheid van voedsel, de kosten van levensonderhoud en de gevolgen van inflatie. Wij focussen hierbij specifiek op de data van Zweden.</p>
 </section>
 <section id="dataset-2">
 <h3>Dataset 2<a class="headerlink" href="#dataset-2" title="Link to this heading">#</a></h3>
-<p><strong>Original</strong>
-| — | — |
-| Name | WDI: Education, Health &amp; Employment (2011 - 2021) |
-| Source | <a class="reference external" href="https://www.kaggle.com/datasets/parsabahramsari/wdi-education-health-and-employment-2011-2021">https://www.kaggle.com/datasets/parsabahramsari/wdi-education-health-and-employment-2011-2021</a> |
-| Records | 209 |
-| Variables | 95 |</p>
+<p><strong>Original</strong></p>
+<table><tr>
+<td>Name</td><td>WDI: Education, Health & Employment (2011 - 2021) </td></tr><tr>
+<td>Source</td><td>[https://www.kaggle.com/datasets/parsabahramsari/wdi-education-health-and-employment-2011-2021](https://www.kaggle.com/datasets/parsabahramsari/wdi-education-health-and-employment-2011-2021) </td></tr><tr>
+<td>Records</td><td>209 </td></tr><tr>
+<td>Variables</td><td>95 </td></tr></table>
 <p><strong>Filtered</strong><br>
-Filter (Sweden): <code class="docutils literal notranslate"><span class="pre">df_wdi_indicators[df_wdi_indicators['Country</span> <span class="pre">Name']</span> <span class="pre">==</span> <span class="pre">'Sweden'].drop('Country</span> <span class="pre">Name',</span> <span class="pre">axis=1).drop('Country</span> <span class="pre">Code',</span> <span class="pre">axis=1)</span></code>
-| — | — |
-| Records | 11 |
-| Variables | 93 |</p>
+Filter (Sweden): <code class="docutils literal notranslate"><span class="pre">df_wdi_indicators[df_wdi_indicators['Country</span> <span class="pre">Name']</span> <span class="pre">==</span> <span class="pre">'Sweden'].drop('Country</span> <span class="pre">Name',</span> <span class="pre">axis=1).drop('Country</span> <span class="pre">Code',</span> <span class="pre">axis=1)</span></code></p>
+<table><tr>
+<td>Records</td><td>11 </td></tr><tr>
+<td>Variables</td><td>93 </td></tr></table>
 <p><strong>Description</strong>
 Deze dataset bevat wereldwijde sociaaleconomische indicatoren zoals onderwijs, gezondheid en werkgelegenheid, tussen 2011 en 2021 van 19 geavanceerde economieën. Het biedt statistieken per land per jaar, zoals het werkloosheidspercentage, het gemiddelde inkomen, het opleidingsniveau en gezondheidsindicatoren. Hiermee is het mogelijk om de 19 landen te vergelijken op basis van onderwijs, werkgelegenheid, gezondheidszorg en het geeft demografie om trends en verschillen te identificeren. Wij zullen hierbij focussen op Zweden.</p>
 </section>
 <section id="dataset-3">
 <h3>Dataset 3<a class="headerlink" href="#dataset-3" title="Link to this heading">#</a></h3>
-<p><strong>Original</strong>
-| — | — |
-| Name | Annual net earnings |
-| Source | <a class="reference external" href="https://ec.europa.eu/eurostat/databrowser/bookmark/6adafcb6-297e-4d27-b687-9b7c189c264c?lang=en">https://ec.europa.eu/eurostat/databrowser/bookmark/6adafcb6-297e-4d27-b687-9b7c189c264c?lang=en</a> |
-| Records | 193548 |
-| Variables | 11 |</p>
+<p><strong>Original</strong></p>
+<table><tr>
+<td>Name</td><td>Annual net earnings </td></tr><tr>
+<td>Source</td><td>[https://ec.europa.eu/eurostat/databrowser/bookmark/6adafcb6-297e-4d27-b687-9b7c189c264c?lang=en](https://ec.europa.eu/eurostat/databrowser/bookmark/6adafcb6-297e-4d27-b687-9b7c189c264c?lang=en) </td></tr><tr>
+<td>Records</td><td>193548 </td></tr><tr>
+<td>Variables</td><td>11 </td></tr><tr></table>
 <p><strong>Filtered</strong><br>
-Filter (Sweden): <code class="docutils literal notranslate"><span class="pre">df_annual_net_earnings_sweden</span> <span class="pre">=</span> <span class="pre">df_annual_net_earnings[df_annual_net_earnings['geo']</span> <span class="pre">==</span> <span class="pre">'Sweden'].drop('geo',</span> <span class="pre">axis=1)</span></code>
-| — | — |
-| Records | 5742 |
-| Variables | 10 |</p>
+Filter (Sweden): <code class="docutils literal notranslate"><span class="pre">df_annual_net_earnings_sweden</span> <span class="pre">=</span> <span class="pre">df_annual_net_earnings[df_annual_net_earnings['geo']</span> <span class="pre">==</span> <span class="pre">'Sweden'].drop('geo',</span> <span class="pre">axis=1)</span></code></p>
+<table><tr>
+<td>Records</td><td>5742 </td></tr><tr>
+<td>Variables</td><td>10 </td></tr></table>
 <p><strong>Description</strong>
 Deze dataset is een subset van de Annual net earnings, een subset met alleen Zweden.
 De originele dataset bevat netto inkomsten die reflecterend zijn voor verschillende soorten gezinnen in de EU en landen die economisch sterk verbonden zijn met de EU, door de jaren heen (2000 - 2024), per land. Waar het netto inkomen uit is opgebouwd (bruto inkomen / belastingen / financiële ondersteuning van de overheid, etc.) worden benoemd. De data komen van een Model, dat op zichzelf is gebaseerd op data die verschillende landen zelf hebben gedeeld.</p>
+<p><a name="vis"></a></p>
 </section>
 </section>
 <section id="visualisatie">
 <h2>Visualisatie<a class="headerlink" href="#visualisatie" title="Link to this heading">#</a></h2>
-<p><a name="vis"></a></p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
