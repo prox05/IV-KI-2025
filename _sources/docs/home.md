@@ -63,7 +63,7 @@ Deze dataset bevat de maandelijkse prijzen van vier essentiële voedingsmiddelen
 
 **Filtered**<br>
 ```
-df_wdi_indicators[df_wdi_indicators['Country Name'] == 'Sweden'].drop('Country Name', axis=1).drop('Country Code', axis=1)
+df_wdi_indicators_sweden = df_wdi_indicators[df_wdi_indicators['Country Name'] == 'Sweden'].drop('Country Name', axis=1).drop('Country Code', axis=1)
 df_wdi_indicators_sweden_years = df_wdi_indicators_sweden[df_wdi_indicators_sweden['Time'] >= 2018]
 ```
 <table>
@@ -72,7 +72,7 @@ df_wdi_indicators_sweden_years = df_wdi_indicators_sweden[df_wdi_indicators_swed
 <td>Records </td><td>11</td><td>4</td></tr><tr>
 <td>Variables </td><td>93</td><td>93</td></tr></tbody></table>
 
-**Description**
+**Description** <br>
 Deze dataset bevat wereldwijde sociaaleconomische indicatoren zoals onderwijs, gezondheid en werkgelegenheid, tussen 2011 en 2021 van 19 geavanceerde economieën. Het biedt statistieken per land per jaar, zoals het werkloosheidspercentage, het gemiddelde inkomen, het opleidingsniveau en gezondheidsindicatoren. Hiermee is het mogelijk om de 19 landen te vergelijken op basis van onderwijs, werkgelegenheid, gezondheidszorg en het geeft demografie om trends en verschillen te identificeren. Wij zullen hierbij focussen op Zweden.
 
 ### Dataset 3
@@ -94,9 +94,9 @@ df_annual_net_earnings_sweden_years = df_annual_net_earnings_sweden[(df_annual_n
 <td>Records </td><td>5742 </td><td>936</td></tr><tr>
 <td>Variables </td><td>10 </td><td>10</td></tr></tbody></table>
 
-**Description**
+**Description** <br>
 Deze dataset is een subset van de Annual net earnings, een subset met alleen Zweden. 
-De originele dataset bevat netto inkomsten die reflecterend zijn voor verschillende soorten gezinnen in de EU en landen die economisch sterk verbonden zijn met de EU, door de jaren heen (2000 - 2024), per land. Waar het netto inkomen uit is opgebouwd (bruto inkomen / belastingen / financiële ondersteuning van de overheid, etc.) worden benoemd. De data komen van een Model, dat op zichzelf is gebaseerd op data die verschillende landen zelf hebben gedeeld.
+De originele dataset bevat netto inkomsten die reflecterend zijn voor verschillende soorten gezinnen in de EU en landen die economisch sterk verbonden zijn met de EU, door de jaren heen (2000 - 2024), per land. Waar het netto inkomen uit is opgebouwd (bruto inkomen / belastingen / financiële ondersteuning van de overheid, etc.) worden benoemd. De data komen van een Model, dat op zichzelf is gebaseerd op data die verschillende landen zelf hebben gedeeld.<br>
 
 <a name="vis"></a>
 ## Visualisatie

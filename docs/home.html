@@ -461,7 +461,7 @@ Deze dataset bevat de maandelijkse prijzen van vier essentiële voedingsmiddelen
 <td>Records </td><td>209 </td></tr><tr>
 <td>Variables </td><td>95 </td></tr></table>
 <p><strong>Filtered</strong><br></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_wdi_indicators</span><span class="p">[</span><span class="n">df_wdi_indicators</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sweden&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Country Code&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_wdi_indicators_sweden</span> <span class="o">=</span> <span class="n">df_wdi_indicators</span><span class="p">[</span><span class="n">df_wdi_indicators</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sweden&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Country Code&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">df_wdi_indicators_sweden_years</span> <span class="o">=</span> <span class="n">df_wdi_indicators_sweden</span><span class="p">[</span><span class="n">df_wdi_indicators_sweden</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2018</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -470,7 +470,7 @@ Deze dataset bevat de maandelijkse prijzen van vier essentiële voedingsmiddelen
 <tr>
 <td>Records </td><td>11</td><td>4</td></tr><tr>
 <td>Variables </td><td>93</td><td>93</td></tr></tbody></table>
-<p><strong>Description</strong>
+<p><strong>Description</strong> <br>
 Deze dataset bevat wereldwijde sociaaleconomische indicatoren zoals onderwijs, gezondheid en werkgelegenheid, tussen 2011 en 2021 van 19 geavanceerde economieën. Het biedt statistieken per land per jaar, zoals het werkloosheidspercentage, het gemiddelde inkomen, het opleidingsniveau en gezondheidsindicatoren. Hiermee is het mogelijk om de 19 landen te vergelijken op basis van onderwijs, werkgelegenheid, gezondheidszorg en het geeft demografie om trends en verschillen te identificeren. Wij zullen hierbij focussen op Zweden.</p>
 </section>
 <section id="dataset-3">
@@ -491,9 +491,9 @@ Deze dataset bevat wereldwijde sociaaleconomische indicatoren zoals onderwijs, g
 <tr>
 <td>Records </td><td>5742 </td><td>936</td></tr><tr>
 <td>Variables </td><td>10 </td><td>10</td></tr></tbody></table>
-<p><strong>Description</strong>
+<p><strong>Description</strong> <br>
 Deze dataset is een subset van de Annual net earnings, een subset met alleen Zweden.
-De originele dataset bevat netto inkomsten die reflecterend zijn voor verschillende soorten gezinnen in de EU en landen die economisch sterk verbonden zijn met de EU, door de jaren heen (2000 - 2024), per land. Waar het netto inkomen uit is opgebouwd (bruto inkomen / belastingen / financiële ondersteuning van de overheid, etc.) worden benoemd. De data komen van een Model, dat op zichzelf is gebaseerd op data die verschillende landen zelf hebben gedeeld.</p>
+De originele dataset bevat netto inkomsten die reflecterend zijn voor verschillende soorten gezinnen in de EU en landen die economisch sterk verbonden zijn met de EU, door de jaren heen (2000 - 2024), per land. Waar het netto inkomen uit is opgebouwd (bruto inkomen / belastingen / financiële ondersteuning van de overheid, etc.) worden benoemd. De data komen van een Model, dat op zichzelf is gebaseerd op data die verschillende landen zelf hebben gedeeld.<br></p>
 <p><a name="vis"></a></p>
 </section>
 </section>
