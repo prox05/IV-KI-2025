@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Filtered Data &#8212; G1 (#24)</title>
+    <title>Datasets &#8212; Zweden - Lonen en Inflatie</title>
   
   
   
@@ -57,7 +57,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/filtered/info';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/unused/Datasets-Markdown-Bestand';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -150,7 +150,7 @@
   
   
   
-    <p class="title logo__title">G1 (#24)</p>
+    <p class="title logo__title">Zweden - Lonen en Inflatie</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -253,7 +253,7 @@
       
       
       
-      <li><a href="https://github.com/prox05/IV-KI-2025/issues/new?title=Issue%20on%20page%20%2Fdocs/filtered/info.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/prox05/IV-KI-2025/issues/new?title=Issue%20on%20page%20%2Fdocs/unused/Datasets-Markdown-Bestand.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -283,7 +283,7 @@
       
       
       
-      <li><a href="../../_sources/docs/filtered/info.md" target="_blank"
+      <li><a href="../../_sources/docs/unused/Datasets-Markdown-Bestand.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -354,7 +354,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -365,11 +367,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Filtered Data</h1>
+    <h1>Datasets</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-consumer-price-index">Dataset 1: Consumer Price Index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-wdi-education-health-emplyment">Dataset 2: WDI: Education, Health &amp; Emplyment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-annual-net-earnings">Dataset 3: Annual net earnings</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -379,9 +391,73 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="filtered-data">
-<h1>Filtered Data<a class="headerlink" href="#filtered-data" title="Link to this heading">#</a></h1>
-<p>See dataset_sources/info.md for information about datasets here.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="datasets">
+<h1>Datasets<a class="headerlink" href="#datasets" title="Link to this heading">#</a></h1>
+<section id="dataset-1-consumer-price-index">
+<h2>Dataset 1: Consumer Price Index<a class="headerlink" href="#dataset-1-consumer-price-index" title="Link to this heading">#</a></h2>
+<p>TODO Nieuwe dataset gebruiken <a class="reference external" href="https://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__PR__PR0101__PR0101S/SnabbStatPR0101/table/tableViewLayout1/">https://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__PR__PR0101__PR0101S/SnabbStatPR0101/table/tableViewLayout1/</a> <br>
+<strong>Original</strong></p>
+<table><tr>
+<td>Name</td><td>Vital Food Costs: A Five-Nation Analysis 2018-2022 </td></tr><tr>
+<td>Source</td><td> [https://www.kaggle.com/datasets/sumangoda/food-prices](https://www.kaggle.com/datasets/sumangoda/food-prices) </td></tr><tr>
+<td>Records</td><td>1200 </td></tr><tr>
+<td>Variables</td><td>10 </td></tr></table>
+<p><em>Filtered</em>*<br></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_food_pricees_sweden</span> <span class="o">=</span> <span class="n">df_food_prices</span><span class="p">[</span><span class="n">df_food_prices</span><span class="p">[</span><span class="s1">&#39;Country &#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sweden&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Country &#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_food_prices_sweden_years</span> <span class="o">=</span> <span class="n">df_food_prices_sweden</span><span class="p">[</span><span class="n">df_food_prices_sweden</span><span class="p">[</span><span class="s1">&#39;Year &#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2021</span><span class="p">]</span>
+</pre></div>
+</div>
+<table>
+<thead><tr><td></td><td>Sweden </td><td>Sweden 2018 - 2021 </td></tr></thead><tbody>
+<tr>
+<td>Records</td><td>240</td><td>190 </td></tr><tr>
+<td>Variables</td><td>9 </td><td>9</td></tr></tbody></table>
+<p><strong>Description</strong><br>
+Deze dataset bevat de maandelijkse prijzen van vier essentiële voedingsmiddelen (melk, eieren, brood en aardappelen) in vijf landen (Australië, Japan, Canada, Zuid-Afrika en Zweden) van 2018 tot 2022. Elk record bevat het land, de datum, het artikel, de prijs in lokale valuta, de prijs in dollars, de beschikbaarheid en de kwaliteit van het product. Deze dataset kan helpen bij het beoordelen van de betaalbaarheid van voedsel, de kosten van levensonderhoud en de gevolgen van inflatie. Wij focussen hierbij specifiek op de data van Zweden.</p>
+</section>
+<section id="dataset-2-wdi-education-health-emplyment">
+<h2>Dataset 2: WDI: Education, Health &amp; Emplyment<a class="headerlink" href="#dataset-2-wdi-education-health-emplyment" title="Link to this heading">#</a></h2>
+<p><strong>Original</strong></p>
+<table><tr>
+<td>Name </td><td>WDI: Education, Health & Employment (2011 - 2021) </td></tr><tr>
+<td>Source </td><td> [https://www.kaggle.com/datasets/parsabahramsari/wdi-education-health-and-employment-2011-2021](https://www.kaggle.com/datasets/parsabahramsari/wdi-education-health-and-employment-2011-2021) </td></tr><tr>
+<td>Records </td><td>209 </td></tr><tr>
+<td>Variables </td><td>95 </td></tr></table>
+<p><strong>Filtered</strong><br></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_wdi_indicators_sweden</span> <span class="o">=</span> <span class="n">df_wdi_indicators</span><span class="p">[</span><span class="n">df_wdi_indicators</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sweden&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Country Code&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_wdi_indicators_sweden_years</span> <span class="o">=</span> <span class="n">df_wdi_indicators_sweden</span><span class="p">[</span><span class="n">df_wdi_indicators_sweden</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2018</span><span class="p">]</span>
+</pre></div>
+</div>
+<table>
+<thead><tr><td></td><td>Sweden </td><td>Sweden 2018 - 2021 </td></tr></thead><tbody>
+<tr>
+<td>Records </td><td>11</td><td>4</td></tr><tr>
+<td>Variables </td><td>93</td><td>93</td></tr></tbody></table>
+<p><strong>Description</strong> <br>
+Deze dataset bevat wereldwijde sociaaleconomische indicatoren zoals onderwijs, gezondheid en werkgelegenheid, tussen 2011 en 2021 van 19 geavanceerde economieën. Het biedt statistieken per land per jaar, zoals het werkloosheidspercentage, het gemiddelde inkomen, het opleidingsniveau en gezondheidsindicatoren. Hiermee is het mogelijk om de 19 landen te vergelijken op basis van onderwijs, werkgelegenheid, gezondheidszorg en het geeft demografie om trends en verschillen te identificeren. Wij zullen hierbij focussen op Zweden.</p>
+</section>
+<section id="dataset-3-annual-net-earnings">
+<h2>Dataset 3: Annual net earnings<a class="headerlink" href="#dataset-3-annual-net-earnings" title="Link to this heading">#</a></h2>
+<p><strong>Original</strong></p>
+<table><tr>
+<td>Name </td><td>Annual net earnings </td></tr><tr>
+<td>Source </td><td> [https://ec.europa.eu/eurostat/databrowser/bookmark/6adafcb6-297e-4d27-b687-9b7c189c264c?lang=en](https://ec.europa.eu/eurostat/databrowser/bookmark/6adafcb6-297e-4d27-b687-9b7c189c264c?lang=en) </td></tr><tr>
+<td>Records </td><td>193548 </td></tr><tr>
+<td>Variables </td><td>11 </td></tr><tr></table>
+<p><strong>Filtered</strong><br></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_annual_net_earnings_sweden</span> <span class="o">=</span> <span class="n">df_annual_net_earnings</span><span class="p">[</span><span class="n">df_annual_net_earnings</span><span class="p">[</span><span class="s1">&#39;geo&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sweden&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;geo&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_annual_net_earnings_sweden_years</span> <span class="o">=</span> <span class="n">df_annual_net_earnings_sweden</span><span class="p">[(</span><span class="n">df_annual_net_earnings_sweden</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2018</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_annual_net_earnings_sweden</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2021</span><span class="p">)]</span>
+</pre></div>
+</div>
+<table>
+<thead><tr><td></td><td>Sweden </td><td>Sweden 2018 - 2021 </td></tr></thead><tbody>
+<tr>
+<td>Records </td><td>5742 </td><td>936</td></tr><tr>
+<td>Variables </td><td>10 </td><td>10</td></tr></tbody></table>
+<p><strong>Description</strong> <br>
+Deze dataset is een subset van de Annual net earnings, een subset met alleen Zweden.
+De originele dataset bevat netto inkomsten die reflecterend zijn voor verschillende soorten gezinnen in de EU en landen die economisch sterk verbonden zijn met de EU, door de jaren heen (2000 - 2024), per land. Waar het netto inkomen uit is opgebouwd (bruto inkomen / belastingen / financiële ondersteuning van de overheid, etc.) worden benoemd. De data komen van een Model, dat op zichzelf is gebaseerd op data die verschillende landen zelf hebben gedeeld.<br></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -397,7 +473,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./docs/filtered"
+            path: "./docs/unused"
         },
         predefinedOutput: true
     }
@@ -420,6 +496,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-consumer-price-index">Dataset 1: Consumer Price Index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-wdi-education-health-emplyment">Dataset 2: WDI: Education, Health &amp; Emplyment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-annual-net-earnings">Dataset 3: Annual net earnings</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
