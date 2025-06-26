@@ -28,33 +28,104 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import nbformat
+import plotly.graph_objects as go
 
-# 📌 Juiste pad naar jouw notebook
-path = "path = "/home/sabih/IV-KI-2025/docs/Visualisatie.ipynb"
-"
+# Figuur maken
+fig4 = go.Figure()
 
-# 📥 Open het notebookbestand met de juiste encoding
-with open(path, encoding="utf8") as f:
-    nb = nbformat.read(f, as_version=4)
+for year in sorted(df_income['Year'].unique()):
+    df_year = df_income[df_income['Year'] == year]
+    fig4.add_trace(go.Box(
+        y=df_year['Value'],
+        name=str(year),
+        visible=(year == 2018),
+        boxpoints=False,  # Toon alleen de boxplot, geen individuele punten
+        marker_color='#59A14F',
+        line_color='#2C3E50'
+    ))
 
-# 🏷️ Voeg de tag 'hide-input' toe aan alle codecellen
-for cell in nb['cells']:
-    if cell['cell_type'] == 'code':
-        tags = cell.setdefault('metadata', {}).setdefault('tags', [])
-        if 'hide-input' not in tags:
-            tags.append('hide-input')
+# Jaarkiezer
+buttons = []
+for i, year in enumerate(sorted(df_income['Year'].unique())):
+    visible = [False] * len(df_income['Year'].unique())
+    visible[i] = True
+    buttons.append(
+        dict(label=str(year),
+             method="update",
+             args=[{"visible": visible},
+                   {"title": f"<b>Figuur 4: Inkomensverdeling - {year}</b>"}])
+    )
 
-# 💾 Overschrijf het notebook met de nieuwe metadata
-with open(path, 'w', encoding="utf8") as f:
-    nbformat.write(nb, f)
+fig4.update_layout(
+    title='<b>Inkomensverdeling </b>',
+    yaxis=dict(title='Netto inkomen (€)'),
+    updatemenus=[{
+        "buttons": buttons,
+        "direction": "down",
+        "active": 0,
+        "x": 0.3,
+        "y": 1.15
+    }],
+    height=700,  # Extra hoogte voor betere weergave
+    plot_bgcolor='white',
+    showlegend=False
+)
 
+fig4.show()
 ------------------
 
 
-[0;36m  Cell [0;32mIn[1], line 4[0;36m[0m
-[0;31m    path = "path = "/home/sabih/IV-KI-2025/docs/Visualisatie.ipynb"[0m
-[0m                                                                  ^[0m
-[0;31mSyntaxError[0m[0;31m:[0m unterminated string literal (detected at line 4)
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+File [0;32m~/return/envs/jupyterbook/lib/python3.10/site-packages/pandas/core/indexes/base.py:3805[0m, in [0;36mIndex.get_loc[0;34m(self, key)[0m
+[1;32m   3804[0m [38;5;28;01mtry[39;00m:
+[0;32m-> 3805[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_engine[49m[38;5;241;43m.[39;49m[43mget_loc[49m[43m([49m[43mcasted_key[49m[43m)[49m
+[1;32m   3806[0m [38;5;28;01mexcept[39;00m [38;5;167;01mKeyError[39;00m [38;5;28;01mas[39;00m err:
 
+File [0;32mindex.pyx:167[0m, in [0;36mpandas._libs.index.IndexEngine.get_loc[0;34m()[0m
+
+File [0;32mindex.pyx:196[0m, in [0;36mpandas._libs.index.IndexEngine.get_loc[0;34m()[0m
+
+File [0;32mpandas/_libs/hashtable_class_helper.pxi:7081[0m, in [0;36mpandas._libs.hashtable.PyObjectHashTable.get_item[0;34m()[0m
+
+File [0;32mpandas/_libs/hashtable_class_helper.pxi:7089[0m, in [0;36mpandas._libs.hashtable.PyObjectHashTable.get_item[0;34m()[0m
+
+[0;31mKeyError[0m: 'Year'
+
+The above exception was the direct cause of the following exception:
+
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+Cell [0;32mIn[12], line 6[0m
+[1;32m      3[0m [38;5;66;03m# Figuur maken[39;00m
+[1;32m      4[0m fig4 [38;5;241m=[39m go[38;5;241m.[39mFigure()
+[0;32m----> 6[0m [38;5;28;01mfor[39;00m year [38;5;129;01min[39;00m [38;5;28msorted[39m([43mdf_income[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43mYear[39;49m[38;5;124;43m'[39;49m[43m][49m[38;5;241m.[39munique()):
+[1;32m      7[0m     df_year [38;5;241m=[39m df_income[df_income[[38;5;124m'[39m[38;5;124mYear[39m[38;5;124m'[39m] [38;5;241m==[39m year]
+[1;32m      8[0m     fig4[38;5;241m.[39madd_trace(go[38;5;241m.[39mBox(
+[1;32m      9[0m         y[38;5;241m=[39mdf_year[[38;5;124m'[39m[38;5;124mValue[39m[38;5;124m'[39m],
+[1;32m     10[0m         name[38;5;241m=[39m[38;5;28mstr[39m(year),
+[0;32m   (...)[0m
+[1;32m     14[0m         line_color[38;5;241m=[39m[38;5;124m'[39m[38;5;124m#2C3E50[39m[38;5;124m'[39m
+[1;32m     15[0m     ))
+
+File [0;32m~/return/envs/jupyterbook/lib/python3.10/site-packages/pandas/core/frame.py:4102[0m, in [0;36mDataFrame.__getitem__[0;34m(self, key)[0m
+[1;32m   4100[0m [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mcolumns[38;5;241m.[39mnlevels [38;5;241m>[39m [38;5;241m1[39m:
+[1;32m   4101[0m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_getitem_multilevel(key)
+[0;32m-> 4102[0m indexer [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mcolumns[49m[38;5;241;43m.[39;49m[43mget_loc[49m[43m([49m[43mkey[49m[43m)[49m
+[1;32m   4103[0m [38;5;28;01mif[39;00m is_integer(indexer):
+[1;32m   4104[0m     indexer [38;5;241m=[39m [indexer]
+
+File [0;32m~/return/envs/jupyterbook/lib/python3.10/site-packages/pandas/core/indexes/base.py:3812[0m, in [0;36mIndex.get_loc[0;34m(self, key)[0m
+[1;32m   3807[0m     [38;5;28;01mif[39;00m [38;5;28misinstance[39m(casted_key, [38;5;28mslice[39m) [38;5;129;01mor[39;00m (
+[1;32m   3808[0m         [38;5;28misinstance[39m(casted_key, abc[38;5;241m.[39mIterable)
+[1;32m   3809[0m         [38;5;129;01mand[39;00m [38;5;28many[39m([38;5;28misinstance[39m(x, [38;5;28mslice[39m) [38;5;28;01mfor[39;00m x [38;5;129;01min[39;00m casted_key)
+[1;32m   3810[0m     ):
+[1;32m   3811[0m         [38;5;28;01mraise[39;00m InvalidIndexError(key)
+[0;32m-> 3812[0m     [38;5;28;01mraise[39;00m [38;5;167;01mKeyError[39;00m(key) [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01merr[39;00m
+[1;32m   3813[0m [38;5;28;01mexcept[39;00m [38;5;167;01mTypeError[39;00m:
+[1;32m   3814[0m     [38;5;66;03m# If we have a listlike key, _check_indexing_error will raise[39;00m
+[1;32m   3815[0m     [38;5;66;03m#  InvalidIndexError. Otherwise we fall through and re-raise[39;00m
+[1;32m   3816[0m     [38;5;66;03m#  the TypeError.[39;00m
+[1;32m   3817[0m     [38;5;28mself[39m[38;5;241m.[39m_check_indexing_error(key)
+
+[0;31mKeyError[0m: 'Year'
 
