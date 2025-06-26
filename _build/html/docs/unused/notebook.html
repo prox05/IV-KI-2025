@@ -464,12 +464,19 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">        <script type="text/javascript">
-        window.PlotlyConfig = {MathJaxConfig: 'local'};
-        if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
-        </script>
-        <script type="module">import "https://cdn.plot.ly/plotly-3.0.1.min"</script>
-        </div></div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">11</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">import</span><span class="w"> </span><span class="nn">calendar</span>
+<span class="ne">---&gt; </span><span class="mi">11</span> <span class="kn">from</span><span class="w"> </span><span class="nn">pyaxis</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyaxis</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">from</span><span class="w"> </span><span class="nn">plotly.offline</span><span class="w"> </span><span class="kn">import</span> <span class="n">init_notebook_mode</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">init_notebook_mode</span><span class="p">(</span><span class="n">connected</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pyaxis&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <section id="dataset-1-consumer-price-index">
 <h2>Dataset 1: Consumer Price Index<a class="headerlink" href="#dataset-1-consumer-price-index" title="Link to this heading">#</a></h2>
