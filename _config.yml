@@ -24,8 +24,7 @@ repository:
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
-html:
-  show_input: true  
+html: 
   use_issues_button: true
   use_repository_button: true
   
@@ -45,20 +44,4 @@ sphinx:
       # This is for plotly to work
       - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
  
- parse:
-  myst_enable_extensions:
-    - "colon_fence"
-    - "dollarmath"
-    - "html_admonition"
-    - "html_image"
-    - "substitution"
-    - "tasklist"
-    - "attrs_block"
-    - "attrs_inline"
-  myst_dmath_double_inline: true
-
-sphinx:
-  config:
-    nb_merge_streams: true
-    suppress_warnings: ["myst.domains"]
 
