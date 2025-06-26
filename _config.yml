@@ -1,3 +1,15 @@
+execute:
+  execute_notebooks: "off"
+
+launch_buttons:
+  colab_url: ""
+  binderhub_url: ""
+  thebe: false
+
+html:
+  show_input: false
+
+
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
