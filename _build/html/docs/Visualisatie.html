@@ -421,59 +421,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">nbformat</span>
-
-<span class="c1"># ✅ ENKEL het pad, zonder &#39;path =&#39;</span>
-<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/home/sabih/IV-KI-2025/docs/Visualisatie.ipynb&quot;</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">nb</span> <span class="o">=</span> <span class="n">nbformat</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">as_version</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">nb</span><span class="p">[</span><span class="s1">&#39;cells&#39;</span><span class="p">]:</span>
-    <span class="k">if</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;cell_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;code&#39;</span><span class="p">:</span>
-        <span class="n">tags</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;metadata&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="p">[])</span>
-        <span class="k">if</span> <span class="s1">&#39;remove-input&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span>
-            <span class="n">tags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;remove-input&#39;</span><span class="p">)</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">nbformat</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">nb</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
-</pre></div>
+  <div class="cell tag_remove-input docutils container">
 </div>
-</div>
-</details>
-</div>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># All imports</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">plotly.graph_objs</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">go</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">calendar</span>
-
-<span class="c1"># from pyaxis import pyaxis</span>
-
-<span class="kn">from</span><span class="w"> </span><span class="nn">plotly.offline</span><span class="w"> </span><span class="kn">import</span> <span class="n">init_notebook_mode</span>
-<span class="n">init_notebook_mode</span><span class="p">(</span><span class="n">connected</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">        <script type="text/javascript">
         window.PlotlyConfig = {MathJaxConfig: 'local'};
@@ -484,198 +434,41 @@ document.write(`
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="visualisatie">
 <h1>Visualisatie<a class="headerlink" href="#visualisatie" title="Link to this heading">#</a></h1>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Laad alle datasets</span>
-
-<span class="c1"># df_CPI_processed = pd.read_csv(&#39;processed_data/CPI_2024-2024.csv&#39;)</span>
-<span class="n">df_WDI_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;dataset_sources/WDI_Data.csv&#39;</span><span class="p">)</span>
-<span class="n">df_annual_net_earnings_processed</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;processed_data/Annual_Net_Earnings_Sweden_2014-2024.csv&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
+<div class="cell tag_hide-input tag_remove-input docutils container">
 </div>
 <section id="perspectief-1">
 <h2>Perspectief 1<a class="headerlink" href="#perspectief-1" title="Link to this heading">#</a></h2>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Schrijf en maak visualisaties voor pespectief 1 hier; origineel te vinden in notebook.ipynb</span>
-</pre></div>
+<div class="cell tag_remove-input docutils container">
 </div>
-</div>
-</details>
-</div>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
-
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;processed_data/CPI.csv&quot;</span><span class="p">)</span>
-
-
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">),</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y-%m&#39;</span><span class="p">)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">)</span>
-
-
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;monthly_change&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;DATA&#39;</span><span class="p">]</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;cpi_index&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">100.0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)):</span>
-    <span class="n">prev</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;cpi_index&#39;</span><span class="p">]</span>
-    <span class="n">change</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;monthly_change&#39;</span><span class="p">]</span>
-    <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;cpi_index&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">prev</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">change</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span>
-
-
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
-<span class="n">yearly_cpi</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)[</span><span class="s1">&#39;cpi_index&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-
-
-<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">yearly_cpi</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;cpi_index&#39;</span><span class="p">,</span>
-             <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#004c99&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-
-
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ontwikkeling van voedselprijzen in Zweden (CPI, 2014–2024)&quot;</span><span class="p">,</span>
-          <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Jaar&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;CPI-index (start = 100)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">yearly_cpi</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">])</span>
-
-
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-
-
-<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="mf">0.88</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</details>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="../_images/3554bc692e695046d2db52a4542b797ed341fb66535850295097161e8eb98487.png" src="../_images/3554bc692e695046d2db52a4542b797ed341fb66535850295097161e8eb98487.png" />
 </div>
 </div>
 <p>Deze grafiek toont de ontwikkeling van het CPI(consumer price index) tussen 2014 en 2024 voor Zweden. Voor 2014 is er een start waarde van 100 genomen. Het CPI is duidelijk gestegen in de afgelopen 10 jaar en vooral vanaf 2021. Dat betekend dat de gemiddelde kosten van levensonderhoud zijn toegenomen.</p>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-
-<span class="c1"># Laad de verwerkte datasets</span>
-<span class="n">df_CPI</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;processed_data/CPI.csv&#39;</span><span class="p">)</span>  
-<span class="n">df_income</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;processed_data/Annual_Net_Earnings_Sweden_2014-2024.csv&#39;</span><span class="p">)</span>
-
-<span class="c1"># Verwerk data</span>
-<span class="n">df_CPI</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_CPI</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d</span><span class="si">{4}</span><span class="s1">)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-<span class="n">avg_cpi_per_year</span> <span class="o">=</span> <span class="n">df_CPI</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)[</span><span class="s1">&#39;DATA&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">avg_income_per_year</span> <span class="o">=</span> <span class="n">df_income</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">)[</span><span class="s1">&#39;OBS_VALUE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-
-<span class="c1"># Filter voor 2018-2022</span>
-<span class="n">years_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">2023</span><span class="p">)</span>
-<span class="n">avg_cpi_per_year</span> <span class="o">=</span> <span class="n">avg_cpi_per_year</span><span class="p">[</span><span class="n">avg_cpi_per_year</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">years_range</span><span class="p">)]</span>
-<span class="n">avg_income_per_year</span> <span class="o">=</span> <span class="n">avg_income_per_year</span><span class="p">[</span><span class="n">avg_income_per_year</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">years_range</span><span class="p">)]</span>
-
-<span class="c1"># Maak de visualisatie</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
-
-<span class="c1"># CPI (rode lijn)</span>
-<span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
-<span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#e41a1c&#39;</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Verwijder x-as label</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;CONSUMENTENPRIJSINDEX (%)&#39;</span><span class="p">,</span> 
-              <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">linespacing</span><span class="o">=</span><span class="mf">1.8</span><span class="p">)</span>
-<span class="n">price_line</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">avg_cpi_per_year</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">avg_cpi_per_year</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> 
-                     <span class="s1">&#39;o-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
-                     <span class="n">markeredgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">markeredgewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> 
-                     <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Consumentenprijsindex&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="c1"># Grotere tick labels</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelcolor</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">years_range</span><span class="p">))</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-
-<span class="c1"># Netto inkomen (blauwe lijn)</span>
-<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
-<span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#377eb8&#39;</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Gemiddel Netto Inkomen (SEK)&#39;</span><span class="p">,</span> 
-              <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">linespacing</span><span class="o">=</span><span class="mf">1.8</span><span class="p">)</span>
-<span class="n">income_line</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">avg_income_per_year</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">avg_income_per_year</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> 
-                      <span class="s1">&#39;s-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
-                      <span class="n">markeredgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">markeredgewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> 
-                      <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Netto Inkomen&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelcolor</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-
-<span class="c1"># Titel</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;ONTWIKKELING PRIJZEN EN INKOMEN IN ZWEDEN (2018-2022)&#39;</span><span class="p">,</span> 
-          <span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
-
-<span class="c1"># Legenda</span>
-<span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">price_line</span><span class="p">,</span> <span class="n">income_line</span><span class="p">]</span>
-<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">get_label</span><span class="p">()</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> 
-           <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.98</span><span class="p">),</span> <span class="n">framealpha</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="c1"># Grid en layout</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-
-<span class="c1"># Voeg JAAR label toe onder de x-as</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figtext</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="s1">&#39;Jaren(2018-2022)&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</details>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="../_images/05686bccb8557dd6b0dcc97173d07f828b8ab0796a5cd5d580769324c4744392.png" src="../_images/05686bccb8557dd6b0dcc97173d07f828b8ab0796a5cd5d580769324c4744392.png" />
 </div>
 </div>
-<p>De rode lijn toont de maandelijkse procentuele verandering in voedselprijzen (CPI)
-De blauwe lijn toont het gemiddelde netto inkomen in SEK
-Positieve CPI waarden duiden op prijsstijgingen, negatieve op dalingen
-Data bronnen: Statistics Sweden en Eurostat</p>
+<p>Deze grafiek toont de ontwikkeling van de consumentenprijsindex (CPI) en het gemiddelde netto inkomen in Zweden tussen 2018 en 2022. Gedurende de eerste jaren in deze periode – van 2018 tot en met 2021 – stegen zowel de consumentenprijzen (CPI) als het gemiddelde netto inkomen geleidelijk. Deze parallelle ontwikkeling suggereert dat de koopkracht van huishoudens in deze jaren min of meer stabiel bleef: prijzen stegen, maar de inkomens gingen in gelijke tred mee omhoog.</p>
+<p>Een duidelijke kentering vond echter plaats in 2022. De CPI schoot dat jaar fors omhoog, wat wijst op een periode van sterke inflatie. Deze prijsstijging was uitzonderlijk scherp in vergelijking met voorgaande jaren. Daartegenover bleef de stijging van het netto inkomen relatief gematigd, zonder dezelfde sprong te maken. Hierdoor ontstond een kloof tussen de prijsontwikkeling en de inkomensgroei.</p>
+<p>Het gevolg hiervan is dat de reële koopkracht – dus wat mensen daadwerkelijk kunnen kopen met hun inkomen – in 2022 onder druk kwam te staan. Hoewel mensen misschien iets meer gingen verdienen, stegen de kosten van levensonderhoud in een veel hoger tempo.</p>
+<p>Kortom, de grafiek maakt duidelijk dat Zweden in 2022 te maken kreeg met een inflatieschok die niet gecompenseerd werd door een gelijke inkomensgroei, wat wijst op een verslechtering van de financiële positie van veel huishoudens in dat jaar.</p>
 </section>
 <section id="perspectief-2">
 <h2>Perspectief 2<a class="headerlink" href="#perspectief-2" title="Link to this heading">#</a></h2>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Schrijf en maak visualisaties voor pespectief 1 hier; origineel te vinden in notebook.ipynb</span>
-</pre></div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/8bf1f21fc105924c4b9c22b30777c536b1a352d2de4c229f0c588c1c5c13fb34.png" src="../_images/8bf1f21fc105924c4b9c22b30777c536b1a352d2de4c229f0c588c1c5c13fb34.png" />
 </div>
 </div>
-</details>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/a1f584513316da21aeae5f2d9ee9d2ecd3acf609c5859ba473427409b10a11ef.png" src="../_images/a1f584513316da21aeae5f2d9ee9d2ecd3acf609c5859ba473427409b10a11ef.png" />
+</div>
 </div>
 </section>
 </section>
