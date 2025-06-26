@@ -1,3 +1,5 @@
+
+
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
@@ -23,8 +25,10 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
+  show_input: false  
   use_issues_button: true
   use_repository_button: true
+  
 
 # Add launch buttons
 launch_buttons:
