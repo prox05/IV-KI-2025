@@ -1,7 +1,7 @@
 # Perspectieven
 
-## Perspectief 1
-De prijzen van het voedsel in Zweden zijn de afgelopen jaren gestegen. Hierdoor zijn er veel huishoudens die het niet meer kunnen betalen om comfortabel te leven.
+## Perspectief 1: Kwetsbare huishoudens en voedselprijzen
+De prijs van voedsel in Zweden is sinds 2020 aanzienlijk gestegen, onder andere als gevolg van wereldwijde marktverstoringen door COVID-19. Volgens onderzoek (Akter, 2020 en Dietrich et al., 2021) zorgden pandemiegerelateerde maatregelen voor extra prijsdruk op basisproducten. Voor huishoudens met lage of instabiele inkomens zijn deze prijsstijgingen niet opgevangen door evenredige inkomensgroei. Hierdoor dreigt een deel van de bevolking in de knel te komen, wat vragen oproept over de betaalbaarheid van de dagelijkse levensbehoeften in Zweden (Holmberg, 2024).
 
-## Perspectief 2
-De werkgelegenheid in Zweden is de afgelopen jaren stabiel gebleven en het nettoloon is zelfs gestegen. Hierdoor zouden de inwoners van Zweden in principe de gestegen kosten van het voedsel moeten kunnen betalen.
+## Perspectief 2: Inkomensgroei en economische stabiliteit
+Aan de andere kant wijzen statistieken van Eurostat (2024) en de World Bank (2024) uit dat het gemiddelde netto-inkomen in Zweden de afgelopen jaren is gestegen. De werkgelegenheid is bovendien relatief stabiel gebleven, zelfs tijdens de pandemie. Dit zou kunnen betekenen dat de gemiddelde consument wel degelijk in staat is om hogere voedselprijzen te betalen. Echter, zoals Holmberg (2024) en Crawley en Theloudis (2024) aantonen, is die koopkracht ongelijk verdeeld en hebben huishoudens zonder financiële buffers moeite om stijgende prijzen op te vangen. In dit perspectief gaat het dan ook om verdeling, niet om het totaalplaatje.
