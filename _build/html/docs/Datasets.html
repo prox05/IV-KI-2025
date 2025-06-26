@@ -439,47 +439,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="datasets-en-preprocessing">
 <h1>Datasets en Preprocessing<a class="headerlink" href="#datasets-en-preprocessing" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">nbformat</span>
-
-<span class="c1"># ✅ ENKEL het pad, zonder &#39;path =&#39;</span>
-<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/home/sabih/IV-KI-2025/docs/Visualisatie.ipynb&quot;</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">nb</span> <span class="o">=</span> <span class="n">nbformat</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">as_version</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">nb</span><span class="p">[</span><span class="s1">&#39;cells&#39;</span><span class="p">]:</span>
-    <span class="k">if</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;cell_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;code&#39;</span><span class="p">:</span>
-        <span class="n">tags</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;metadata&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="p">[])</span>
-        <span class="k">if</span> <span class="s1">&#39;remove-input&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span>
-            <span class="n">tags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;remove-input&#39;</span><span class="p">)</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">nbformat</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">nb</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># All imports</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">plotly.graph_objs</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">go</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">calendar</span>
-
-<span class="c1"># from pyaxis import pyaxis</span>
-
-<span class="kn">from</span><span class="w"> </span><span class="nn">plotly.offline</span><span class="w"> </span><span class="kn">import</span> <span class="n">init_notebook_mode</span>
-<span class="n">init_notebook_mode</span><span class="p">(</span><span class="n">connected</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">        <script type="text/javascript">
         window.PlotlyConfig = {MathJaxConfig: 'local'};
@@ -490,22 +450,7 @@ document.write(`
 </div>
 <section id="dataset-1-consumer-price-index">
 <h2>Dataset 1: Consumer Price Index<a class="headerlink" href="#dataset-1-consumer-price-index" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load source dataset 1</span>
-
-<span class="c1"># CPI_url = &quot;dataset_sources/CPI.px&quot;</span>
-<span class="c1"># CPI_decoded = pyaxis.parse(uri = CPI_url , encoding = &#39;ISO-8859-2&#39;)</span>
-<span class="c1"># df_CPI = CPI_decoded[&quot;DATA&quot;]</span>
-<span class="c1"># df_CPI.to_csv(&#39;processed_data/CPI.csv&#39;, index=False)</span>
-
-<span class="c1"># Load converted source dataset 1</span>
-<span class="n">df_CPI</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;processed_data/CPI.csv&#39;</span><span class="p">)</span>
-<span class="c1"># df_CPI.info()</span>
-<span class="c1"># df_CPI.head(n=5)</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 </div>
 <section id="source">
 <h3>Source<a class="headerlink" href="#source" title="Link to this heading">#</a></h3>
@@ -539,25 +484,9 @@ document.write(`
 </section>
 <section id="processing">
 <h3>Processing<a class="headerlink" href="#processing" title="Link to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code processig en filterig hier</span>
-<span class="c1"># TODO, Uncomment de de code hieronder, en zet de code er in; uncomment ook de load in Visualisatie.ipynb</span>
-
-<span class="c1"># df_CPI_processed = </span>
-<span class="c1"># df_CPI_processed.to_csv(&#39;processed_data/CPI_2014-2024.csv&#39;, index=False)</span>
-</pre></div>
+<div class="cell tag_remove-input docutils container">
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Laad processed data</span>
-
-<span class="c1"># df_CPI_processed = pd.read_csv(&#39;processed_data/CPI_2024-2024.csv&#39;)</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 </div>
 <p>TODO beschrijf processing</p>
 <table>
@@ -611,14 +540,7 @@ document.write(`
 </section>
 <section id="dataset-2-world-development-indicators">
 <h2>Dataset 2: World Development Indicators<a class="headerlink" href="#dataset-2-world-development-indicators" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Laad source dataset 2</span>
-
-<span class="n">df_WDI_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;dataset_sources/WDI_Data.csv&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 </div>
 <section id="id1">
 <h3>Source<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
@@ -653,29 +575,9 @@ document.write(`
 </section>
 <section id="id3">
 <h3>Processing<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code processig en filterig hier</span>
-<span class="n">df_temp</span> <span class="o">=</span> <span class="n">df_WDI_all</span>
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1975</span><span class="p">,</span> <span class="mi">2014</span><span class="p">):</span>
-    <span class="n">st</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; [YR&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;]&#39;</span>
-    <span class="n">df_temp</span> <span class="o">=</span> <span class="n">df_temp</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">st</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">df_WDI_processed</span> <span class="o">=</span> <span class="n">df_temp</span>
-<span class="n">df_WDI_processed</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;processed_data/WDI_2014-2024.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
+<div class="cell tag_remove-input docutils container">
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Laad processed data</span>
-
-<span class="n">df_WDI_processed</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;processed_data/WDI_2014-2024.csv&#39;</span><span class="p">)</span>
-<span class="c1"># df_WDI_processed.info()</span>
-<span class="c1"># df_WDI_processed.head(n-5)</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 </div>
 <p>TODO beschrijf processing</p>
 <table>
@@ -729,14 +631,7 @@ document.write(`
 </section>
 <section id="dataset-3-annual-net-earnings">
 <h2>Dataset 3: Annual net earnings<a class="headerlink" href="#dataset-3-annual-net-earnings" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Laad source dataset 3</span>
-
-<span class="n">df_annual_net_earnings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;dataset_sources/estat_earn_nt_net_en.csv&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 </div>
 <section id="id4">
 <h3>Source<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
@@ -770,26 +665,9 @@ document.write(`
 </section>
 <section id="id6">
 <h3>Processing<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code processing en sla op</span>
-
-<span class="n">df_annual_net_earnings_processed</span> <span class="o">=</span> <span class="n">df_annual_net_earnings</span><span class="p">[((</span><span class="n">df_annual_net_earnings</span><span class="p">[</span><span class="s1">&#39;geo&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sweden&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_annual_net_earnings</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2014</span><span class="p">))]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;geo&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">df_annual_net_earnings_processed</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;processed_data/Annual_Net_Earnings_Sweden_2014-2024.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
+<div class="cell tag_remove-input docutils container">
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Laad processed data</span>
-
-<span class="n">df_annual_net_earnings_processed</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;processed_data/Annual_Net_Earnings_Sweden_2014-2024.csv&#39;</span><span class="p">)</span>
-<span class="c1"># df_annual_net_earnings_processed.info()</span>
-<span class="c1"># df_annual_net_earnings_processed.head(n=5)</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 </div>
 <table>
     <thead>
