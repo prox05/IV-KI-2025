@@ -28,16 +28,33 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-De rode lijn toont de maandelijkse procentuele verandering in voedselprijzen (CPI)
-De blauwe lijn toont het gemiddelde netto inkomen in SEK
-Positieve CPI waarden duiden op prijsstijgingen, negatieve op dalingen
-Data bronnen: Statistics Sweden en Eurostat
+import nbformat
+
+# 📌 Juiste pad naar jouw notebook
+path = "path = "/home/sabih/IV-KI-2025/docs/Visualisatie.ipynb"
+"
+
+# 📥 Open het notebookbestand met de juiste encoding
+with open(path, encoding="utf8") as f:
+    nb = nbformat.read(f, as_version=4)
+
+# 🏷️ Voeg de tag 'hide-input' toe aan alle codecellen
+for cell in nb['cells']:
+    if cell['cell_type'] == 'code':
+        tags = cell.setdefault('metadata', {}).setdefault('tags', [])
+        if 'hide-input' not in tags:
+            tags.append('hide-input')
+
+# 💾 Overschrijf het notebook met de nieuwe metadata
+with open(path, 'w', encoding="utf8") as f:
+    nbformat.write(nb, f)
+
 ------------------
 
 
-[0;36m  Cell [0;32mIn[6], line 1[0;36m[0m
-[0;31m    De rode lijn toont de maandelijkse procentuele verandering in voedselprijzen (CPI)[0m
-[0m       ^[0m
-[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+[0;36m  Cell [0;32mIn[1], line 4[0;36m[0m
+[0;31m    path = "path = "/home/sabih/IV-KI-2025/docs/Visualisatie.ipynb"[0m
+[0m                                                                  ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m unterminated string literal (detected at line 4)
 
 

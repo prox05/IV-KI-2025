@@ -421,9 +421,52 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="visualisatie">
-<h1>Visualisatie<a class="headerlink" href="#visualisatie" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
+  <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">nbformat</span>
+
+<span class="c1"># 📌 Juiste pad naar jouw notebook</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;path = &quot;</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">sabih</span><span class="o">/</span><span class="n">IV</span><span class="o">-</span><span class="n">KI</span><span class="o">-</span><span class="mi">2025</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">Visualisatie</span><span class="o">.</span><span class="n">ipynb</span><span class="s2">&quot;</span>
+<span class="s2">&quot;</span>
+
+<span class="c1"># 📥 Open het notebookbestand met de juiste encoding</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">nb</span> <span class="o">=</span> <span class="n">nbformat</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">as_version</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># 🏷️ Voeg de tag &#39;hide-input&#39; toe aan alle codecellen</span>
+<span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">nb</span><span class="p">[</span><span class="s1">&#39;cells&#39;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;cell_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;code&#39;</span><span class="p">:</span>
+        <span class="n">tags</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;metadata&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="k">if</span> <span class="s1">&#39;hide-input&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span>
+            <span class="n">tags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;hide-input&#39;</span><span class="p">)</span>
+
+<span class="c1"># 💾 Overschrijf het notebook met de nieuwe metadata</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">nbformat</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">nb</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;path = &quot;</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">sabih</span><span class="o">/</span><span class="n">IV</span><span class="o">-</span><span class="n">KI</span><span class="o">-</span><span class="mi">2025</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">Visualisatie</span><span class="o">.</span><span class="n">ipynb</span><span class="s2">&quot;</span>
+                                                                  <span class="o">^</span>
+<span class="ne">SyntaxError</span>: unterminated string literal (detected at line 4)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># All imports</span>
 
@@ -442,6 +485,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html">        <script type="text/javascript">
         window.PlotlyConfig = {MathJaxConfig: 'local'};
@@ -450,7 +494,14 @@ document.write(`
         <script type="module">import "https://cdn.plot.ly/plotly-3.0.1.min"</script>
         </div></div>
 </div>
-<div class="cell docutils container">
+<section class="tex2jax_ignore mathjax_ignore" id="visualisatie">
+<h1>Visualisatie<a class="headerlink" href="#visualisatie" title="Link to this heading">#</a></h1>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Laad alle datasets</span>
 
@@ -460,17 +511,29 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <section id="perspectief-1">
 <h2>Perspectief 1<a class="headerlink" href="#perspectief-1" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Schrijf en maak visualisaties voor pespectief 1 hier; origineel te vinden in notebook.ipynb</span>
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
@@ -520,12 +583,18 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="../_images/3554bc692e695046d2db52a4542b797ed341fb66535850295097161e8eb98487.png" src="../_images/3554bc692e695046d2db52a4542b797ed341fb66535850295097161e8eb98487.png" />
 </div>
 </div>
 <p>Deze grafiek toont de ontwikkeling van het CPI(consumer price index) tussen 2014 en 2024 voor Zweden. Voor 2014 is er een start waarde van 100 genomen. Het CPI is duidelijk gestegen in de afgelopen 10 jaar en vooral vanaf 2021. Dat betekend dat de gemiddelde kosten van levensonderhoud zijn toegenomen.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
@@ -595,6 +664,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="../_images/05686bccb8557dd6b0dcc97173d07f828b8ab0796a5cd5d580769324c4744392.png" src="../_images/05686bccb8557dd6b0dcc97173d07f828b8ab0796a5cd5d580769324c4744392.png" />
 </div>
@@ -606,12 +676,18 @@ Data bronnen: Statistics Sweden en Eurostat</p>
 </section>
 <section id="perspectief-2">
 <h2>Perspectief 2<a class="headerlink" href="#perspectief-2" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Schrijf en maak visualisaties voor pespectief 1 hier; origineel te vinden in notebook.ipynb</span>
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 </section>
 </section>
