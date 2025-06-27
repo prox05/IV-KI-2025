@@ -8,5 +8,3 @@ Wij hebben hierna alle feedback verzameld en zo een nieuwe taakverdeling opgezet
 
 ## Verwerking
 Als eerst hebben we de rubric goed doorgelezen zodat wij wisten waar wij heen moesten werken. Daarna hebben wij onze perspectieven dus aangepast door de COVID pandemie te betrekken. Hierbij hebben wij ook bronnen gezocht om deze perspectieven te ondersteunen. Bij het veranderen van onze visualisaties hebben wij gelet op kleurgebruik, hoeveelheid tekst en hoe het er overal uit ziet. Zo hebben wij bijvoorbeeld geen standaard kleuren gebruikt en ervoor gezorgd dat de tekst op een goede afstand stond. Ook zijn de halve jaren weggehaald vervangen door kwartalen als dat nodig was.
-
-## ...
