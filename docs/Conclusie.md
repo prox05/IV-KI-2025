@@ -7,5 +7,5 @@ Perspectief 2, stelt dat inkomensgroei en economische stabiliteit voldoende zijn
 
 Daarom concluderen wij dat de macro-economische stabiliteit van Zweden niet voor iedereen gelijk doorwerkt. Kwetsbare groepen, zoals alleenstaande ouders, migrantenhuishoudens of mensen met tijdelijke contracten, worden onevenredig hard geraakt door inflatie. Beleidsmatig is het dus essentieel om verder te kijken dan gemiddelden, en oog te hebben voor verdelingseffecten binnen de samenleving.
 
-### Beperkingen
+### Beperking en Vervolgonderzoek
 Een beperking van dit onderzoek is dat de datasets niet alle relevante variabelen bevatten, zoals regionale verschillen binnen Zweden of gedetailleerde uitgavenpatronen van huishoudens. Vervolgonderzoek zou kunnen kijken naar hoe specifieke beleidsmaatregelen de koopkracht van kwetsbare groepen beïnvloeden.
