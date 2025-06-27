@@ -26,7 +26,7 @@ https://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__PR__PR0101__PR0101S/Sn
 
 ### Dataset 2: World Development Indicators
 
-table>
+<table>
 <tr>
 <td>
 Name
