@@ -3,7 +3,7 @@ from dash import dcc, html, Input, State, Output
 import plotly.graph_objects as go
 import pandas as pd
 
-df_earnings = pd.read_csv('processed_data/Annual_Net_Earnings_Sweden_2014-2024.csv')
+df_earnings = pd.read_csv('docs/processed_data/Annual_Net_Earnings_Sweden_2014-2024.csv')
 df_earnings = df_earnings[df_earnings['currency'] == 'National currency']
 
 labels = {'One-earner couple with two children earning 100% of the average earning': '👱(💶)👱(-) 🧒🧒 Gezin 2 ouders, 2 kinderen, 1 ouder heeft gemiddeld inkomen',
