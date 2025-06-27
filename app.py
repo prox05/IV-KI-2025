@@ -23,6 +23,7 @@ marker_colors = {'Family allowances':"#F5B700", 'Social Security':"#DC0073", 'Ta
 
 app = dash.Dash(__name__)
 app.title = "Inkomste bronnen van gezinnen"
+server = app.server
 
 app.layout = html.Div([
     html.H2("Inkomste bronnen van gezinnen"),
