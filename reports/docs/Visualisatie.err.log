@@ -1,63 +1,130 @@
 Traceback (most recent call last):
-  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 154, in wrapped
-    asyncio.get_running_loop()
-RuntimeError: no running event loop
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+  File "/home/sabih/return/lib/python3.13/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
     executenb(
-  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 1319, in execute
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/sabih/return/lib/python3.13/site-packages/nbclient/client.py", line 1319, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 158, in wrapped
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sabih/.local/lib/python3.13/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
     return loop.run_until_complete(inner)
-  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/sabih/return/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
     return future.result()
-  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 709, in async_execute
+           ~~~~~~~~~~~~~^^
+  File "/home/sabih/return/lib/python3.13/site-packages/nbclient/client.py", line 709, in async_execute
     await self.async_execute_cell(
-  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "/home/sabih/return/lib/python3.13/site-packages/nbclient/client.py", line 1062, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+  File "/home/sabih/return/lib/python3.13/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import nbformat
+import dash
+from dash import dcc, html, Input, State, Output
+import plotly.graph_objects as go
+import pandas as pd
 
-# ✅ ENKEL het pad, zonder 'path ='
-path = "/home/sabih/IV-KI-2025/docs/Visualisatie.ipynb"
+df_earnings = pd.read_csv('processed_data/Annual_Net_Earnings_Sweden_2014-2024.csv')
+df_earnings = df_earnings[df_earnings['currency'] == 'National currency']
 
-with open(path, encoding="utf8") as f:
-    nb = nbformat.read(f, as_version=4)
+labels = {'One-earner couple with two children earning 100% of the average earning': '👱(💶)👱(-) 🧒🧒 Gezin 2 ouders, 2 kinderen, 1 ouder heeft gemiddeld inkomen',
+ 'Two-earner couple with two children, both earning 100% of the average earning': '👱(💶)👱(💶) 🧒🧒 Gezin 2 ouders, 2 kinderen, 2 ouders hebben allebij gmiddeld inkomen',
+ 'Two-earner couple with two children, one earning 100% and the other 33% of the average earning': '👱(💶)👱(🪙) 🧒🧒 Gezin 2 ouders, 2 kinderen, 1 ouder gemiddeld inkomen, 1 ouder 33% van gemiddeld',
+ 'Two-earner couple with two children, one earning 100% and the other 67% of the average earning': '👱(💶)👱(🪙🪙) 🧒🧒 Gezin 2 ouders, 2 kinderen, 1 ouder gemiddeld inkomen, 1 ouder 67% van gemiddeld',
+ 'Two-earner couple without children, both earning 100% of the average earning': '👱(💶)👱(💶) Gezin 2 volwassennen, 2 hebben allebij gemiddeld inkomen',
+ 'Two-earner couple without children, one earning 100% and the other 33% of the average earning': '👱(💶)👱(🪙) Gezin 2 volwassennen, 1 gemiddeld inkomen, 1 33% van gemiddeld inkomen',
+ 'Single person with two children earning 67% of the average earning': '👱(🪙🪙) 🧒🧒 Gezin 1 ouder, 2 kinderen, ouder 67% van gemiddeld inkomen',
+ 'Single person without children earning 67% of the average earning': '👱(🪙🪙) Gezin 1 volwassenne, met 67% van gemiddeld inkomen',
+ 'Single person without children earning 100% of the average earning': '👱(💶) Gezin 1 volwassenne, met gemiddeld inkomen',
+ 'Single person without children earning 125% of the average earning': '👱(💶🪙) Gezin 1 volwassenne, met 125% van gemiddeld inkomen',
+ 'Single person without children earning 167% of the average earning': '👱(💶🪙🪙) Gezin 1 volwassenne, met 167% van gemiddeld inkomen'}
 
-for cell in nb['cells']:
-    if cell['cell_type'] == 'code':
-        tags = cell.setdefault('metadata', {}).setdefault('tags', [])
-        if 'remove-input' not in tags:
-            tags.append('remove-input')
+estructs = ['Family allowances','Social Security','Taxes','Net earning']
+marker_colors = {'Family allowances':"#F5B700", 'Social Security':"#DC0073", 'Taxes':"#371E30", 'Net earning':"#00C49A"}
 
-with open(path, 'w', encoding="utf8") as f:
-    nbformat.write(nb, f)
+app = dash.Dash(__name__)
+app.title = "Inkomste bronnen van gezinnen"
+
+app.layout = html.Div([
+    html.H2("Inkomste bronnen van gezinnen"),
+    dcc.Dropdown(
+        id='group-dropdown',
+        options=[{'label':labels[l], 'value':l} for l in labels],
+        value='One-earner couple with two children earning 100% of the average earning'
+    ),
+    dcc.Graph(id='main-graph'),
+    dcc.Store(id='current-mode', data={'mode': 'bar', 'group': 'One-earner couple with two children earning 100% of the average earning', 'year': None})
+])
+
+def create_stacked_bar(group):
+    fig = go.Figure()
+    for struct in estructs:
+        subset = df_earnings[(df_earnings["estruct"] == struct) & (df_earnings["ecase"] == group)]
+        fig.add_trace(go.Bar(
+            x=subset["TIME_PERIOD"],
+            y=subset["OBS_VALUE"],
+            name=struct,
+            marker_color = marker_colors[struct]
+        ))
+    fig.update_layout(barmode='stack', title=f'Inkomste bronnen {labels[group]}')
+    return fig
+
+def create_donut(year, group):
+    subset = df_earnings[(df_earnings["estruct"] == 'Family allowances') | (df_earnings["estruct"] == 'Net earning') | (df_earnings["estruct"] == 'Social Security')| (df_earnings["estruct"] =='Taxes')]
+    subset = subset[(subset["TIME_PERIOD"] == year) & (subset["ecase"] == group)]
+    fig = go.Figure(data=[go.Pie(
+        labels=subset["estruct"],
+        values=subset["OBS_VALUE"],
+        marker_colors=["#F5B700","#00C49A", "#DC0073","#371E30"],
+        hole=0.5
+    )])
+    fig.update_layout(title=f"Inkomste bronnen {labels[group]} {year}")
+    return fig
+
+@app.callback(
+    Output('main-graph', 'figure'),
+    Output('current-mode', 'data'),
+    Input('main-graph', 'clickData'),
+    Input('group-dropdown', 'value'),
+    State('current-mode', 'data')
+)
+
+def toggle_donut_bar(clickData, selected_group, stored_data):
+    if selected_group == stored_data['group']:
+        if stored_data['mode'] == 'bar':
+            if clickData:
+                clicked_year = clickData["points"][0]["x"]
+                return create_donut(clicked_year, stored_data["group"]), {'mode': 'donut', 'group':stored_data['group'], 'year':clicked_year}
+            return create_stacked_bar(stored_data['group']), stored_data
+        else:
+            return create_stacked_bar(stored_data['group']), {'mode': 'bar', 'group': stored_data['group'], 'year':None}
+    else:
+        if stored_data['mode'] == 'donut':
+            return create_donut(stored_data['year'], selected_group), {'mode':stored_data['mode'], 'group': selected_group, 'year':stored_data['year']}
+        else:
+            return create_stacked_bar(selected_group), {'mode':stored_data['mode'], 'group': selected_group, 'year':stored_data['year']}
+
+if __name__ == '__main__':
+    app.run(debug=False)
+
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-Cell [0;32mIn[1], line 6[0m
-[1;32m      3[0m [38;5;66;03m# ✅ ENKEL het pad, zonder 'path ='[39;00m
-[1;32m      4[0m path [38;5;241m=[39m [38;5;124m"[39m[38;5;124m/home/sabih/IV-KI-2025/docs/Visualisatie.ipynb[39m[38;5;124m"[39m
-[0;32m----> 6[0m [38;5;28;01mwith[39;00m [38;5;28;43mopen[39;49m[43m([49m[43mpath[49m[43m,[49m[43m [49m[43mencoding[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43mutf8[39;49m[38;5;124;43m"[39;49m[43m)[49m [38;5;28;01mas[39;00m f:
-[1;32m      7[0m     nb [38;5;241m=[39m nbformat[38;5;241m.[39mread(f, as_version[38;5;241m=[39m[38;5;241m4[39m)
-[1;32m      9[0m [38;5;28;01mfor[39;00m cell [38;5;129;01min[39;00m nb[[38;5;124m'[39m[38;5;124mcells[39m[38;5;124m'[39m]:
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[13], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mdash[39;00m
+[1;32m      2[0m [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01mdash[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m dcc, html, Input, State, Output
+[1;32m      3[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01mgraph_objects[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mgo[39;00m
 
-File [0;32m~/.conda/envs/jupyterbook/lib/python3.10/site-packages/IPython/core/interactiveshell.py:324[0m, in [0;36m_modified_open[0;34m(file, *args, **kwargs)[0m
-[1;32m    317[0m [38;5;28;01mif[39;00m file [38;5;129;01min[39;00m {[38;5;241m0[39m, [38;5;241m1[39m, [38;5;241m2[39m}:
-[1;32m    318[0m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
-[1;32m    319[0m         [38;5;124mf[39m[38;5;124m"[39m[38;5;124mIPython won[39m[38;5;124m'[39m[38;5;124mt let you open fd=[39m[38;5;132;01m{[39;00mfile[38;5;132;01m}[39;00m[38;5;124m by default [39m[38;5;124m"[39m
-[1;32m    320[0m         [38;5;124m"[39m[38;5;124mas it is likely to crash IPython. If you know what you are doing, [39m[38;5;124m"[39m
-[1;32m    321[0m         [38;5;124m"[39m[38;5;124myou can use builtins[39m[38;5;124m'[39m[38;5;124m open.[39m[38;5;124m"[39m
-[1;32m    322[0m     )
-[0;32m--> 324[0m [38;5;28;01mreturn[39;00m [43mio_open[49m[43m([49m[43mfile[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
-
-[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '/home/sabih/IV-KI-2025/docs/Visualisatie.ipynb'
+[0;31mModuleNotFoundError[0m: No module named 'dash'
 
