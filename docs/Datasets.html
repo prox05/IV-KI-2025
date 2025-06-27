@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -457,7 +457,15 @@ document.write(`
 <table>
     <tr>
         <td>
-            Naam
+            Bron:
+        </td>
+        <td>
+            Statistics Sweden(SCB)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Naam:
         </td>
         <td>
             Consumer Price Index (CPI), monthly changes, percent by economic indicator and month
@@ -465,7 +473,7 @@ document.write(`
     </tr>
     <tr>
         <td>
-            Source URL
+            URL:
         </td>
         <td>
             https://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__PR__PR0101__PR0101S/SnabbStatPR0101/
@@ -498,7 +506,12 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<p>TODO beschrijf processing</p>
+<p>Tijdens de preprocessing hebben we:</p>
+<ul class="simple">
+<li><p>Alleen data voor Zweden geselecteerd</p></li>
+<li><p>De tijdspanne beperkt tot januari 2014 t/m december 2024</p></li>
+<li><p>Alleen relevante kolommen behouden (zoals indexnaam, maand en waarde)</p></li>
+</ul>
 <table>
     <thead>
         <tr>
@@ -557,7 +570,15 @@ document.write(`
 <table>
     <tr>
         <td>
-            Naam
+            Bron:
+        </td>
+        <td>
+            World Bank Group
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Naam:
         </td>
         <td>
             World Development Indicators
@@ -565,7 +586,7 @@ document.write(`
     </tr>
     <tr>
         <td>
-            Source URL
+            URL:
         </td>
         <td>
             https://databank.worldbank.org/source/world-development-indicators
@@ -581,7 +602,7 @@ document.write(`
 </section>
 <section id="id2">
 <h3>Beschrijving<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
-<p>Deze dataset bevat economische en financiële indicatoren voor Zweden van 2014 tot 2024. Een aantal belangrijke veriabelen zijn: BBP, bruto nationaal inkomen, armoedecijfers en de gini-index(inkomensongelijkheid).</p>
+<p>Deze dataset bevat economische en financiële indicatoren voor Zweden van 2014 tot 2024. Een aantal belangrijke veriabelen zijn: BBP, bruto nationaal inkomen, armoedecijfers en de gini-index(inkomensongelijkheid). Deze gegevens vormen een belangrijk achtergrondkader voor het interpreteren van trends in voedselprijzen en inkomensverdeling.</p>
 </section>
 <section id="id3">
 <h3>Processing<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
@@ -589,7 +610,13 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<p>TODO beschrijf processing</p>
+<p>Tijdens het preprocessing hebben we:</p>
+<ul class="simple">
+<li><p>Alleen data voor Zweden geselecteerd</p></li>
+<li><p>De tijdsperiode beperkt tot 2014–2024</p></li>
+<li><p>Indicatoren gefilterd op relevantie voor koopkracht, inkomensverdeling en macro-economische context</p></li>
+<li><p>Ontbrekende waarden verwijderd waar nodig.</p></li>
+</ul>
 <table>
     <thead>
         <tr>
@@ -648,15 +675,23 @@ document.write(`
 <table>
     <tr>
         <td>
-            Naam
+            Bron:
         </td>
         <td>
-            Annual net earnings
+            Eurostat
         </td>
     </tr>
     <tr>
         <td>
-            Source URL
+            Naam
+        </td>
+        <td>
+            Annual Net Earnings
+        </td>
+    </tr>
+    <tr>
+        <td>
+            URL:
         </td>
         <td>
             https://ec.europa.eu/eurostat/databrowser/bookmark/6adafcb6-297e-4d27-b687-9b7c189c264c?lang=en
@@ -671,7 +706,7 @@ document.write(`
 </section>
 <section id="id5">
 <h3>Beschrijving<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
-<p>Deze dataset bevat de financiele gegevens voor verschillende type huishoudens in Zweden van 2014 tot 2024. De gegevens zijn weergeven in euro en in de valuta van Zweden. De dataset bevat onder andere: bruto inkomen, netto inkomen, uitkeringen, inkomstenbelasting, sociale zekerheid en het type huishouden(gezin zonder kinderen, eenverdieners, alleenstaanden etz…).</p>
+<p>Deze dataset bevat de financiele gegevens voor verschillende type huishoudens in Zweden van 2014 tot 2024. De gegevens zijn weergeven in euro en in de valuta van Zweden. De dataset bevat onder andere: bruto inkomen, netto inkomen, uitkeringen, inkomstenbelasting, sociale zekerheid en het type huishouden(gezin zonder kinderen, eenverdieners, alleenstaanden, etc.).</p>
 </section>
 <section id="id6">
 <h3>Processing<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
@@ -679,6 +714,12 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
+<p>Tijdens de preprocessing hebben we:</p>
+<ul class="simple">
+<li><p>De tijdspanne beperkt tot 2014–2024</p></li>
+<li><p>Enkel de relevante huishoudtypes behouden voor vergelijking</p></li>
+<li><p>Zowel euro’s als SEK omgerekend naar een uniforme valuta waar nodig</p></li>
+</ul>
 <table>
     <thead>
         <tr>
