@@ -28,19 +28,19 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# Laad source dataset 3
-
-df_annual_net_earnings = pd.read_csv('dataset_sources/estat_earn_nt_net_en.csv')
-df_annual_net_earings.info()
+# Code processig en filterig hier
+# df_temp = df_WDI_all
+# for x in range(1975, 2014):
+#    st = str(x) + ' [YR' + str(x) + ']'
+#    df_temp = df_temp.drop(st, axis=1)
+# df_WDI_processed = df_temp
+€ df_WDI_processed.to_csv('processed_data/WDI_2014-2024.csv', index=False)
 ------------------
 
 
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mNameError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[7], line 4[0m
-[1;32m      1[0m [38;5;66;03m# Laad source dataset 3[39;00m
-[1;32m      3[0m df_annual_net_earnings [38;5;241m=[39m pd[38;5;241m.[39mread_csv([38;5;124m'[39m[38;5;124mdataset_sources/estat_earn_nt_net_en.csv[39m[38;5;124m'[39m)
-[0;32m----> 4[0m [43mdf_annual_net_earings[49m[38;5;241m.[39minfo()
+[0;36m  Cell [0;32mIn[5], line 7[0;36m[0m
+[0;31m    € df_WDI_processed.to_csv('processed_data/WDI_2014-2024.csv', index=False)[0m
+[0m    ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid character '€' (U+20AC)
 
-[0;31mNameError[0m: name 'df_annual_net_earings' is not defined
 
