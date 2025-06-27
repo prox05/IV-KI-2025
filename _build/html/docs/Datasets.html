@@ -596,42 +596,8 @@ document.write(`
 <section id="id3">
 <h3>Processing<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
-    <span class="err">€</span> <span class="n">df_WDI_processed</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;processed_data/WDI_2014-2024.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid character &#39;€&#39; (U+20AC)
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 441 entries, 0 to 440
-Data columns (total 15 columns):
- #   Column         Non-Null Count  Dtype 
----  ------         --------------  ----- 
- 0   Country Name   438 non-null    object
- 1   Country Code   436 non-null    object
- 2   Series Name    436 non-null    object
- 3   Series Code    436 non-null    object
- 4   2014 [YR2014]  436 non-null    object
- 5   2015 [YR2015]  436 non-null    object
- 6   2016 [YR2016]  436 non-null    object
- 7   2017 [YR2017]  436 non-null    object
- 8   2018 [YR2018]  436 non-null    object
- 9   2019 [YR2019]  436 non-null    object
- 10  2020 [YR2020]  436 non-null    object
- 11  2021 [YR2021]  436 non-null    object
- 12  2022 [YR2022]  436 non-null    object
- 13  2023 [YR2023]  436 non-null    object
- 14  2024 [YR2024]  436 non-null    object
-dtypes: object(15)
-memory usage: 51.8+ KB
-</pre></div>
-</div>
-</div>
 </div>
 <p>Tijdens het preprocessing hebben we:</p>
 <ul class="simple">
@@ -692,18 +658,6 @@ memory usage: 51.8+ KB
 <section id="dataset-3-annual-net-earnings">
 <h2>Dataset 3: Annual net earnings<a class="headerlink" href="#dataset-3-annual-net-earnings" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Laad source dataset 3</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">df_annual_net_earnings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;dataset_sources/estat_earn_nt_net_en.csv&#39;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">df_annual_net_earings</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;df_annual_net_earings&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <section id="id4">
 <h3>Source<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
@@ -748,27 +702,6 @@ memory usage: 51.8+ KB
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 2466 entries, 0 to 2465
-Data columns (total 10 columns):
- #   Column       Non-Null Count  Dtype  
----  ------       --------------  -----  
- 0   DATAFLOW     2466 non-null   object 
- 1   LAST UPDATE  2466 non-null   object 
- 2   freq         2466 non-null   object 
- 3   currency     2466 non-null   object 
- 4   estruct      2466 non-null   object 
- 5   ecase        2466 non-null   object 
- 6   TIME_PERIOD  2466 non-null   int64  
- 7   OBS_VALUE    2466 non-null   float64
- 8   OBS_FLAG     0 non-null      float64
- 9   CONF_STATUS  0 non-null      float64
-dtypes: float64(3), int64(1), object(6)
-memory usage: 192.8+ KB
-</pre></div>
-</div>
-</div>
 </div>
 <p>Tijdens de preprocessing hebben we:</p>
 <ul class="simple">
