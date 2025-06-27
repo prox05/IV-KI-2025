@@ -1,24 +1,30 @@
 Traceback (most recent call last):
-  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 154, in wrapped
-    asyncio.get_running_loop()
-RuntimeError: no running event loop
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+  File "/home/sabih/return/lib/python3.13/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
     executenb(
-  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 1319, in execute
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/sabih/return/lib/python3.13/site-packages/nbclient/client.py", line 1319, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 158, in wrapped
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sabih/.local/lib/python3.13/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
     return loop.run_until_complete(inner)
-  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/sabih/return/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
     return future.result()
-  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 709, in async_execute
+           ~~~~~~~~~~~~~^^
+  File "/home/sabih/return/lib/python3.13/site-packages/nbclient/client.py", line 709, in async_execute
     await self.async_execute_cell(
-  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "/home/sabih/return/lib/python3.13/site-packages/nbclient/client.py", line 1062, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+  File "/home/sabih/return/lib/python3.13/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
@@ -109,19 +115,16 @@ def toggle_donut_bar(clickData, selected_group, stored_data):
 
 if __name__ == '__main__':
     app.run(debug=False)
+
 ------------------
 
------ stderr -----
-Address already in use
-Port 8050 is in use by another program. Either identify and stop that program, or start the server with a different port.
------ stderr -----
-/home/May/.conda/envs/jupyterbook/lib/python3.10/site-packages/IPython/core/interactiveshell.py:3587: UserWarning:
 
-To exit: use 'exit', 'quit', or Ctrl-D.
-------------------
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[12], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mdash[39;00m
+[1;32m      2[0m [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01mdash[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m dcc, html, Input, State, Output
+[1;32m      3[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01mgraph_objects[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mgo[39;00m
 
-An exception has occurred, use %tb to see the full traceback.
-
-[0;31mSystemExit[0m[0;31m:[0m 1
-
+[0;31mModuleNotFoundError[0m: No module named 'dash'
 

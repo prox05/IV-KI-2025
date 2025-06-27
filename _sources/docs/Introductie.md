@@ -1,14 +1,12 @@
-# De Evolutie van Voedselprijzen en Inkomens in Zweden
+# Introductie
 
 Door <br>
 - Amora van Deursen 15759601 [github](https://github.com/moratje111)
 - Emilie Rosier 15838366 [github](https://github.com/emilierosier)
-- May Bardet 13160974 [github](https://github.com/MayBardet)
+- May Bardet 13160974 [gibhub](https://github.com/MayBardet)
 - Sabih Syed 15611175 [github](https://github.com/prox05/)
 
 Team nummer: G1
-
-![Foto1](zweden1-1.webp)
 
 ## Inhoud
 - [Introductie]('Introductie.md')
@@ -27,8 +25,6 @@ In de afgelopen tien jaar is de discussie rond de kosten van levensonderhoud in 
 De COVID-19-pandemie heeft hierin een belangrijke rol gespeeld. Terwijl het virus zich vanaf begin 2020 over de wereld verspreidde, namen overheden ingrijpende maatregelen om de gezondheid van het volk te beschermen. In veel landen (waaronder Zweden) leidde dit tot lockdowns, verminderde internationale handel en verstoorde aanvoerketens. Wetenschappelijk onderzoek bevestigt dat juist deze maatregelen een directe invloed hebben gehad op de voedselprijzen. Akter (2020) analyseerde de situatie in 31 Europese landen en toonde aan dat strenge COVID-maatregelen in maart 2020 resulteerden in gemiddeld 1% extra stijging van voedselprijzen, met name bij producten zoals vlees, vis en groenten. Ook Dietrich et al. (2021) bevestigen dat strikte coronabeleid in sterk geïntegreerde economieën zoals Zweden prijsstijgingen veroorzaakte in de voedselketen.
 
 Deze prijsveranderingen kwamen bovenop structurele kostenontwikkelingen en maakten het voor veel huishoudens lastiger om comfortabel rond te komen. Hierbij ontstaat de vraag: kan de inkomensgroei van de afgelopen jaren deze prijsdruk compenseren?
-
-![Foto2](zweden1-2.webp)
 
 Volgens cijfers van Eurostat (2024) is het nettojaarloon in Zweden de afgelopen vijf jaar gestegen. Daarnaast blijkt uit gegevens van de World Bank (2024) dat de werkgelegenheid relatief stabiel is gebleven tijdens en na de pandemie. Op het eerste gezicht lijkt het dus logisch om te stellen dat de gemiddelde Zweedse burger in staat zou moeten zijn om met de stijgende prijzen om te gaan. Maar hierbij wordt er geen rekening gehouden met de ongelijkheid tussen inkomensgroepen. Onderzoek van Holmberg (2024) laat zien dat juist huishoudens met een laag inkomen kwetsbaar blijven voor externe prijsdruk. Bovendien bleek uit de studie van Crawley en Theloudis (2024) dat zelfs tijdelijke inkomensverstoringen (zoals werkurenverlies tijdens COVID-19) een langdurig effect kunnen hebben op consumptiegedrag, vooral bij huishoudens zonder financiële buffers.
 
