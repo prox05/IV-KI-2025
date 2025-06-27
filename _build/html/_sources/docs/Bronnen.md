@@ -1,6 +1,9 @@
 # Bronnen
 
 ## Datasets
+
+Zie pagina 'Datasets en Preprocessing' voor uitgebreidere informatie over de datasets zelf.
+
 ### Dataset 1: Consumer Price Index
 <table>
 <tr>
@@ -44,8 +47,7 @@ Source URL
 
 ### Dataset 3: Annual net earnings
 
-
-table>
+<table>
 <tr>
 <td>
 Name
@@ -64,7 +66,7 @@ https://ec.europa.eu/eurostat/databrowser/bookmark/6adafcb6-297e-4d27-b687-9b7c1
 </tr>
 </table>
 
-### Bronnen:
+## Andere Bronnen
 
 Akter, S. (2020). The impact of COVID-19 related 'stay-at-home' restrictions on food prices in Europe: Findings from a preliminary analysis. Food Security, 12(4), 753–757. https://doi.org/10.1007/s12571-020-01082-3
 
