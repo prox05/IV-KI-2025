@@ -530,16 +530,10 @@ document.write(`
             <td>
                 822
             </td>
-            <td>
-                780
-            </td>
         </tr>
         <tr>
             <td>
                 Variabelen
-            </td>
-            <td>
-                4
             </td>
             <td>
                 4
@@ -552,9 +546,6 @@ document.write(`
             <td>
                 Jan 2014 - Juni 2025
             </td>
-            <td>
-                Jan 2014 - Dec 2024
-            </td>
         </tr>
     </tbody>
 </table></section>
@@ -562,71 +553,6 @@ document.write(`
 <section id="dataset-2-world-development-indicators">
 <h2>Dataset 2: World Development Indicators<a class="headerlink" href="#dataset-2-world-development-indicators" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 441 entries, 0 to 440
-Data columns (total 54 columns):
- #   Column         Non-Null Count  Dtype 
----  ------         --------------  ----- 
- 0   Country Name   438 non-null    object
- 1   Country Code   436 non-null    object
- 2   Series Name    436 non-null    object
- 3   Series Code    436 non-null    object
- 4   1975 [YR1975]  436 non-null    object
- 5   1976 [YR1976]  436 non-null    object
- 6   1977 [YR1977]  436 non-null    object
- 7   1978 [YR1978]  436 non-null    object
- 8   1979 [YR1979]  436 non-null    object
- 9   1980 [YR1980]  436 non-null    object
- 10  1981 [YR1981]  436 non-null    object
- 11  1982 [YR1982]  436 non-null    object
- 12  1983 [YR1983]  436 non-null    object
- 13  1984 [YR1984]  436 non-null    object
- 14  1985 [YR1985]  436 non-null    object
- 15  1986 [YR1986]  436 non-null    object
- 16  1987 [YR1987]  436 non-null    object
- 17  1988 [YR1988]  436 non-null    object
- 18  1989 [YR1989]  436 non-null    object
- 19  1990 [YR1990]  436 non-null    object
- 20  1991 [YR1991]  436 non-null    object
- 21  1992 [YR1992]  436 non-null    object
- 22  1993 [YR1993]  436 non-null    object
- 23  1994 [YR1994]  436 non-null    object
- 24  1995 [YR1995]  436 non-null    object
- 25  1996 [YR1996]  436 non-null    object
- 26  1997 [YR1997]  436 non-null    object
- 27  1998 [YR1998]  436 non-null    object
- 28  1999 [YR1999]  436 non-null    object
- 29  2000 [YR2000]  436 non-null    object
- 30  2001 [YR2001]  436 non-null    object
- 31  2002 [YR2002]  436 non-null    object
- 32  2003 [YR2003]  436 non-null    object
- 33  2004 [YR2004]  436 non-null    object
- 34  2005 [YR2005]  436 non-null    object
- 35  2006 [YR2006]  436 non-null    object
- 36  2007 [YR2007]  436 non-null    object
- 37  2008 [YR2008]  436 non-null    object
- 38  2009 [YR2009]  436 non-null    object
- 39  2010 [YR2010]  436 non-null    object
- 40  2011 [YR2011]  436 non-null    object
- 41  2012 [YR2012]  436 non-null    object
- 42  2013 [YR2013]  436 non-null    object
- 43  2014 [YR2014]  436 non-null    object
- 44  2015 [YR2015]  436 non-null    object
- 45  2016 [YR2016]  436 non-null    object
- 46  2017 [YR2017]  436 non-null    object
- 47  2018 [YR2018]  436 non-null    object
- 48  2019 [YR2019]  436 non-null    object
- 49  2020 [YR2020]  436 non-null    object
- 50  2021 [YR2021]  436 non-null    object
- 51  2022 [YR2022]  436 non-null    object
- 52  2023 [YR2023]  436 non-null    object
- 53  2024 [YR2024]  436 non-null    object
-dtypes: object(54)
-memory usage: 186.2+ KB
-</pre></div>
-</div>
-</div>
 </div>
 <section id="id1">
 <h3>Source<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
@@ -670,6 +596,14 @@ memory usage: 186.2+ KB
 <section id="id3">
 <h3>Processing<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+    <span class="err">€</span> <span class="n">df_WDI_processed</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;processed_data/WDI_2014-2024.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid character &#39;€&#39; (U+20AC)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -761,7 +695,7 @@ memory usage: 51.8+ KB
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Laad source dataset 3</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">df_annual_net_earnings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;dataset_sources/estat_earn_nt_net_en.csv&#39;</span><span class="p">)</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">df_annual_net_earings</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
