@@ -11,14 +11,14 @@ Team nummer: G1
 ![Foto1](zweden1.webp)
 
 ## Inhoud
-- [Introductie]('Introductie.md')
-- [Perspectieven]('Perspectieven.md')
-- [Datasets]('Datasets.ipynb')
-- [Visualisatie]('Visualisatie.ipynb')
-- [Conclusie]('Conclusie.md')
-- [Reflectie]('Reflectie.md')
-- [Verdeling]('Verdeling.md')
-- [Bronnen]('Bronnen.md')
+- Introductie
+- Perspectieven
+- Datasets
+- Visualisatie
+- Conclusie
+- Reflectie
+- Verdeling
+- Bronnen
 
 # Introductie
 
