@@ -10,7 +10,7 @@ Gezocht naar datasets. Gewerkt aan de proposal en de draft. De wetenschappelijke
 Op basis van de bronnen de introductie geschreven, de perspectieven bedacht en ook daarvoor tekst geschreven. Gekeken welke datavisualisaties bij de perspectieven pasten. 2 visualisaties gemaakt, 1 over CPI en 1 over het netto inkomen. 
 
 ## Emilie
-Gewerkt aan de proposal en de draft. 2 visualisaties gemaakt. 3 interpetaties van de visualisaties geschreven. Meegewerkt aan de argumenten van de perspectieven. De reflectie geschreven. Database omschrijvingen geschreven. 
+Gezocht online naar datasets. Gewerkt aan de proposal en de draft. 2 visualisaties gemaakt. 3 interpetaties van de visualisaties geschreven. Meegewerkt aan de argumenten van de perspectieven. Meegeholpen met de visualisaties te koppelen aan de argumenten. De reflectie geschreven. Database omschrijvingen geschreven. 
 
 ## May
 
