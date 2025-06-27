@@ -83,3 +83,7 @@ IMF. (2024). Sweden: Staff Concluding Statement of the 2024 Article IV Mission. 
 Statistics Sweden. (2024). Consumer Price Index (CPI), monthly changes, percent by economic indicator and month. https://www.statistikdatabasen.scb.se
 
 World Bank. (2024). World Development Indicators: Sweden. https://databank.worldbank.org/source/world-development-indicators
+
+Skatteverket via https://tradingeconomics.com (2025). Sweden Personal Income Tax Rate. https://tradingeconomics.com/sweden/personal-income-tax-rate
+
+European Commission, Sweden Details of Sweden's support measures to help citizens and companies during the significant economic impact of the coronavirus pandemic. https://commission.europa.eu/strategy-and-policy/coronavirus-response/supporting-jobs-and-economy-during-coronavirus-pandemic/state-aid-cases/sweden_en
