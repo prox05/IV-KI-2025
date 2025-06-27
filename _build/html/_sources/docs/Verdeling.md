@@ -6,6 +6,8 @@ Onze team heeft goed samen kunnen werken, er waren geen communicatie problemen.
 De taken verdeling is als volgt:
 
 ## Amora
+Gezocht naar datasets. Gewerkt aan de proposal en de draft. De wetenschappelijke bronnen gezocht voor ons onderzoek.
+Op basis van de bronnen de introductie geschreven, de perspectieven bedacht en ook daarvoor tekst geschreven. Gekeken welke datavisualisaties bij de perspectieven pasten. 2 visualisaties gemaakt, 1 over CPI en 1 over het netto inkomen. 
 
 ## Emilie
 
