@@ -6,3 +6,4 @@ pandas
 plotly
 seaborn
 calendar
+dash
