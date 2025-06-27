@@ -6,6 +6,8 @@ Door <br>
 - May Bardet 13160974 [gibhub](https://github.com/MayBardet)
 - Sabih Syed 15611175 [github](https://github.com/prox05/)
 
+Team nummer: G1
+
 ## Inhoud
 - [Introductie]('Introductie.md')
 - [Perspectieven]('Perspectieven.md')
