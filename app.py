@@ -22,11 +22,11 @@ estructs = ['Family allowances','Social Security','Taxes','Net earning']
 marker_colors = {'Family allowances':"#F5B700", 'Social Security':"#DC0073", 'Taxes':"#371E30", 'Net earning':"#00C49A"}
 
 app = dash.Dash(__name__)
-app.title = "Inkomste bronnen van gezinnen"
+app.title = "Inkomstenbronnen van gezinnen"
 server = app.server
 
 app.layout = html.Div([
-    html.H2("Inkomste bronnen van gezinnen"),
+    html.H2("Inkomstenbronnen van gezinnen"),
     dcc.Dropdown(
         id='group-dropdown',
         options=[{'label':labels[l], 'value':l} for l in labels],
@@ -46,7 +46,7 @@ def create_stacked_bar(group):
             name=struct,
             marker_color = marker_colors[struct]
         ))
-    fig.update_layout(barmode='stack', title=f'Inkomste bronnen {labels[group]}')
+    fig.update_layout(barmode='stack', title=f'Inkomstenbronnen {labels[group]}')
     return fig
 
 def create_donut(year, group):
@@ -58,7 +58,7 @@ def create_donut(year, group):
         marker_colors=["#F5B700","#00C49A", "#DC0073","#371E30"],
         hole=0.5
     )])
-    fig.update_layout(title=f"Inkomste bronnen {labels[group]} {year}")
+    fig.update_layout(title=f"Inkomstenbronnen {labels[group]} {year}")
     return fig
 
 @app.callback(
