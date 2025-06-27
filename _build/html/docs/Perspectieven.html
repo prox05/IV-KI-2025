@@ -440,7 +440,7 @@ document.write(`
 <img alt="../_images/3554bc692e695046d2db52a4542b797ed341fb66535850295097161e8eb98487.png" src="../_images/3554bc692e695046d2db52a4542b797ed341fb66535850295097161e8eb98487.png" />
 </div>
 </div>
-<p>De grafiek toont de ontwikkeling van het CPI (consumer price index) tussen 2014 en 2024 voor Zweden. Om een duidelijker beeld te krijgen van de procentuele verandering is er als startwaarde 100 genomen.Van 2014 tot 2020 was er een geleidelijke stijging van voedselprijzen. Dit wijst op een redelijk stabiele markt.</p>
+<p>De grafiek toont de ontwikkeling van het CPI (consumer price index) tussen 2014 en 2024 voor Zweden. Met op de x-as de tijd is jaren en op de y-as de CPI-index. Om een duidelijker beeld te krijgen van de procentuele verandering is er als startwaarde 100 genomen.Van 2014 tot 2020 was er een geleidelijke stijging van voedselprijzen. Dit wijst op een redelijk stabiele markt.</p>
 <p>Vanaf 2021 is er duidelijk een verandering te zien. De prijzen stijgen sneller dan ervoor. Deze grote stijging valt samen met de nasleep van COVID pandemie. De stekte stijging tussen 2021 en 2023 illusteert een belangrijke verandering van betaalbaarheid.</p>
 <p>Een analyse van de Consumer Price Index (SCB, 2025) laat zien dat de maandelijkse voedselprijsveranderingen na 2020 sterk zijn gestegen, vooral tijdens en vlak na de pandemie. Tegelijkertijd blijkt uit inkomensgegevens van Eurostat (2024) dat de netto-inkomens van deze groepen niet gelijke tred hielden met de inflatie. Hierdoor kunnen huishoudens minder kopen voor hetzelfde bedrag. Het probleem is dus een relatieve koopkrachtvermindering die leidt tot sociale uitsluiting en onzekerheid over de primaire levensbehoeften (Crawley &amp; Theloudis, 2024).</p>
 <p>(Hier visualisatie inkomen vs cpi)
@@ -451,7 +451,7 @@ jsdfadf</p>
 <img alt="../_images/05686bccb8557dd6b0dcc97173d07f828b8ab0796a5cd5d580769324c4744392.png" src="../_images/05686bccb8557dd6b0dcc97173d07f828b8ab0796a5cd5d580769324c4744392.png" />
 </div>
 </div>
-<p>De figuur toont de ontwikkeling van de consumentenprijsindex (CPI) en het gemiddelde netto inkomen in Zweden over de periode van 2018 tot en met 2022. Uit de grafiek blijkt dat de CPI tussen 2018 en 2020 licht is gedaald, wat duidt op een periode van stabiele of zelfs iets lagere prijzen. Vanaf 2020 is echter een duidelijke stijging te zien: in 2021 neemt de CPI weer toe, en deze stijging zet door in 2022.</p>
+<p>De figuur toont de ontwikkeling van de consumentenprijsindex (CPI) en het gemiddelde netto inkomen in Zweden over de periode van 2018 tot en met 2022. Met op de x-as de tijd is jaren en op de y-as de consumentenprijsindex in percentages. Uit de grafiek blijkt dat de CPI tussen 2018 en 2020 licht is gedaald, wat duidt op een periode van stabiele of zelfs iets lagere prijzen. Vanaf 2020 is echter een duidelijke stijging te zien: in 2021 neemt de CPI weer toe, en deze stijging zet door in 2022.</p>
 <p>Het gemiddelde netto inkomen laat over dezelfde periode een gestage stijging zien. Jaar na jaar neemt het inkomen iets toe, zonder sterke schommelingen. In 2022 liggen de CPI en het gemiddelde netto inkomen op visueel vergelijkbare niveaus, wat suggereert dat de prijzen en inkomens zich tegen het einde van de periode naar elkaar toe bewegen.</p>
 <p>Het omslagpunt in 2020 is opvallen, want waar de eerste drie jaar een combinatie van stijgende inkomens en stabiele prijzen te zien is, verandert het beeld na 2020 door de hernieuwde prijsstijging. Deze ontwikkeling wijst op een veranderende economische situatie waarin de verhouding tussen prijs- en inkomensgroei opnieuw in balans moet worden gebracht.</p>
 <section id="argumenten-perspectief-1">
@@ -468,10 +468,158 @@ jsdfadf</p>
 <p>Een ander perspectief stelt dat Zweden zich economisch relatief goed heeft weten te handhaven, zelfs tijdens crisissituaties zoals COVID-19. Statistieken van de World Bank (2024) en Eurostat (2024) tonen aan dat het gemiddelde netto-inkomen in Zweden over de afgelopen tien jaar een gestage groei heeft doorgemaakt. In combinatie met een relatief hoge arbeidsparticipatiegraad en lage werkloosheid suggereert dit dat veel huishoudens wel de middelen hebben om stijgende voedselprijzen op te vangen.</p>
 <p>(Hier visualisatie netto inkomen)
 (Uitleg visualisatie)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+
+
+<span class="c1"># ------------------------------------------</span>
+<span class="c1"># DATA INLADEN</span>
+<span class="c1"># ------------------------------------------</span>
+
+
+<span class="c1"># Lees netto jaarloon in</span>
+<span class="n">earnings_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;processed_data/Annual_Net_Earnings_Sweden_2014-2024.csv&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># ------------------------------------------</span>
+<span class="c1"># PREPROCESSING NETTO JAARLOON (2014–2024)</span>
+<span class="c1"># ------------------------------------------</span>
+
+
+<span class="n">earnings_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+   <span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">:</span> <span class="s1">&#39;Jaar&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;OBS_VALUE&#39;</span><span class="p">:</span> <span class="s1">&#39;Netto_Jaarloon&#39;</span>
+<span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="n">earnings_df</span> <span class="o">=</span> <span class="n">earnings_df</span><span class="p">[(</span><span class="n">earnings_df</span><span class="p">[</span><span class="s1">&#39;Jaar&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2014</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">earnings_df</span><span class="p">[</span><span class="s1">&#39;Jaar&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2024</span><span class="p">)]</span>
+
+
+<span class="c1"># ------------------------------------------</span>
+<span class="c1"># GRAFIEK – NETTO JAARLOON</span>
+<span class="c1"># ------------------------------------------</span>
+
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;pastel&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span>
+   <span class="n">data</span><span class="o">=</span><span class="n">earnings_df</span><span class="p">,</span>
+   <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Jaar&quot;</span><span class="p">,</span>
+   <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Netto_Jaarloon&quot;</span><span class="p">,</span>
+   <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
+   <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+   <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#2ca02c&quot;</span>  <span class="c1"># mooie groene kleur</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Netto jaarloon van eenverdienersgezin met twee kinderen in Zweden (2014–2024)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Netto jaarloon (€)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Jaar&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/320c137416b9721bb9c40a85efd0d12b832e15db42190d1010dca49c9a2b9790.png" src="../_images/320c137416b9721bb9c40a85efd0d12b832e15db42190d1010dca49c9a2b9790.png" />
+</div>
+</div>
+<p>Deze grafiek toont het netto jaarloon van een eenverdienersgezin met twee kinderen in zweden tussen 2014 en 2024. De x-as geeft de tijd is jaren weer en de y-as het netto jaarloon in euro’s. De donkergroene lijn geeft het gemiddelde aan en het lichtgroene gebied geeft het minimale en maximale netto jaarloon aan. Er zijn geen heftige dalingen of schommelingen te zien,    zelfs tijdens de pandemie jaren. Het gemiddeld netto inkomen voor dit type huishouden is dus stabiel gebleven.</p>
 <p>Bovendien is het Zweedse fiscale systeem progressief: hogere inkomens dragen meer belasting af en er bestaan toeslagen voor gezinnen met kinderen (Holmberg, 2024). Deze combinatie van inkomensgroei en herverdeling zorgt ervoor dat de gemiddelde Zweedse consument vandaag meer netto te besteden heeft dan tien jaar geleden, ondanks dat er inflatie heeft plaatsgevonden</p>
 <p>Daarbij moet worden opgemerkt dat de consumptieve bestedingen in Zweden sinds 2021 opnieuw zijn toegenomen, wat wijst op een herstel van het vertrouwen in de economie (World Bank, 2024). Volgens Crawley en Theloudis (2024) is het verschil in koopkracht vaak eerder een kwestie van verdeling dan van absolute afname. Dat betekent dat de gemiddelde consument zich nog steeds voedselprijzen kan veroorloven, maar dat sommige groepen achterblijven.</p>
 <p>(Hier visualisatie inkomensverdeling)
 (Uitleg visualisatie)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">plotly.graph_objects</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">go</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Filter data (ga ervan uit dat OBS_VALUE al in SEK is)</span>
+<span class="n">df_filtered</span> <span class="o">=</span> <span class="n">df_income</span><span class="p">[</span><span class="n">df_income</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">2022</span><span class="p">)]</span>
+
+<span class="c1"># Y-as instellingen in SEK</span>
+<span class="n">y_tickvals</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">25000</span><span class="p">,</span> <span class="mi">50000</span><span class="p">,</span> <span class="mi">75000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> 
+              <span class="mi">250000</span><span class="p">,</span> <span class="mi">500000</span><span class="p">,</span> <span class="mi">750000</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">,</span> <span class="mi">1500000</span><span class="p">]</span>
+<span class="n">y_ticktext</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;5k&#39;</span><span class="p">,</span> <span class="s1">&#39;10k&#39;</span><span class="p">,</span> <span class="s1">&#39;25k&#39;</span><span class="p">,</span> <span class="s1">&#39;50k&#39;</span><span class="p">,</span> <span class="s1">&#39;75k&#39;</span><span class="p">,</span> <span class="s1">&#39;100k&#39;</span><span class="p">,</span> 
+              <span class="s1">&#39;250k&#39;</span><span class="p">,</span> <span class="s1">&#39;500k&#39;</span><span class="p">,</span> <span class="s1">&#39;750k&#39;</span><span class="p">,</span> <span class="s1">&#39;1M&#39;</span><span class="p">,</span> <span class="s1">&#39;1.5M&#39;</span><span class="p">]</span>
+
+<span class="c1"># Figuur maken</span>
+<span class="n">fig4</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">df_filtered</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()):</span>
+    <span class="n">df_year</span> <span class="o">=</span> <span class="n">df_filtered</span><span class="p">[</span><span class="n">df_filtered</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">year</span><span class="p">]</span>
+    <span class="n">y_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df_year</span><span class="p">[</span><span class="s1">&#39;OBS_VALUE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">df_year</span><span class="p">[</span><span class="s1">&#39;OBS_VALUE&#39;</span><span class="p">])</span>
+    <span class="n">fig4</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Box</span><span class="p">(</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">y_values</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="n">visible</span><span class="o">=</span><span class="p">(</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2022</span><span class="p">),</span>
+        <span class="n">boxpoints</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">marker_color</span><span class="o">=</span><span class="s1">&#39;#59A14F&#39;</span><span class="p">,</span>
+        <span class="n">line_color</span><span class="o">=</span><span class="s1">&#39;#2C3E50&#39;</span><span class="p">,</span>
+        <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">hoverinfo</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span>
+        <span class="n">hovertemplate</span><span class="o">=</span><span class="s1">&#39;%</span><span class="si">{y:,.2f}</span><span class="s1"> kr&lt;extra&gt;&lt;/extra&gt;&#39;</span>  <span class="c1"># Tooltip met SEK</span>
+    <span class="p">))</span>
+
+<span class="c1"># Layout met Nederlandse labels</span>
+<span class="n">fig4</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">text</span><span class="o">=</span><span class="s2">&quot;&lt;b&gt;Inkomensverdeling&lt;/b&gt;&quot;</span><span class="p">,</span>  <span class="c1"># Nederlandse titel</span>
+        <span class="n">x</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span>
+        <span class="n">xanchor</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span>
+        <span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">&#39;Arial&#39;</span><span class="p">)</span>
+    <span class="p">),</span>
+    <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Netto inkomen (SEK)&#39;</span><span class="p">,</span>
+        <span class="n">tickvals</span><span class="o">=</span><span class="n">y_tickvals</span><span class="p">,</span>
+        <span class="n">ticktext</span><span class="o">=</span><span class="n">y_ticktext</span><span class="p">,</span>
+        <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span>
+        <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mi">2000000</span><span class="p">)],</span>
+        <span class="n">gridcolor</span><span class="o">=</span><span class="s1">&#39;rgba(200,200,200,0.3)&#39;</span><span class="p">,</span>
+        <span class="n">zeroline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">title_font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+    <span class="p">),</span>
+    <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">showticklabels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">showgrid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]</span>
+    <span class="p">),</span>
+    <span class="n">updatemenus</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;buttons&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">),</span>
+                      <span class="n">method</span><span class="o">=</span><span class="s2">&quot;update&quot;</span><span class="p">,</span>
+                      <span class="n">args</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;visible&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">y</span><span class="o">==</span><span class="n">year</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">df_filtered</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())]}])</span>
+                 <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">df_filtered</span><span class="p">[</span><span class="s1">&#39;TIME_PERIOD&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())],</span>
+        <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;down&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mf">1.15</span><span class="p">,</span>
+        <span class="s2">&quot;xanchor&quot;</span><span class="p">:</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;yanchor&quot;</span><span class="p">:</span> <span class="s2">&quot;top&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bgcolor&quot;</span><span class="p">:</span> <span class="s2">&quot;rgba(255,255,255,0.8)&quot;</span>
+    <span class="p">}],</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">650</span><span class="p">,</span>
+    <span class="n">margin</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">80</span><span class="p">),</span>
+    <span class="n">plot_bgcolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>
+    <span class="n">paper_bgcolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Nul-weergave</span>
+<span class="n">fig4</span><span class="o">.</span><span class="n">add_annotation</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=-</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">xref</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">yref</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span>
+    <span class="n">text</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="n">showarrow</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">),</span>
+    <span class="n">xanchor</span><span class="o">=</span><span class="s1">&#39;right&#39;</span>
+<span class="p">)</span>
+
+<span class="n">fig4</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+<p>Deze grafiek toont hoe inkomens verdeeld waren onder Zweden van 2018 tot 2022. De box geeft aan wat het inkomen van de meeste mensen was, de dikke lijn in het midden is het gemiddelde. De lijntjes boven en onder het vak laten de maximaal en de minimaal zien. Omdat sommigen veel meer verdienden dan anderen, gebruiken we een speciale schaal  zodat je alle verschillen goed kunt zien. En met het keuzemenu bovenaan kan je verschillende jaren selecteren.</p>
 <section id="argumenten-perspectief-2">
 <h3>Argumenten perspectief 2:<a class="headerlink" href="#argumenten-perspectief-2" title="Link to this heading">#</a></h3>
 <ul class="simple">
