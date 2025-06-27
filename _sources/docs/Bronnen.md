@@ -16,12 +16,12 @@ Consumer Price Index (CPI), monthly changes, percent by economic indicator and m
 Source URL
 </td>
 <td>
-https://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__PR__PR0101__PR0101S/SnabbStatPR0101/table/tableViewLayout1/
+https://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__PR__PR0101__PR0101S/SnabbStatPR0101/ 
 </td>
 </tr>
 </table>
 
-### Dataset 2: WDI: Education, Heatlh & Employment
+### Dataset 2: World Development Indicators
 
 table>
 <tr>
@@ -29,7 +29,7 @@ table>
 Name
 </td>
 <td>
-WDI: Education, Health & Employment
+ World Development Indicators 
 </td>
 </tr>
 <tr>
@@ -37,12 +37,32 @@ WDI: Education, Health & Employment
 Source URL
 </td>
 <td>
-https://www.kaggle.com/datasets/parsabahramsari/wdi-education-health-and-employment-2011-2021](https://www.kaggle.com/datasets/parsabahramsari/wdi-education-health-and-employment-2011-2021
+ https://databank.worldbank.org/source/world-development-indicators 
 </td>
 </tr>
 </table>
 
-### Dataset 3
+### Dataset 3: Annual net earnings
+
+
+table>
+<tr>
+<td>
+Name
+</td>
+<td>
+Annual net earnings
+</td>
+</tr>
+<tr>
+<td>
+Source URL
+</td>
+<td>
+https://ec.europa.eu/eurostat/databrowser/bookmark/6adafcb6-297e-4d27-b687-9b7c189c264c?lang=en 
+</td>
+</tr>
+</table>
 
 ### Bronnen:
 
