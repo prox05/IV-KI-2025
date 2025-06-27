@@ -28,7 +28,7 @@ De COVID-19-pandemie heeft hierin een belangrijke rol gespeeld. Terwijl het viru
 
 Deze prijsveranderingen kwamen bovenop structurele kostenontwikkelingen en maakten het voor veel huishoudens lastiger om comfortabel rond te komen. Hierbij ontstaat de vraag: kan de inkomensgroei van de afgelopen jaren deze prijsdruk compenseren?
 
-![Foto2](zweden1.webp)
+![Foto2](zweden2.jpg)
 
 Volgens cijfers van Eurostat (2024) is het nettojaarloon in Zweden de afgelopen vijf jaar gestegen. Daarnaast blijkt uit gegevens van de World Bank (2024) dat de werkgelegenheid relatief stabiel is gebleven tijdens en na de pandemie. Op het eerste gezicht lijkt het dus logisch om te stellen dat de gemiddelde Zweedse burger in staat zou moeten zijn om met de stijgende prijzen om te gaan. Maar hierbij wordt er geen rekening gehouden met de ongelijkheid tussen inkomensgroepen. Onderzoek van Holmberg (2024) laat zien dat juist huishoudens met een laag inkomen kwetsbaar blijven voor externe prijsdruk. Bovendien bleek uit de studie van Crawley en Theloudis (2024) dat zelfs tijdelijke inkomensverstoringen (zoals werkurenverlies tijdens COVID-19) een langdurig effect kunnen hebben op consumptiegedrag, vooral bij huishoudens zonder financiële buffers.
 
